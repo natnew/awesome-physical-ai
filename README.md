@@ -29,6 +29,12 @@ Physical AI and Embodied AI represent the convergence of large-scale machine lea
   - [Community](#community)
   - [Companies & Labs](#companies--labs)
   - [Newsletters & Blogs](#newsletters--blogs)
+  - [People to Follow](#people-to-follow)
+- [Getting Started Projects](#getting-started-projects)
+  - [Beginner: Foundations](#beginner-foundations-week-1-2)
+  - [Intermediate: Simulation & Imitation](#intermediate-simulation--imitation-week-3-6)
+  - [Advanced: Foundation Models & Transfer](#advanced-foundation-models--transfer-week-7-12)
+  - [Hardware Projects](#hardware-projects-optional)
 - [Related Awesome Lists](#related-awesome-lists)
 
 ---
@@ -374,12 +380,93 @@ Organizations advancing Physical AI.
 
 Stay updated with the latest developments.
 
+**Deep Dives & Analysis**
+- [Chipstrat](https://www.chipstrat.com/) - Austin Lyons. Semiconductors, AI, and robotics strategy. Excellent "Robots That See" series on computer vision for robotics.
+- [Robots & Startups](https://robotsandstartups.substack.com/) - Andra Keay (Silicon Valley Robotics). Robot startups and industry trends from the epicenter of the robot revolution.
+- [Import AI](https://importai.substack.com/) - Jack Clark. Weekly analysis of AI breakthroughs, policy, and implications for robotics.
+- [Interconnects](https://www.interconnects.ai/) - Nathan Lambert. Technical deep dives on AI from an actual model trainer.
+- [Ahead of AI](https://magazine.sebastianraschka.com/) - Sebastian Raschka. Research-focused ML/AI coverage.
+- [The Batch](https://www.deeplearning.ai/the-batch/) - Andrew Ng's weekly AI newsletter with educational focus.
+
+**Industry News**
 - [The Robot Report](https://www.therobotreport.com/) - News and analysis on robotics industry.
-- [IEEE Spectrum Robotics](https://spectrum.ieee.org/topic/robotics/) - IEEE's robotics coverage.
+- [IEEE Spectrum Robotics](https://spectrum.ieee.org/topic/robotics/) - IEEE's robotics coverage and technical features.
 - [Robotics 24/7](https://www.robotics247.com/) - Industry news and research updates.
+
+**Research & Company Blogs**
 - [Hugging Face Blog](https://huggingface.co/blog) - Updates on LeRobot, Reachy, and open-source robotics.
 - [NVIDIA Developer Blog](https://developer.nvidia.com/blog/category/robotics/) - Isaac, Cosmos, and robotics AI updates.
 - [Meta AI Blog](https://ai.meta.com/blog/) - V-JEPA, research updates from Yann LeCun's team.
+- [Boston Dynamics Blog](https://bostondynamics.com/blog/) - Advanced locomotion and manipulation research.
+- [Google DeepMind Blog](https://deepmind.google/blog/) - Gemini Robotics, RT-2, and embodied AI updates.
+
+### People to Follow
+
+Researchers, engineers, and practitioners shaping Physical AI.
+
+**Research Leaders**
+- [Yann LeCun](https://x.com/ylecun) - Chief AI Scientist at Meta. V-JEPA, world models, and self-supervised learning.
+- [Fei-Fei Li](https://x.com/drfeifei) - Stanford HAI, World Labs. Computer vision and spatial intelligence pioneer.
+- [Pieter Abbeel](https://x.com/paboratory) - Berkeley BAIR, Covariant. Robot learning and RL.
+- [Sergey Levine](https://x.com/svlevine) - Berkeley. Reinforcement learning and robot learning.
+- [Chelsea Finn](https://x.com/chelaboratory) - Stanford. Meta-learning and robot learning.
+- [Russ Tedrake](https://x.com/russtedrake) - MIT, Toyota Research Institute. Manipulation and control.
+- [Dieter Fox](https://x.com/dieterfox) - NVIDIA, UW. Perception and robot learning.
+
+**Robotics & Hardware**
+- [Kate Darling](https://x.com/gaboratory) - MIT Media Lab, BD AI Institute. Robotics ethics and human-robot interaction.
+- [Rodney Brooks](https://x.com/rodneyabrooks) - iRobot co-founder, Robust.AI. Robotics pioneer and blogger.
+- [Angelica Lim](https://x.com/petitegeek) - SFU. Social robotics and emotional AI.
+- [Andra Keay](https://x.com/robohub) - Silicon Valley Robotics. Robot ecosystem and startups.
+
+**Industry Leaders**
+- [Brett Adcock](https://x.com/adcock_brett) - Figure CEO. Humanoid robotics at scale.
+- [Austin Lyons](https://x.com/austinlyons) - Chipstrat. Semiconductor and robotics strategy.
+- [Soumith Chintala](https://x.com/soumithchintala) - PyTorch co-founder, Meta. Open-source AI.
+- [Andrej Karpathy](https://x.com/karpathy) - Ex-Tesla AI, educator. Neural networks and autonomous systems.
+
+---
+
+## Getting Started Projects
+
+Hands-on projects to progress from beginner to mastery. All runnable on laptop or mobile.
+
+### Beginner: Foundations (Week 1-2)
+
+Start here to build intuition for robot learning concepts.
+
+- **Gymnasium Cart-Pole** - Classic control problem. Balance a pole using RL in 50 lines of Python. [Tutorial](https://gymnasium.farama.org/tutorials/training_agents/cart_pole/)
+- **MuJoCo Playground** - Explore physics simulation in the browser. No install required. [Playground](https://mujoco.github.io/mujoco_wasm/)
+- **Hugging Face Deep RL Course** - Free, hands-on RL fundamentals with Colab notebooks. [Course](https://huggingface.co/learn/deep-rl-course/)
+- **Spinning Up in Deep RL** - OpenAI's educational resource. Well-documented implementations. [Guide](https://spinningup.openai.com/)
+
+### Intermediate: Simulation & Imitation (Week 3-6)
+
+Build robot policies in simulation environments.
+
+- **LeRobot Tutorials** - Train manipulation policies using Hugging Face's framework. Includes pre-trained models. [Repo](https://github.com/huggingface/lerobot)
+- **Diffusion Policy Colab** - Implement diffusion-based robot policies step by step. [Colab](https://colab.research.google.com/github/real-stanford/diffusion_policy/blob/main/diffusion_policy.ipynb)
+- **MuJoCo Humanoid Control** - Train a humanoid to walk using PPO. [MuJoCo Docs](https://mujoco.readthedocs.io/)
+- **Isaac Lab Getting Started** - GPU-accelerated robot learning. Requires NVIDIA GPU. [Docs](https://isaac-sim.github.io/IsaacLab/)
+- **RoboMimic** - Framework for robot learning from demonstrations. [Repo](https://github.com/ARISE-Initiative/robomimic)
+
+### Advanced: Foundation Models & Transfer (Week 7-12)
+
+Work with state-of-the-art models and real-world transfer.
+
+- **OpenVLA Fine-tuning** - Fine-tune a 7B vision-language-action model on custom tasks. [Guide](https://openvla.github.io/)
+- **Octo Custom Dataset** - Train generalist policies on Open X-Embodiment data. [Repo](https://octo-models.github.io/)
+- **Open X-Embodiment Colab** - Explore 1M+ trajectories across 22 robot embodiments. [Colab](https://colab.research.google.com/github/google-deepmind/open_x_embodiment/blob/main/colabs/Open_X_Embodiment_Datasets.ipynb)
+- **RT-X Evaluation** - Evaluate cross-embodiment transfer with RT-X models. [Paper](https://robotics-transformer-x.github.io/)
+
+### Hardware Projects (Optional)
+
+For those ready to touch real robots.
+
+- **SO-100 Arm ($110)** - LeRobot-compatible low-cost robot arm. [Build Guide](https://github.com/TheRobotStudio/SO-ARM100)
+- **ALOHA ($20K)** - Bimanual teleoperation platform with extensive documentation. [Repo](https://github.com/tonyzhaozh/aloha)
+- **Reachy Mini ($299)** - Desktop humanoid from Pollen Robotics with Python SDK. [Shop](https://www.pollen-robotics.com/)
+- **NVIDIA JetBot** - Autonomous driving on Jetson Nano. Great for perception projects. [Wiki](https://github.com/NVIDIA-AI-IOT/jetbot/wiki)
 
 ---
 
@@ -402,5 +489,4 @@ Other curated lists covering adjacent topics.
 ## Contributing
 
 Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
-
 
