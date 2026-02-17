@@ -17,7 +17,6 @@ safe-outputs:
     - question
     - help-wanted
     - good-first-issue
-source: github/gh-aw/.github/workflows/issue-triage-agent.md@94662b1dee8ce96c876ba9f33b3ab8be32de82a4
 strict: true
 timeout-minutes: 5
 tools:
@@ -58,7 +57,7 @@ Hi @{author}! I've categorized this issue as **{label_name}** based on the follo
 
 </details>
 
-**References**: [Triage run §{run_id}](https://github.com/github/gh-aw/actions/runs/{run_id})
+**References**: [Triage run §{run_id}](https://github.com/{repository}/actions/runs/{run_id})
 ```
 
 **Key formatting requirements**:
