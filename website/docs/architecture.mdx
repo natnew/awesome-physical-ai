@@ -1,0 +1,53 @@
+---
+id: architecture
+title: Architecture
+description: Repository anatomy, content structure, and how the docs layer fits on top.
+---
+
+This is an information architecture page, not an application runtime diagram. The repository was originally a README-first catalog with contribution policy and GitHub workflow metadata, so the most useful architecture view is the editorial layout.
+
+## Repository anatomy
+
+| File or path | Role |
+| --- | --- |
+| [README.md](https://github.com/natnew/awesome-physical-ai/blob/main/README.md) | Primary curated catalog and the source of truth for sections, subsections, project tracks, and related lists. |
+| [CONTRIBUTING.md](https://github.com/natnew/awesome-physical-ai/blob/main/CONTRIBUTING.md) | Defines what qualifies for inclusion, formatting rules, alphabetical ordering, and the pull request checklist. |
+| [LICENSE](https://github.com/natnew/awesome-physical-ai/blob/main/LICENSE) | MIT license at the repository root. |
+| [.github/workflows/issue-triage-agent.md](https://github.com/natnew/awesome-physical-ai/blob/main/.github/workflows/issue-triage-agent.md) | Human-readable issue triage workflow source. |
+| [.github/workflows/issue-triage-agent.lock.yml](https://github.com/natnew/awesome-physical-ai/blob/main/.github/workflows/issue-triage-agent.lock.yml) | Generated workflow file that operationalizes the issue triage automation. |
+| `website/` | This Docusaurus layer. It exists to improve navigation without moving the source catalog out of the README. |
+
+## Content architecture
+
+The README currently breaks the catalog into these major areas:
+
+- Learn
+- Build
+- Deploy
+- Stay Current
+- Getting Started Projects
+- Related Awesome Lists
+- Contributing
+
+Below those headings, the README uses 24 subsection headings to separate courses from books, model families from simulators, hardware from datasets, and similar adjacent concerns.
+
+That split matters because it gives the list a usable shape even before the site exists.
+
+## Why the docs project lives in `website/`
+
+Two repository-specific reasons drove the layout:
+
+1. The root repository should continue to read as an awesome-list project, with the README left in the top-level position.
+2. The existing `.gitignore` already excluded `/site`, so using a committed `website/` project avoided conflicting with the current ignore rules.
+
+## Docs-layer structure
+
+The Docusaurus site adds a separate navigation layer:
+
+- homepage for immediate orientation
+- task-based quick-start routing into the README
+- workflow and curation pages derived from `CONTRIBUTING.md`
+- architecture and scope pages derived from the actual repository structure
+- GitHub Pages deployment workflow for publishing the site
+
+The intent is to keep the source catalog simple while still offering a serious docs experience.

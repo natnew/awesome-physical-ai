@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title>Awesome Physical AI favicon</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#031019" />
+      <stop offset="100%" stop-color="#0a2538" />
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8ce4ff" />
+      <stop offset="100%" stop-color="#48b7ff" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)" />
+  <g fill="none" stroke="url(#line)" stroke-width="6" stroke-linecap="round">
+    <path d="M24 40L52 28L78 48L104 34" />
+    <path d="M24 88L50 70L76 92L104 78" />
+    <path d="M52 28L50 70" />
+    <path d="M78 48L76 92" />
+  </g>
+  <g fill="#dff7ff">
+    <circle cx="24" cy="40" r="6" />
+    <circle cx="52" cy="28" r="7" />
+    <circle cx="78" cy="48" r="6" />
+    <circle cx="104" cy="34" r="7" />
+    <circle cx="24" cy="88" r="6" />
+    <circle cx="50" cy="70" r="7" />
+    <circle cx="76" cy="92" r="6" />
+    <circle cx="104" cy="78" r="7" />
+  </g>
+</svg>

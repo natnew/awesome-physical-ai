@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  --ifm-color-primary: #67d3ff;
+  --ifm-color-primary-dark: #4cc8ff;
+  --ifm-color-primary-darker: #36c1ff;
+  --ifm-color-primary-darkest: #00a4e6;
+  --ifm-color-primary-light: #82dcff;
+  --ifm-color-primary-lighter: #96e2ff;
+  --ifm-color-primary-lightest: #beeefe;
+  --ifm-font-family-base: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  --ifm-font-family-monospace: 'IBM Plex Mono', 'Consolas', monospace;
+  --ifm-heading-font-family: 'Space Grotesk', 'IBM Plex Sans', sans-serif;
+  --ifm-background-color: #051019;
+  --ifm-background-surface-color: #091724;
+  --ifm-navbar-background-color: rgba(5, 16, 25, 0.72);
+  --ifm-footer-background-color: rgba(5, 16, 25, 0.96);
+  --ifm-font-color-base: #f2f8ff;
+  --ifm-heading-color: #f8fbff;
+  --ifm-link-color: #9de0ff;
+  --ifm-code-font-size: 92%;
+  --ifm-line-height-base: 1.72;
+  --ifm-global-radius: 18px;
+}
+
+html[data-theme='dark'] {
+  --ifm-background-color: #051019;
+  --ifm-background-surface-color: #091724;
+}
+
+html,
+body {
+  background: #031019;
+}
+
+body {
+  color: var(--ifm-font-color-base);
+}
+
+body,
+#__docusaurus {
+  min-height: 100vh;
+}
+
+#__docusaurus {
+  position: relative;
+}
+
+.site-content-layer {
+  position: relative;
+  z-index: 2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ifm-heading-font-family);
+  letter-spacing: -0.03em;
+}
+
+.container {
+  max-width: 1360px !important;
+}
+
+.navbar {
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(132, 202, 255, 0.12);
+  box-shadow: none;
+}
+
+.navbar__inner,
+.footer__container {
+  width: min(1360px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.navbar__title,
+.navbar__link {
+  font-weight: 600;
+}
+
+.button {
+  border-radius: 999px;
+}
+
+.button--primary {
+  background: linear-gradient(135deg, #6bd6ff, #3db2ff);
+  border: 0;
+  color: #031018;
+  box-shadow: 0 10px 30px rgba(40, 162, 232, 0.3);
+}
+
+.button--secondary {
+  border-color: rgba(149, 216, 255, 0.48) !important;
+  color: #ebf8ff !important;
+  background: rgba(8, 24, 38, 0.86) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(143, 214, 255, 0.08),
+    0 12px 32px rgba(1, 11, 19, 0.24);
+}
+
+.button--secondary:hover,
+.button--secondary:focus-visible {
+  color: #f7fbff !important;
+  background: rgba(11, 30, 45, 0.94) !important;
+  border-color: rgba(167, 225, 255, 0.6) !important;
+}
+
+.theme-doc-sidebar-container {
+  background: rgba(6, 16, 25, 0.72);
+  border-right: 1px solid rgba(129, 195, 255, 0.12);
+}
+
+.theme-doc-markdown {
+  max-width: 900px;
+}
+
+.main-wrapper,
+.theme-layout-main,
+.footer,
+.navbar {
+  position: relative;
+  z-index: 2;
+}
+
+.theme-doc-markdown table {
+  display: table;
+  width: 100%;
+  background: rgba(7, 18, 28, 0.62);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.theme-doc-markdown th,
+.theme-doc-markdown td {
+  border-color: rgba(131, 199, 255, 0.12);
+}
+
+.theme-doc-markdown a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+.theme-doc-markdown code {
+  border: 1px solid rgba(126, 202, 255, 0.16);
+  background: rgba(12, 27, 40, 0.72);
+}
+
+.theme-doc-markdown blockquote {
+  border-left-color: rgba(103, 211, 255, 0.78);
+  background: rgba(9, 22, 34, 0.72);
+  border-radius: 0 16px 16px 0;
+}
+
+.theme-doc-footer {
+  margin-top: 2.5rem;
+}
+
+.pagination-nav__link {
+  border-color: rgba(129, 195, 255, 0.18);
+  background: rgba(7, 18, 28, 0.76);
+}
+
+.docs-link-grid,
+.signal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.4rem 0;
+}
+
+.docs-card,
+.signal-card {
+  display: block;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(129, 195, 255, 0.18);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(8, 20, 31, 0.86), rgba(6, 16, 25, 0.74));
+  color: inherit;
+  text-decoration: none;
+}
+
+.docs-card strong,
+.signal-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.docs-card span,
+.signal-card span {
+  color: rgba(220, 237, 252, 0.76);
+}
+
+.docs-card:hover {
+  border-color: rgba(130, 215, 255, 0.38);
+  text-decoration: none;
+}
+
+.source-table td:first-child,
+.source-table th:first-child {
+  width: 34%;
+}
+
+@media (max-width: 996px) {
+  .navbar__inner,
+  .footer__container {
+    width: min(100% - 1rem, 100%);
+  }
+}
+
+@media (max-width: 760px) {
+  .docs-link-grid,
+  .signal-grid {
+    grid-template-columns: 1fr;
+  }
+}

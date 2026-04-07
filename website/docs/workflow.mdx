@@ -1,0 +1,67 @@
+---
+id: workflow
+title: Workflow
+description: How to use the catalog and how contributions move through the repository.
+---
+
+This repository already implies a workflow through its README structure and contribution rules. The main value of this page is to make that workflow explicit.
+
+## Use the list effectively
+
+1. Pick the branch that matches your current need: Learn, Build, Deploy, Stay Current, or the project ladder.
+2. Drop into the most specific subsection instead of reading the entire list top to bottom.
+3. Use the subsection to collect candidates, then validate details on the linked upstream project pages, papers, or documentation.
+4. If you discover drift or missing high-value material, return through the contribution process instead of editing ad hoc.
+
+## Contribute to the list
+
+The source workflow is documented in [CONTRIBUTING.md](https://github.com/natnew/awesome-physical-ai/blob/main/CONTRIBUTING.md). The file is explicit about both mechanics and quality bar.
+
+### Contribution sequence
+
+```bash
+git checkout -b add-resource-name
+```
+
+Then:
+
+1. Add the resource to the most specific category.
+2. Keep entries alphabetically ordered within that category.
+3. Use the documented Markdown format.
+4. Open a pull request with a clear title and a short explanation of why the resource is worth adding.
+
+### Required entry format
+
+```markdown
+- [Name](URL) - Description ending with a period.
+```
+
+### Questions the guide asks contributors to answer
+
+- Is the resource actively maintained?
+- Does it add unique value not already covered?
+- Would a robotics researcher or practitioner benefit from knowing about it?
+- Is it accessible through documentation, open-source code, or a public demo?
+
+## Quality controls already documented in the repo
+
+The contribution guide sets category-specific rules instead of using a single vague definition of "awesome":
+
+- Software and tools should be actively maintained, documented, and ideally have more than 100 GitHub stars.
+- Papers should be published at peer-reviewed venues or be influential arXiv preprints with more than 50 citations.
+- Hardware should be commercially available or provide open-source designs with reproduction guides.
+- Courses should come from recognized institutions or show substantial community adoption.
+- Companies should have public products, demos, or research output.
+
+## Existing issue workflow
+
+The repository already contains [.github/workflows/issue-triage-agent.md](https://github.com/natnew/awesome-physical-ai/blob/main/.github/workflows/issue-triage-agent.md) and the generated [.github/workflows/issue-triage-agent.lock.yml](https://github.com/natnew/awesome-physical-ai/blob/main/.github/workflows/issue-triage-agent.lock.yml).
+
+From those tracked files, the current issue-handling behavior is:
+
+- scheduled on weekdays at `0 14 * * 1-5`
+- manually runnable through `workflow_dispatch`
+- focused on unlabeled issues
+- allowed to apply only the labels `bug`, `feature`, `enhancement`, `documentation`, `question`, `help-wanted`, and `good-first-issue`
+
+That is the real automation present in the repository today. This docs site does not assume any broader review, link-checking, or catalog-validation pipeline.

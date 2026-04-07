@@ -205,3 +205,13 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# skills
+.github/skills/
+
+# Docusaurus website local/build artifacts
+website/node_modules/
+website/.docusaurus/
+website/build/
+website/.cache-loader/
+
