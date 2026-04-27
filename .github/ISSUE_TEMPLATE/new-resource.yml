@@ -1,0 +1,78 @@
+name: New resource
+description: Propose a single high-signal resource to add to the curated list.
+title: "Add: <resource name>"
+labels: ["type:new-resource"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting, read [CONTRIBUTING.md](https://github.com/natnew/awesome-physical-ai/blob/main/CONTRIBUTING.md) and the [curation standards](https://github.com/natnew/awesome-physical-ai/blob/main/website/docs/curation-standards.mdx). Only propose resources you have personally used or can genuinely recommend.
+  - type: input
+    id: name
+    attributes:
+      label: Resource name
+      placeholder: e.g. PyTorch
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Canonical URL. No trailing slash.
+      placeholder: https://example.org/project
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Proposed category
+      options:
+        - Simulators
+        - Datasets
+        - Benchmarks
+        - Evaluation Methodology
+        - Robotics Foundation Models
+        - World Models
+        - Manipulation
+        - Locomotion
+        - Sim-to-Real
+        - Safety & Robustness
+        - Governance & Policy
+        - Production Patterns
+        - Courses
+        - Companies
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: One-line description
+      description: Concise sentence. Starts with uppercase, ends with a period.
+      placeholder: Tensor library with autograd.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is this high-signal?
+      description: What unique value does it add over entries already present?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Maintenance / credibility evidence
+      description: Last commit date, stars, citations, venue, institutional backing — whatever applies to its category.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I have read CONTRIBUTING.md.
+          required: true
+        - label: I have personally used or can genuinely recommend this resource.
+          required: true
+        - label: This resource is not already listed.
+          required: true

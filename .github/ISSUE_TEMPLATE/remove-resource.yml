@@ -1,0 +1,57 @@
+name: Remove resource
+description: Propose removal of an existing entry that no longer meets the curation bar.
+title: "Remove: <resource name>"
+labels: ["type:remove-resource"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when an entry is dead, abandoned, low-signal, duplicated, or miscategorised. See [curation standards](https://github.com/natnew/awesome-physical-ai/blob/main/website/docs/curation-standards.mdx).
+  - type: input
+    id: link
+    attributes:
+      label: Link to the existing entry
+      description: URL of the entry as it appears in the list.
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Current category
+      options:
+        - Simulators
+        - Datasets
+        - Benchmarks
+        - Evaluation Methodology
+        - Robotics Foundation Models
+        - World Models
+        - Manipulation
+        - Locomotion
+        - Sim-to-Real
+        - Safety & Robustness
+        - Governance & Policy
+        - Production Patterns
+        - Courses
+        - Companies
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: Reason
+      options:
+        - Dead link
+        - Abandoned
+        - Low-signal
+        - Duplicate
+        - Miscategorised
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Last commit date, archive notice, replacement entry, or other supporting detail.
+    validations:
+      required: true

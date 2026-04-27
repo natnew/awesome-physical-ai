@@ -1,0 +1,49 @@
+name: Category proposal
+description: Propose a new top-level category. Requires at least three seed entries.
+title: "Category: <proposed name>"
+labels: ["type:category-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        New categories must arrive with **at least three vetted seed entries** in the canonical entry format. Proposals without three seed entries will be deferred. See [CONTRIBUTING.md](https://github.com/natnew/awesome-physical-ai/blob/main/CONTRIBUTING.md).
+  - type: input
+    id: name
+    attributes:
+      label: Proposed category name
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why is this category needed?
+      description: What gap does it fill in the current taxonomy?
+    validations:
+      required: true
+  - type: textarea
+    id: differentiation
+    attributes:
+      label: How does it differ from existing categories?
+      description: Compare against the current 14 top-level categories. Explain why the proposed entries do not belong in any of them.
+    validations:
+      required: true
+  - type: textarea
+    id: seeds
+    attributes:
+      label: Seed entries (minimum 3)
+      description: One per line, in canonical format.
+      placeholder: |
+        - [Name](URL) - Description ending with a period.
+        - [Name](URL) - Description ending with a period.
+        - [Name](URL) - Description ending with a period.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I have listed at least three seed entries above.
+          required: true
+        - label: Each seed entry meets the curation standards for its kind.
+          required: true

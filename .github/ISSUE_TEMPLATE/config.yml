@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Curation standards
+    url: https://github.com/natnew/awesome-physical-ai/blob/main/website/docs/curation-standards.mdx
+    about: Read the inclusion bar before opening an issue.
+  - name: Contributing guide
+    url: https://github.com/natnew/awesome-physical-ai/blob/main/CONTRIBUTING.md
+    about: Entry format, placement rules, and PR checklist.

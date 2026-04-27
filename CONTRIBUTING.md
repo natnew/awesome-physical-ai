@@ -38,6 +38,11 @@ Follow these formatting conventions:
 - No trailing slashes on URLs.
 - No period after URLs.
 
+Do / don't:
+
+- Do: `- [PyTorch](https://pytorch.org) - Tensor library with autograd.`
+- Don't: `- [pytorch](https://pytorch.org/) Tensor library with autograd` (lowercase name, trailing slash, missing dash separator and terminal period).
+
 ### Categories
 
 - Add entries to the most specific applicable category.
@@ -65,9 +70,16 @@ Follow these formatting conventions:
 - Miscategorized resources.
 - Duplicate entries.
 
+### How to propose a removal
+
+Open a [**Remove resource**](https://github.com/natnew/awesome-physical-ai/issues/new/choose) issue. Include the link to the existing entry, its current category, the reason (dead link / abandoned / low-signal / duplicate / miscategorised), and supporting evidence (last commit date, archive notice, replacement entry, etc.). Removals are accepted when the entry no longer meets the curation standards above.
+
+### How to propose a new category
+
+Open a [**Category proposal**](https://github.com/natnew/awesome-physical-ai/issues/new/choose) issue. Include the proposed name, why it is needed, how it differs from existing categories, and **at least three seed entries** in the canonical entry format. Proposals without three vetted seed entries will be deferred.
+
 ### Suggesting Improvements
 
-- New categories (with 3+ entries ready).
 - Restructuring proposals.
 - Documentation improvements.
 
@@ -75,10 +87,10 @@ Follow these formatting conventions:
 
 - [ ] I have read and followed the guidelines above.
 - [ ] The resource is not a duplicate.
-- [ ] The resource meets quality standards.
-- [ ] Formatting follows conventions.
-- [ ] Entry is in alphabetical order.
-- [ ] Links are working.
+- [ ] The resource meets the quality standards for its category.
+- [ ] Formatting follows the conventions in the Formatting section.
+- [ ] Entry is placed in the most specific applicable category, in alphabetical order.
+- [ ] Links are working and have no trailing slash.
 - [ ] I have provided a clear explanation of why this resource is awesome.
 
 ## Code of Conduct
