@@ -174,22 +174,24 @@ const docsNavigation = [
 export default function Home() {
   return (
     <Layout
-      title="Docs"
-      description="Standalone documentation and navigation for the Awesome Physical AI repository."
+      title="Awesome Physical AI — Curated Physical AI Resources & Roadmap"
+      description="Awesome Physical AI: a curated, engineering-oriented map of Physical AI resources, robotics resources, robot learning, embodied AI, embodied agents, robotics simulation, sim-to-real, world models, vision-language-action (VLA) models, Physical AI benchmarks, foundation models for robotics, generalist robot policies, and production-grade, safe embodied AI systems."
     >
       <main className={styles.main}>
           <header className={styles.hero}>
-            <p className={styles.eyebrow}>README-first documentation for a curated Physical AI catalog</p>
+            <p className={styles.eyebrow}>Curated Physical AI resources — a Physical AI roadmap for robotics, embodied AI, simulation, world models, and VLA models</p>
             <h1 className={styles.title}>
-              <span className={styles.titleLine}>Physical / Embodied AI:</span>
+              <span className={styles.titleLine}>Physical AI &amp; Embodied AI:</span>
               <span className={styles.titleLine}>Find resources faster.</span>
             </h1>
             <p className={styles.lead}>
-              Awesome Physical AI describes itself as a curated list of resources to learn,
-              build, deploy, and stay current in Physical AI / Embodied AI. The repository is
-              centered on a single README plus contribution policy and GitHub workflow files, so
-              this site focuses on orientation, navigation, and the curation model rather than a
-              fictional software runtime.
+              Awesome Physical AI is a curated, engineering-oriented map of Physical AI resources —
+              robotics resources, robot learning, embodied agents, robotics simulation, sim-to-real,
+              world models, vision-language-action (VLA) models, Physical AI benchmarks, foundation
+              models for robotics, generalist robot policies, and patterns for production-grade,
+              safe embodied AI systems. The repository is centered on a single README plus
+              contribution policy and GitHub workflow files, so this site focuses on orientation,
+              navigation, and the curation model rather than a fictional software runtime.
             </p>
             <div className={styles.actions}>
               <Link className="button button--primary button--lg" to="/docs/overview">

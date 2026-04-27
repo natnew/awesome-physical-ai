@@ -2,7 +2,7 @@
 const config = {
   title: 'Awesome Physical AI',
   tagline:
-    'Repository-grounded navigation for the curated Physical AI / Embodied AI resource list.',
+    'A curated Physical AI roadmap: robotics resources, embodied AI, world models, robotics simulation, sim-to-real, Physical AI benchmarks, foundation models for robotics, and production-grade Physical AI systems.',
   favicon: 'img/favicon.svg',
   url: 'https://natnew.github.io',
   baseUrl: process.env.DOCUSAURUS_BASE_URL || '/awesome-physical-ai/',
@@ -37,6 +37,32 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {
+          name: 'description',
+          content:
+            'Awesome Physical AI — a curated, engineering-oriented map of Physical AI resources: robotics resources, robot learning, embodied AI, embodied agents, embodied intelligence, robotics simulation, sim-to-real, world models, vision-language-action (VLA) models, Physical AI benchmarks, robotics datasets, robotics benchmarks, foundation models for robotics, generalist robot policies, and production-grade, safe embodied AI systems.',
+        },
+        {
+          name: 'keywords',
+          content:
+            'awesome physical AI, Physical AI resources, Physical AI roadmap, robotics resources, robot learning, robotics foundation models, embodied AI, embodied agents, embodied intelligence, robotics simulation, sim-to-real, simulation environments, world models, vision-language-action models, VLA models, Physical AI benchmarks, robotics datasets, robotics benchmarks, foundation models for robotics, generalist robot policies, production-grade Physical AI systems, safe embodied AI systems',
+        },
+        { property: 'og:title', content: 'Awesome Physical AI' },
+        {
+          property: 'og:description',
+          content:
+            'A curated Physical AI roadmap covering robotics resources, embodied AI, world models, robotics simulation, sim-to-real, VLA models, Physical AI benchmarks, foundation models for robotics, generalist robot policies, and production-grade, safe embodied AI systems.',
+        },
+        { property: 'og:type', content: 'website' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'Awesome Physical AI' },
+        {
+          name: 'twitter:description',
+          content:
+            'Curated Physical AI resources: robotics, embodied AI, simulation, sim-to-real, world models, VLA models, benchmarks, and production-grade Physical AI systems.',
+        },
+      ],
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: true,

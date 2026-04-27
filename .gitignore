@@ -215,3 +215,7 @@ website/.docusaurus/
 website/build/
 website/.cache-loader/
 
+
+# Project constitution (local only)
+specs/
+
