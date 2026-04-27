@@ -1,5 +1,11 @@
 # Awesome Physical AI [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+[![License: MIT](https://img.shields.io/github/license/natnew/awesome-physical-ai?color=blue)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Last Commit](https://img.shields.io/github/last-commit/natnew/awesome-physical-ai)](https://github.com/natnew/awesome-physical-ai/commits/main)
+[![Contributors](https://img.shields.io/github/contributors/natnew/awesome-physical-ai)](https://github.com/natnew/awesome-physical-ai/graphs/contributors)
+[![GitHub stars](https://img.shields.io/github/stars/natnew/awesome-physical-ai?style=social)](https://github.com/natnew/awesome-physical-ai/stargazers)
+
 > A curated list of **awesome Physical AI** resources — a Physical AI roadmap covering robotics, embodied AI, simulation, world models, and production-grade Physical AI systems.
 
 Physical AI and embodied AI represent the convergence of large-scale machine learning with robotics — enabling embodied agents that perceive, reason, and act in the physical world. This list is a curated, engineering-oriented map of **Physical AI resources**: robotics resources, robot learning, robotics foundation models, vision-language-action models (VLA models), world models, robotics simulation, sim-to-real techniques, simulation environments, Physical AI benchmarks, robotics datasets, robotics benchmarks, foundation models for robotics, generalist robot policies, and patterns for safe, production-grade Physical AI systems.
@@ -51,7 +57,7 @@ Physics engines and high-fidelity simulation environments for robotics and embod
 - [Isaac Lab](https://isaac-sim.github.io/IsaacLab/) — Unified robot learning framework on Isaac Sim for RL, imitation learning, and motion planning.
 - [Drake](https://drake.mit.edu/) — Model-based design toolbox from TRI/MIT for planning, control, and rigorous dynamics analysis.
 - [Gazebo](https://gazebosim.org/) — Open-source robotics simulator with mature ROS integration and broad sensor support.
-- [PyBullet](https://pybullet.org/) — Open-source physics engine with Python bindings, popular for prototyping and RL.
+- [PyBullet](https://github.com/bulletphysics/bullet3) — Open-source physics engine (Bullet) with Python bindings, popular for prototyping and RL.
 - [Habitat](https://aihabitat.org/) — Embodied AI platform optimised for high-throughput 3D navigation and instruction-following research.
 - [SAPIEN](https://sapien.ucsd.edu/) — Physics-rich simulator with the PartNet-Mobility articulated object dataset.
 - [Genesis](https://genesis-embodied-ai.github.io/) — Universal differentiable simulator for robotics and embodied AI with cross-platform physics solvers.
@@ -77,7 +83,7 @@ Task suites and standardised evaluations for manipulation, locomotion, and embod
 - [RLBench](https://sites.google.com/view/rlbench) — Vision-guided manipulation benchmark covering 100+ tasks in CoppeliaSim.
 - [MetaWorld](https://meta-world.github.io/) — Meta-RL benchmark with 50 manipulation tasks for multi-task and transfer studies.
 - [CALVIN](https://github.com/mees/calvin) — Benchmark for long-horizon, language-conditioned manipulation.
-- [HumanoidBench](https://sferrazza.cc/humanoidbench_site/) — Simulated humanoid benchmark for whole-body control across locomotion and manipulation.
+- [HumanoidBench](https://humanoid-bench.github.io/) — Simulated humanoid benchmark for whole-body control across locomotion and manipulation.
 - [FurnitureBench](https://clvrai.github.io/furniture-bench/) — Real-world long-horizon furniture assembly benchmark.
 - [ARNOLD](https://arnold-benchmark.github.io/) — Language-grounded continuous-task benchmark in physically realistic scenes.
 - [Colosseum](https://robot-colosseum.github.io/) — Generalisation benchmark perturbing 14 axes of variation for manipulation.
@@ -88,7 +94,6 @@ Task suites and standardised evaluations for manipulation, locomotion, and embod
 Harnesses, metrics, and methodology for measuring robot policy performance, robustness, and sim-to-real validity.
 
 - [RoboArena](https://robo-arena.github.io/) — Decentralised real-world evaluation protocol for generalist robot policies.
-- [Isaac Lab-Arena](https://developer.nvidia.com/blog/nvidia-releases-new-physical-ai-models/) — NVIDIA evaluation framework for benchmarking robot policies at scale in simulation.
 - [robomimic](https://robomimic.github.io/) — Standardised offline-RL and imitation-learning evaluation pipeline with reproducible baselines.
 - [Bench2Drive](https://github.com/Thinklab-SJTU/Bench2Drive) — Closed-loop evaluation protocol for end-to-end driving policies.
 - [Eval-vs-Train Mismatch (Kumar et al.)](https://arxiv.org/abs/2306.13085) — Methodology paper on why offline metrics mispredict deployed robot performance.
@@ -105,7 +110,7 @@ Generalist policies and vision-language-action (VLA) models for robotic control.
 - [RT-2](https://robotics-transformer2.github.io/) — Vision-language-action model that transfers web knowledge to robotic control.
 - [RT-X](https://robotics-transformer-x.github.io/) — Cross-embodiment models demonstrating positive transfer across robot platforms.
 - [Gemini Robotics](https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/) — Google DeepMind VLA family with embodied reasoning capabilities.
-- [GR00T N1 (NVIDIA)](https://developer.nvidia.com/isaac/groot) — Open humanoid foundation model with a dual-system slow/fast architecture.
+- [GR00T N1 (NVIDIA)](https://developer.nvidia.com/isaac/gr00t) — Open humanoid foundation model with a dual-system slow/fast architecture.
 - [Helix (Figure)](https://www.figure.ai/) — Vision-language-action model targeting generalist humanoid control.
 
 ## World Models
@@ -139,7 +144,7 @@ Legged, bipedal, and humanoid locomotion — controllers, learning approaches, a
 
 - [Learning to Walk in Minutes (ETH/RSL)](https://leggedrobotics.github.io/legged_gym/) — Massively-parallel RL pipeline that trains quadruped locomotion policies from scratch in simulation.
 - [RMA — Rapid Motor Adaptation](https://ashish-kmr.github.io/rma-legged-robots/) — Online adaptation method for robust real-world quadruped locomotion.
-- [ANYmal Parkour (RSL)](https://leggedrobotics.com/anymal/) — Perceptive locomotion enabling agile traversal of complex terrain.
+- [ANYmal Parkour (RSL)](https://www.anybotics.com/robotics/anymal/) — Perceptive locomotion enabling agile traversal of complex terrain.
 - [Cassie Bipedal Locomotion](https://arxiv.org/abs/2105.08328) — Sim-to-real RL controllers for blind bipedal locomotion on Cassie.
 - [HumanPlus](https://humanoid-ai.github.io/) — Humanoid shadowing of human motion for whole-body control via teleoperation and RL.
 - [OmniH2O](https://omni.human2humanoid.com/) — Universal whole-body teleoperation and learning for humanoids.
@@ -154,7 +159,7 @@ Techniques and case studies for transferring policies trained in simulation to r
 - [Learning Dexterous In-Hand Manipulation (OpenAI)](https://arxiv.org/abs/1808.00177) — Sim-to-real dexterous manipulation via automatic domain randomization.
 - [Sim-to-Real via Sim-to-Sim (Koos et al. line)](https://arxiv.org/abs/1812.07252) — Bridging the reality gap with progressively more realistic intermediate simulators.
 - [Eureka (NVIDIA)](https://eureka-research.github.io/) — LLM-driven reward design that enables sim-to-real transfer for dexterous skills.
-- [DextrAH-G](https://dextrah-g.github.io/) — Sim-to-real dexterous arm-hand grasping pipeline using GPU-parallel RL.
+- [DextrAH-G](https://sites.google.com/view/dextrah-g) — Sim-to-real dexterous arm-hand grasping pipeline using GPU-parallel RL.
 - [Real-World Humanoid Locomotion (Radosavovic et al.)](https://arxiv.org/abs/2303.03381) — Sim-to-real RL for humanoid walking with strong robustness.
 - [DayDreamer](https://danijar.com/project/daydreamer/) — World-model approach that reduces real-robot interaction needed for transfer.
 
@@ -180,7 +185,7 @@ Standards, frameworks, and policy guidance relevant to deploying Physical AI sys
 - [IEEE 7000 Series](https://standards.ieee.org/initiatives/autonomous-intelligence-systems/standards/) — Standards on ethical and value-based design for autonomous and intelligent systems.
 - [OECD AI Principles](https://oecd.ai/en/ai-principles) — Intergovernmental principles guiding trustworthy AI deployment, including embodied systems.
 - [UK AI Safety Institute](https://www.aisi.gov.uk/) — Government body publishing evaluations and guidance on frontier AI risks.
-- [White House Executive Order on AI (14110)](https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/) — US federal directive on safe and trustworthy AI development relevant to robotics deployers.
+- [White House Executive Order on AI (14110)](https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence) — US federal directive on safe and trustworthy AI development relevant to robotics deployers.
 
 ## Production Patterns / Reference Architectures
 
@@ -191,7 +196,7 @@ Middleware, runtime stacks, and reference patterns for shipping robots in produc
 - [MoveIt 2](https://moveit.ros.org/) — Production-grade motion planning framework integrated with ROS 2.
 - [Nav2](https://docs.nav2.org/) — ROS 2 navigation stack with behaviour trees, planners, and recovery patterns.
 - [Open-RMF](https://www.open-rmf.org/) — Open-source framework for multi-robot, multi-vendor fleet orchestration.
-- [DDS Security (RTI Connext / Cyclone DDS)](https://www.dds-foundation.org/dds-security-overview/) — Reference patterns for authenticated, encrypted robot data buses.
+- [DDS Security (OMG Spec)](https://www.omg.org/spec/DDS-SECURITY/) — Reference standard for authenticated, encrypted robot data buses (used by ROS 2).
 - [Foxglove](https://foxglove.dev/) — Observability and visualisation stack for robotics telemetry, logs, and replay.
 
 ## Courses
@@ -201,7 +206,7 @@ University courses and structured learning programs in robot learning and embodi
 - [CS 336 — Robot Learning (Stanford)](https://cs336.stanford.edu/) — Modern robot learning, covering imitation and reinforcement learning.
 - [CS 224R — Deep RL for Robotics (Stanford)](http://cs224r.stanford.edu/) — Deep reinforcement learning for real-world robots.
 - [CS 287 — Advanced Robotics (Berkeley)](https://people.eecs.berkeley.edu/~pabbeel/cs287-fa19/) — Planning, learning, and control for robotics.
-- [16-831 — Introduction to Robot Learning (CMU)](https://www.cs.cmu.edu/~robotlearning/) — CMU's foundations of robot learning.
+- [16-831 — Introduction to Robot Learning (CMU)](https://16-831-s24.github.io/) — CMU's foundations of robot learning.
 - [MIT 6.4210 — Robotic Manipulation](https://manipulation.csail.mit.edu/) — Perception, planning, and control for manipulation by Russ Tedrake.
 - [Spinning Up in Deep RL (OpenAI)](https://spinningup.openai.com/) — Educational resource covering deep RL fundamentals with reference implementations.
 - [Hugging Face Deep RL Course](https://huggingface.co/learn/deep-rl-course/) — Free hands-on course on deep reinforcement learning.
