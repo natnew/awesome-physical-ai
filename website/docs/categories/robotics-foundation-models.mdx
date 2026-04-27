@@ -6,7 +6,15 @@ description: Generalist policies and vision-language-action (VLA) models for rob
 
 # Robotics Foundation Models
 
-Generalist policies and vision-language-action (VLA) models for robotic control.
+Robotics foundation models — increasingly framed as vision-language-action (VLA) models — are large pretrained policies that map perception and language directly to robot actions. They aim to be generalist across tasks, scenes, and in some cases embodiments, in the same way that LLMs are generalist across text tasks.
+
+From an engineering standpoint, these models are reshaping the stack: classical perception–planning–control pipelines are being replaced or augmented by a single learned policy, with fine-tuning and prompting as the primary integration surface. That shift moves a lot of risk into data quality, evaluation methodology, and runtime safety, because the model's competence boundary is no longer something you can read off a state machine.
+
+When choosing between options, weigh **embodiment coverage** vs. your target robot, **openness** (weights, training data, fine-tuning recipes), **action-space conventions** (continuous control, discretised tokens, flow matching), and **inference cost** at the control frequency you need. Open models with reproducible recipes are usually a better starting point than closed APIs for any system you intend to deploy and evaluate rigorously.
+
+:::tip Start here
+**[OpenVLA](https://openvla.github.io/)** is the most accessible entry point: open weights, open training recipe, and a 7B-parameter VLA built on a strong vision-language backbone.
+:::
 
 - [π0 (Physical Intelligence)](https://www.physicalintelligence.company/) — Generalist policy combining multi-robot data with flow matching for dexterous manipulation.
 - [Octo](https://octo-models.github.io/) — Open-source generalist robot policy trained on Open X-Embodiment with cross-embodiment fine-tuning.

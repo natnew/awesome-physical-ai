@@ -6,7 +6,15 @@ description: Middleware, runtime stacks, and reference patterns for shipping rob
 
 # Production Patterns / Reference Architectures
 
-Middleware, runtime stacks, and reference patterns for shipping robots in production.
+Production patterns covers the middleware, runtime stacks, and reference architectures used to actually ship robots — message buses, motion planners, navigation stacks, fleet orchestration, and the observability tooling that keeps deployed systems debuggable. It is the layer between a trained policy and a robot a customer can use.
+
+From an engineering standpoint, this is where the cost of operating a fleet is set. Choices about middleware (DDS profiles, QoS), real-time guarantees, security (authentication, encryption on the data bus), and telemetry shape on-call load, incident response time, and the ability to ship updates safely. Most of the reliability differences between robotics teams trace back to decisions made — or skipped — at this layer.
+
+When choosing components, anchor on a **stable middleware** (ROS 2 with a supported DDS vendor is the default), pick **planners and navigation stacks** that match your kinematics and environment, and invest early in **observability** (structured logs, replayable bag files, dashboards). For multi-robot deployments, fleet orchestration and security profiles stop being optional — design them in from the start.
+
+:::tip Start here
+**[ROS 2](https://docs.ros.org/)** is the default backbone: production-grade middleware with QoS, security, and real-time profiles, and the substrate most other entries in this list build on.
+:::
 
 - [ROS 2](https://docs.ros.org/) — De facto middleware for production robot software, with QoS, security, and real-time profiles.
 - [NVIDIA Isaac ROS](https://developer.nvidia.com/isaac-ros) — GPU-accelerated ROS 2 perception and navigation packages for production robots.

@@ -6,7 +6,15 @@ description: Legged, bipedal, and humanoid locomotion — controllers, learning 
 
 # Locomotion
 
-Legged, bipedal, and humanoid locomotion — controllers, learning approaches, and reference platforms.
+Locomotion covers the controllers, learning pipelines, and reference platforms behind legged, bipedal, and humanoid movement. It spans model-based whole-body control, RL-trained neural controllers, perceptive locomotion over rough terrain, and the GPU-parallel training stacks that make modern sim-to-real locomotion practical.
+
+From an engineering standpoint, locomotion is the category where sim-to-real *works* — modern RL policies for quadrupeds and humanoids transfer reliably when training is done with massive parallelism and well-tuned domain randomisation. The interesting risks have moved up the stack: robustness to terrain and disturbances, perceptive integration with cameras and depth, and the safety envelope around fast, dynamic motion near humans.
+
+When choosing between approaches, weigh **platform** (quadruped vs. biped vs. humanoid), **simulator and trainer** (Isaac Lab + RSL-RL is the current default), and **perceptive vs. blind** locomotion based on the terrain you actually need. Reference platforms and open codebases matter disproportionately here: most production locomotion stacks are forks of a small number of well-maintained repositories.
+
+:::tip Start here
+**[Learning to Walk in Minutes (ETH/RSL)](https://leggedrobotics.github.io/legged_gym/)** plus **[RSL-RL](https://github.com/leggedrobotics/rsl_rl)** is the canonical starting stack: GPU-parallel RL, well-tuned PPO, and a working sim-to-real pipeline for quadrupeds.
+:::
 
 - [Learning to Walk in Minutes (ETH/RSL)](https://leggedrobotics.github.io/legged_gym/) — Massively-parallel RL pipeline that trains quadruped locomotion policies from scratch in simulation.
 - [RMA — Rapid Motor Adaptation](https://ashish-kmr.github.io/rma-legged-robots/) — Online adaptation method for robust real-world quadruped locomotion.

@@ -6,7 +6,15 @@ description: Tools, benchmarks, and methodology for safe exploration, robustness
 
 # Safety & Robustness
 
-Tools, benchmarks, and methodology for safe exploration, robustness testing, and failure-mode analysis.
+Safety and robustness covers the tools, benchmarks, and methodology used to constrain policy behaviour, stress-test it under adversarial or out-of-distribution conditions, and characterise its failure modes. It includes constrained RL, safe-exploration environments, formal verification, and the evaluation protocols used to gate deployment.
+
+From an engineering and deployment standpoint, this is the category that determines whether a system is shippable. Capability metrics describe what a policy can do on a good day; safety and robustness work describes what it does on the worst day, in the long tail, and under correlated failures. For physical systems, that distinction is regulatory, contractual, and sometimes life-critical — not optional.
+
+When choosing tools, separate **training-time safety** (constrained RL, safe exploration) from **evaluation-time safety** (adversarial scenarios, stress tests, formal verification) and apply both. Match the **failure-mode taxonomy** to your deployment context — collisions, force limits, drift, hallucinated actions — and pair quantitative robustness metrics with explicit human-in-the-loop fallback paths.
+
+:::tip Start here
+**[Safety Gym (OpenAI)](https://github.com/openai/safety-gym)** is a clean starting point for hands-on work on constrained and safe-exploration RL, with reference environments and baselines that map directly to the literature.
+:::
 
 - [Safety Gym (OpenAI)](https://github.com/openai/safety-gym) — Environments for benchmarking constrained and safe-exploration RL.
 - [Safe Control Gym](https://github.com/utiasDSL/safe-control-gym) — Benchmark suite for safe learning-based control with constraints and disturbances.

@@ -6,7 +6,15 @@ description: Large-scale teleoperation, demonstration, and interaction datasets 
 
 # Datasets
 
-Large-scale teleoperation, demonstration, and interaction datasets used to train robot policies.
+Datasets in Physical AI are the recorded streams of robot behaviour — teleoperated demonstrations, scripted rollouts, and large-scale egocentric video — that feed imitation learning, behaviour cloning, and pretraining for vision-language-action models. They typically include synchronised proprioception, multi-view RGB, depth, and language annotations across one or many embodiments.
+
+From an engineering standpoint, the dataset is the single biggest determinant of what a learned policy can do and where it will silently fail. Coverage gaps, embodiment skew, demonstration quality, and licensing terms propagate directly into deployed behaviour, and dataset hygiene (synchronisation, calibration, action-space conventions) is far more decisive than model architecture for most real-world results.
+
+When choosing between datasets, weigh **embodiment alignment** with your target robot, **task and scene diversity**, **action-space and control-frequency conventions**, and **licence terms** for commercial use. Cross-embodiment corpora are powerful for pretraining but rarely sufficient on their own — most production stacks combine a broad pretraining set with a smaller, tightly-scoped fine-tuning set collected on the deployment platform.
+
+:::tip Start here
+**[Open X-Embodiment](https://robotics-transformer-x.github.io/)** is the default starting point: 1M+ trajectories across 22 embodiments, and the dataset most modern generalist policies are benchmarked against.
+:::
 
 - [Open X-Embodiment](https://robotics-transformer-x.github.io/) — 1M+ trajectories across 22 embodiments; the de facto cross-embodiment training corpus.
 - [DROID](https://droid-dataset.github.io/) — Large-scale, in-the-wild manipulation dataset collected across 13 institutions.

@@ -6,7 +6,15 @@ description: Generative and predictive models of physical dynamics used for plan
 
 # World Models
 
-Generative and predictive models of physical dynamics used for planning, simulation, and pretraining.
+World models are learned predictive models of physical dynamics. They take observations and actions and produce future observations, latent states, or full rollouts — enabling planning in imagination, sample-efficient RL, synthetic data generation, and pretraining for downstream policies.
+
+From an engineering standpoint, world models are how the field is attacking the data-efficiency problem: every step of imagined rollout is one fewer step on hardware, and a good world model can compress months of teleoperation into a reusable simulator. The same property makes them a load-bearing dependency for any system that uses them — model errors compound over rollout horizons, and silently shape what downstream policies can and cannot learn.
+
+When choosing between approaches, separate **generative pixel-space models** (useful for synthetic data and visualisation) from **latent-space predictive models** (useful for planning and control), and weigh **rollout horizon fidelity**, **action-conditioning quality**, and **compute cost per imagined step**. For robot learning specifically, models with demonstrated downstream task transfer matter more than visually impressive video samples.
+
+:::tip Start here
+**[DreamerV3](https://danijar.com/project/dreamerv3/)** is the most pragmatic entry point: a single fixed set of hyperparameters that produces strong results across 150+ tasks, and a clean reference implementation of latent-space world-model RL.
+:::
 
 - [V-JEPA 2 (Meta FAIR)](https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/) — Self-supervised video world model trained on 1M+ hours enabling zero-shot robot planning.
 - [NVIDIA Cosmos](https://developer.nvidia.com/cosmos) — World foundation models for physically-grounded synthetic data generation.

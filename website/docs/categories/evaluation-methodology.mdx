@@ -6,7 +6,15 @@ description: Harnesses, metrics, and methodology for measuring robot policy perf
 
 # Evaluation Methodology
 
-Harnesses, metrics, and methodology for measuring robot policy performance, robustness, and sim-to-real validity.
+Evaluation methodology is the discipline of measuring policies *correctly* — the harnesses, metrics, statistical practices, and protocols that turn a noisy stream of rollouts into a defensible claim about capability. It is distinct from benchmarks: benchmarks fix the *tasks*; methodology fixes how you *measure* over them.
+
+From an engineering and deployment standpoint, this is where most reproducibility failures and overclaimed results live. Small evaluation samples, hidden seed selection, mismatched simulator builds, and offline metrics that do not predict online behaviour all combine to produce numbers that look strong on paper and collapse on hardware. Robust methodology is what makes go/no-go decisions, regression checks, and external comparisons trustworthy.
+
+When choosing tools here, prioritise **statistical rigour** (confidence intervals, seed counts, paired comparisons), **sim-real correlation** for anything you intend to deploy, and **closed-loop evaluation** over open-loop replay whenever the task involves control. Treat the evaluation harness as production code: version it, pin it, and require that any reported metric is reproducible from a single command.
+
+:::tip Start here
+**[Statistical Reliability of RL Evaluations](https://agarwl.github.io/rliable/)** (`rliable`) is the fastest way to upgrade your evaluation hygiene — confidence intervals, performance profiles, and aggregate metrics that hold up under low seed counts.
+:::
 
 - [RoboArena](https://robo-arena.github.io/) — Decentralised real-world evaluation protocol for generalist robot policies.
 - [robomimic](https://robomimic.github.io/) — Standardised offline-RL and imitation-learning evaluation pipeline with reproducible baselines.

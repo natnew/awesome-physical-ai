@@ -6,7 +6,15 @@ description: Physics engines and high-fidelity simulation environments for robot
 
 # Simulators
 
-Physics engines and high-fidelity simulation environments for robotics and embodied AI.
+Simulators are the physics engines and rendering stacks where robot policies are trained, stress-tested, and iterated long before they touch hardware. They span rigid-body dynamics, contact-rich manipulation, photorealistic sensor simulation, and GPU-parallel rollouts that turn weeks of real-world data collection into hours of synthetic experience.
+
+From an engineering standpoint, the simulator is a load-bearing dependency: its solver fidelity, contact model, and randomisation surface bound how well a policy can transfer to real hardware, and its throughput bounds how much you can afford to train. The wrong simulator quietly caps the ceiling of every downstream result — sim-to-real gaps, evaluation noise, and hidden modelling shortcuts all originate here.
+
+When choosing between options, weigh **physics fidelity** (contact, friction, articulated bodies, deformables) against **throughput** (single-thread CPU vs. GPU-parallel) and **sensor realism** (ray-traced cameras, depth, tactile). Then check the surrounding ecosystem: ROS integration, asset libraries, RL wrappers, and active maintenance. Match the simulator to the task — dexterous contact work, photoreal perception, and large-scale RL each have different sweet spots.
+
+:::tip Start here
+If you are new to the space, **[MuJoCo](https://mujoco.org/)** is the most pragmatic entry point: fast, accurate contact dynamics, a small API surface, and the de facto baseline for robot-learning research.
+:::
 
 - [MuJoCo](https://mujoco.org/) — Multi-joint dynamics with contact; fast, accurate physics widely used for RL research.
 - [NVIDIA Isaac Sim](https://developer.nvidia.com/isaac-sim) — GPU-accelerated robotics simulator on Omniverse with photorealistic rendering and PhysX.

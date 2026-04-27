@@ -6,7 +6,15 @@ description: Standards, frameworks, and policy guidance relevant to deploying Ph
 
 # Governance & Policy
 
-Standards, frameworks, and policy guidance relevant to deploying Physical AI systems.
+Governance and policy covers the standards, regulatory frameworks, and institutional guidance that constrain how Physical AI systems are designed, evaluated, and deployed. It spans cross-cutting AI risk frameworks (NIST, OECD), regional regulation (EU AI Act, US executive orders), and domain-specific safety standards for industrial and collaborative robotics (ISO 10218, ISO/TS 15066).
+
+From an engineering standpoint, governance is not a separate workstream from the technical stack — it shapes data provenance requirements, evaluation evidence, incident reporting, and the boundary between human oversight and autonomous action. Teams that treat it as a late-stage checklist routinely discover that earlier architectural choices (data pipelines, logging, model documentation) make compliance disproportionately expensive.
+
+When choosing what to track, scope by **deployment region** (EU AI Act vs. US frameworks), **risk tier** (consumer, industrial, safety-critical), and **domain standards** that already apply to your robot class. A small core — NIST AI RMF for risk practice, an applicable ISO robotics standard, and the regional regulation for your market — is usually enough to set the structure of an internal governance baseline.
+
+:::tip Start here
+The **[NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)** is the most useful single artefact to read first: voluntary, technically grounded, and structured in a way that maps cleanly onto engineering processes.
+:::
 
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) — Voluntary framework for managing risks across the AI lifecycle, applicable to robotics.
 - [EU AI Act](https://artificialintelligenceact.eu/) — Regulation establishing risk-tiered obligations for AI systems sold or operated in the EU.

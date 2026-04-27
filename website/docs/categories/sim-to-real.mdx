@@ -6,7 +6,15 @@ description: Techniques and case studies for transferring policies trained in si
 
 # Sim-to-Real
 
-Techniques and case studies for transferring policies trained in simulation to real hardware.
+Sim-to-real is the set of techniques used to make a policy trained in simulation work on real hardware. It includes domain randomisation, system identification, residual learning, world-model-based fine-tuning, and the broader engineering practice of closing the reality gap between a simulator's contact, sensor, and actuator models and the physical robot.
+
+From an engineering standpoint, sim-to-real is the discipline that decides whether all the upstream investment in simulators, datasets, and training compute actually produces a deployable system. The reality gap is rarely a single problem — it is a stack of small mismatches in dynamics, latency, sensor noise, and actuator behaviour that only become visible under closed-loop control. Successful pipelines treat the gap as something to *measure*, not just bridge.
+
+When choosing between techniques, match the **gap source** to the **method**: dynamics gaps respond well to domain randomisation and system identification; perception gaps respond to photoreal rendering and randomised sensor noise; long-tail behavioural gaps often need real-world fine-tuning or world-model adaptation. Always pair sim-to-real claims with at least one real-robot evaluation under controlled perturbations.
+
+:::tip Start here
+**[Domain Randomization (Tobin et al.)](https://arxiv.org/abs/1703.06907)** is the foundational reference for the field — read it first, even when using more modern methods, because every later technique is a refinement of the framing it introduced.
+:::
 
 - [Domain Randomization (Tobin et al.)](https://arxiv.org/abs/1703.06907) — Foundational paper on randomising simulator parameters for zero-shot transfer.
 - [Learning Dexterous In-Hand Manipulation (OpenAI)](https://arxiv.org/abs/1808.00177) — Sim-to-real dexterous manipulation via automatic domain randomization.

@@ -7,19 +7,19 @@ sidebar_position: 0
 
 # Categories
 
-The Awesome Physical AI list is organised into **14 canonical categories**. Each category mirrors the corresponding section of the root [`README.md`](https://github.com/natnew/awesome-physical-ai/blob/main/README.md) — the README remains the source of truth.
+The Awesome Physical AI list is organised into **14 canonical categories**. Each category mirrors the corresponding section of the root [`README.md`](https://github.com/natnew/awesome-physical-ai/blob/main/README.md) — the README remains the source of truth. Each category page now opens with a short engineering-oriented intro covering what it is, why it matters for deployment, and how to choose between entries.
 
-- [Simulators](./simulators.mdx) — Physics engines and high-fidelity simulation environments for robotics and embodied AI.
-- [Datasets](./datasets.mdx) — Large-scale teleoperation, demonstration, and interaction datasets used to train robot policies.
-- [Benchmarks](./benchmarks.mdx) — Task suites and standardised evaluations for manipulation, locomotion, and embodied reasoning.
-- [Evaluation Methodology](./evaluation-methodology.mdx) — Harnesses, metrics, and methodology for measuring policy performance, robustness, and sim-to-real validity.
-- [Robotics Foundation Models](./robotics-foundation-models.mdx) — Generalist policies and vision-language-action (VLA) models for robotic control.
-- [World Models](./world-models.mdx) — Generative and predictive models of physical dynamics used for planning, simulation, and pretraining.
-- [Manipulation](./manipulation.mdx) — Methods, models, and tools for grasping, dexterous manipulation, and contact-rich tasks.
-- [Locomotion](./locomotion.mdx) — Legged, bipedal, and humanoid locomotion controllers, learning approaches, and reference platforms.
-- [Sim-to-Real](./sim-to-real.mdx) — Techniques and case studies for transferring policies trained in simulation to real hardware.
-- [Safety & Robustness](./safety-and-robustness.mdx) — Tools, benchmarks, and methodology for safe exploration, robustness testing, and failure-mode analysis.
-- [Governance & Policy](./governance-and-policy.mdx) — Standards, frameworks, and policy guidance relevant to deploying Physical AI systems.
-- [Production Patterns / Reference Architectures](./production-patterns.mdx) — Middleware, runtime stacks, and reference patterns for shipping robots in production.
-- [Courses](./courses.mdx) — University courses and structured learning programs in robot learning and embodied AI.
-- [Companies](./companies.mdx) — Organisations advancing Physical AI through foundation models, humanoids, and applied robotics.
+- [Simulators](./simulators.mdx) — Physics engines and rendering stacks where policies are trained and stress-tested before touching hardware.
+- [Datasets](./datasets.mdx) — Recorded robot behaviour — teleoperation, demonstrations, egocentric video — that feeds imitation learning and pretraining.
+- [Benchmarks](./benchmarks.mdx) — Fixed task suites for comparing policies under controlled conditions across manipulation, locomotion, and embodied reasoning.
+- [Evaluation Methodology](./evaluation-methodology.mdx) — How to measure policies *correctly* — harnesses, metrics, and statistical practice that turn rollouts into defensible claims.
+- [Robotics Foundation Models](./robotics-foundation-models.mdx) — Generalist pretrained policies and vision-language-action (VLA) models that map perception and language to robot actions.
+- [World Models](./world-models.mdx) — Learned predictive models of physical dynamics used for imagination-based planning, sample-efficient RL, and synthetic data.
+- [Manipulation](./manipulation.mdx) — Grasping, dexterous, and contact-rich methods — analytic planners, diffusion and transformer policies, and the rigs that feed them.
+- [Locomotion](./locomotion.mdx) — Legged, bipedal, and humanoid controllers and the GPU-parallel training stacks that make modern sim-to-real practical.
+- [Sim-to-Real](./sim-to-real.mdx) — Techniques for closing the reality gap — domain randomisation, system identification, residual learning, and real-robot fine-tuning.
+- [Safety & Robustness](./safety-and-robustness.mdx) — Constrained training, adversarial evaluation, and failure-mode analysis that decide whether a system is shippable.
+- [Governance & Policy](./governance-and-policy.mdx) — Standards, regulation, and risk frameworks that shape how Physical AI systems are evaluated and deployed.
+- [Production Patterns / Reference Architectures](./production-patterns.mdx) — Middleware, planners, fleet orchestration, and observability for shipping robots in production.
+- [Courses](./courses.mdx) — Structured learning paths into robot learning and embodied AI for individuals and team onboarding.
+- [Companies](./companies.mdx) — Organisations actively shaping Physical AI in industry — foundation-model labs, platform builders, and applied deployers.

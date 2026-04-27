@@ -6,7 +6,15 @@ description: Task suites and standardised evaluations for manipulation, locomoti
 
 # Benchmarks
 
-Task suites and standardised evaluations for manipulation, locomotion, and embodied reasoning.
+Benchmarks are the fixed task suites — manipulation skills, long-horizon assemblies, language-conditioned rollouts, embodied QA — used to compare policies under controlled conditions. They define the scenes, success criteria, and evaluation protocol so that two methods can be claimed to be measured against the same yardstick.
+
+From an engineering standpoint, benchmarks are how the field communicates progress, but they are also where most overclaimed results originate. A benchmark's distribution, evaluation cap, and randomisation seeds determine whether reported numbers translate to deployed reliability. Treat benchmark wins as evidence of a *floor* of capability under that distribution — not a ceiling, and not a guarantee of generalisation outside it.
+
+When choosing a benchmark, match the **task family** (manipulation, locomotion, embodied reasoning) and **horizon** (single skill vs. long-horizon) to the capability you actually need to demonstrate. Prefer benchmarks with explicit **generalisation axes** (object, scene, language perturbations) over fixed-scene suites, and pair simulated benchmarks with at least one real-world evaluation before drawing conclusions.
+
+:::tip Start here
+**[LIBERO](https://libero-project.github.io/)** is a strong default for manipulation: 130 tasks across procedural variations, well-supported tooling, and broad adoption across recent VLA papers.
+:::
 
 - [LIBERO](https://libero-project.github.io/) — Lifelong robot learning benchmark with 130 diverse manipulation tasks.
 - [RLBench](https://sites.google.com/view/rlbench) — Vision-guided manipulation benchmark covering 100+ tasks in CoppeliaSim.

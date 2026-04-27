@@ -6,7 +6,15 @@ description: Methods, models, and tools for grasping, dexterous manipulation, an
 
 # Manipulation
 
-Methods, models, and tools for grasping, dexterous manipulation, and contact-rich tasks.
+Manipulation covers the methods, models, and tooling used by robots to grasp, place, assemble, and otherwise interact with objects under contact. It spans analytic grasp planning, learned visuomotor policies, bimanual and dexterous control, and the data-collection rigs (teleoperation, demonstrations) that feed them.
+
+From an engineering standpoint, manipulation is where Physical AI meets the hardest parts of the real world: contact dynamics, occlusion, deformables, and long-horizon dependencies between sub-skills. It is the category where simulation gaps bite hardest, where data quality dominates model choice, and where small changes in gripper geometry, controller stiffness, or camera placement routinely outweigh algorithmic differences.
+
+When choosing between methods, match the **task structure** (single-skill vs. long-horizon, single-arm vs. bimanual, rigid vs. deformable) to the **policy class** (analytic grasp planner, behaviour cloning, diffusion policy, VLA) and the **data regime** you can realistically support. Diffusion- and transformer-based imitation policies have become strong defaults; analytic grasping remains the right answer when geometry is well-known and contact is simple.
+
+:::tip Start here
+**[Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)** is the modern baseline for visuomotor manipulation: simple to set up, strong on contact-rich tasks, and the policy class most recent results are compared against.
+:::
 
 - [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/) — Visuomotor policy learning via action diffusion; widely-used baseline for imitation.
 - [ACT (Action Chunking Transformers)](https://tonyzhaozh.github.io/aloha/) — Transformer policy for bimanual fine manipulation from demonstrations.
