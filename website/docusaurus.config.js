@@ -78,6 +78,12 @@ const config = {
             label: 'Docs',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'categoriesSidebar',
+            position: 'left',
+            label: 'Categories',
+          },
+          {
             href: 'https://github.com/natnew/awesome-physical-ai/blob/main/README.md',
             label: 'README',
             position: 'right',
