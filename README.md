@@ -60,21 +60,37 @@ Hosting notes:
 Physics engines and high-fidelity simulation environments for robotics and embodied AI.
 
 - [MuJoCo](https://mujoco.org/) — Multi-joint dynamics with contact; fast, accurate physics widely used for RL research.
+<!-- tags: simulator, open-source, production-ready -->
 - [NVIDIA Isaac Sim](https://developer.nvidia.com/isaac-sim) — GPU-accelerated robotics simulator on Omniverse with photorealistic rendering and PhysX.
+<!-- tags: simulator, commercial, production-ready -->
 - [Isaac Lab](https://isaac-sim.github.io/IsaacLab/) — Unified robot learning framework on Isaac Sim for RL, imitation learning, and motion planning.
+<!-- tags: simulator, framework, open-source -->
 - [Drake](https://drake.mit.edu/) — Model-based design toolbox from TRI/MIT for planning, control, and rigorous dynamics analysis.
+<!-- tags: simulator, tool, open-source, production-ready -->
 - [Gazebo](https://gazebosim.org/) — Open-source robotics simulator with mature ROS integration and broad sensor support.
+<!-- tags: simulator, open-source, production-ready -->
 - [PyBullet](https://github.com/bulletphysics/bullet3) — Open-source physics engine (Bullet) with Python bindings, popular for prototyping and RL.
+<!-- tags: simulator, tool, open-source -->
 - [Habitat](https://aihabitat.org/) — Embodied AI platform optimised for high-throughput 3D navigation and instruction-following research.
+<!-- tags: simulator, open-source, research-only -->
 - [SAPIEN](https://sapien.ucsd.edu/) — Physics-rich simulator with the PartNet-Mobility articulated object dataset.
+<!-- tags: simulator, tool, open-source, research-only -->
 - [Genesis](https://genesis-embodied-ai.github.io/) — Universal differentiable simulator for robotics and embodied AI with cross-platform physics solvers.
+<!-- tags: simulator, open-source, research-only -->
 - [Webots](https://cyberbotics.com/) — Open-source robot simulator with mature educational and research workflows for mobile and manipulation robotics.
+<!-- tags: simulator, open-source, production-ready -->
 - [CoppeliaSim](https://www.coppeliarobotics.com/) — General-purpose robot simulation platform with rich scene scripting and broad manipulation benchmark usage.
+<!-- tags: simulator, tool -->
 - [CARLA](https://carla.org/) — Open urban-driving simulator used for closed-loop autonomy and robustness testing at scale.
+<!-- tags: simulator, open-source, benchmark -->
 - [AirSim](https://microsoft.github.io/AirSim/) — Photoreal simulation for drones and autonomous vehicles with configurable sensors and environments.
+<!-- tags: simulator, open-source -->
 - [Brax](https://github.com/google/brax) — Differentiable, accelerator-native physics engine designed for high-throughput RL experimentation.
+<!-- tags: simulator, open-source, framework -->
 - [ManiSkill](https://github.com/haosulab/ManiSkill) — GPU-accelerated simulation and task suite for manipulation-focused embodied learning.
+<!-- tags: simulator, benchmark, open-source -->
 - [RaiSim](https://raisim.com/) — High-performance rigid-body simulator widely used for legged-locomotion research and control.
+<!-- tags: simulator, tool, commercial -->
 
 ## Datasets
 
@@ -141,27 +157,44 @@ Harnesses, metrics, and methodology for measuring robot policy performance, robu
 Generalist policies and vision-language-action (VLA) models for robotic control.
 
 - [π0 (Physical Intelligence)](https://www.physicalintelligence.company/) — Generalist policy combining multi-robot data with flow matching for dexterous manipulation.
+<!-- tags: tool, commercial, production-ready -->
 - [Octo](https://octo-models.github.io/) — Open-source generalist robot policy trained on Open X-Embodiment with cross-embodiment fine-tuning.
+<!-- tags: tool, open-source, production-ready -->
 - [OpenVLA](https://openvla.github.io/) — Open-source 7B-parameter vision-language-action model built on Prismatic VLMs.
+<!-- tags: tool, open-source -->
 - [RT-2](https://robotics-transformer2.github.io/) — Vision-language-action model that transfers web knowledge to robotic control.
+<!-- tags: paper, framework -->
 - [RT-X](https://robotics-transformer-x.github.io/) — Cross-embodiment models demonstrating positive transfer across robot platforms.
+<!-- tags: paper, framework, open-source -->
 - [Gemini Robotics](https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/) — Google DeepMind VLA family with embodied reasoning capabilities.
+<!-- tags: paper, framework -->
 - [GR00T N1 (NVIDIA)](https://developer.nvidia.com/isaac/gr00t) — Open humanoid foundation model with a dual-system slow/fast architecture.
+<!-- tags: tool, open-source -->
 - [Helix (Figure)](https://www.figure.ai/) — Vision-language-action model targeting generalist humanoid control.
+<!-- tags: tool, commercial -->
 - [RT-1](https://arxiv.org/abs/2212.06817) — Robotics Transformer for large-scale real-robot manipulation with language-conditioned control.
+<!-- tags: paper -->
 - [PaLM-E](https://arxiv.org/abs/2303.03378) — Embodied multimodal language model integrating visual and robot-state observations for action.
+<!-- tags: paper -->
 - [SayCan](https://arxiv.org/abs/2204.01691) — Language-model-guided skill selection framework for grounded robot task execution.
+<!-- tags: paper -->
 - [Code as Policies](https://arxiv.org/abs/2209.07753) — Program-synthesis approach that compiles language instructions into executable robot policies.
+<!-- tags: paper -->
 - [VIMA](https://arxiv.org/abs/2210.03094) — Promptable transformer for multimodal robot manipulation via in-context generalization.
+<!-- tags: paper -->
 - [Gato](https://arxiv.org/abs/2205.06175) — Generalist policy architecture spanning embodied control and non-robotic tasks with tokenized actions.
+<!-- tags: paper -->
 - [RoboFlamingo](https://arxiv.org/abs/2311.01378) — Open vision-language-action model for low-cost adaptation to robot manipulation tasks.
+<!-- tags: paper, open-source -->
 
 ## World Models
 
 Generative and predictive models of physical dynamics used for planning, simulation, and pretraining.
 
 - [V-JEPA 2 (Meta FAIR)](https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/) — Self-supervised video world model trained on 1M+ hours enabling zero-shot robot planning.
+<!-- tags: paper, framework -->
 - [NVIDIA Cosmos](https://developer.nvidia.com/cosmos) — World foundation models for physically-grounded synthetic data generation.
+<!-- tags: tool, commercial -->
 - [Genie 2 (DeepMind)](https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/) — Foundation world model that generates interactive, controllable 3D environments.
 - [DreamerV3](https://danijar.com/project/dreamerv3/) — General world-model algorithm achieving strong results across 150+ tasks with fixed hyperparameters.
 - [DayDreamer](https://danijar.com/project/daydreamer/) — World models applied to physical robot learning for sample-efficient skill acquisition.

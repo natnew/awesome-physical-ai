@@ -43,6 +43,41 @@ Do / don't:
 - Do: `- [PyTorch](https://pytorch.org) - Tensor library with autograd.`
 - Don't: `- [pytorch](https://pytorch.org/) Tensor library with autograd` (lowercase name, trailing slash, missing dash separator and terminal period).
 
+### Tags
+
+Each entry is tagged with 1–3 labels indicating resource type, maturity, and availability model:
+
+**Type & Purpose:**
+- `tool` — Software, simulator, framework, or library for robotics development.
+- `paper` — Research paper or academic publication.
+- `dataset` — Dataset for training or evaluation.
+- `benchmark` — Benchmark suite or evaluation harness.
+- `simulator` — Physics engine or simulation environment.
+- `framework` — Architectural or algorithmic methodology.
+- `course` — Educational program or lecture series.
+
+**Maturity & Deployment:**
+- `production-ready` — Suitable for production deployment; actively maintained and documented.
+- `research-only` — Experimental or research-focused; may require substantial adaptation for production.
+
+**Licensing & Availability:**
+- `open-source` — Released under an open-source license.
+- `commercial` — Commercial product or closed-source.
+
+**How to tag entries:**
+
+When adding or updating an entry in the README, include tags in an HTML comment on the next line:
+
+```markdown
+- [Resource Name](https://url.example) — Description of the resource.
+<!-- tags: tool, open-source, production-ready -->
+```
+
+If a resource doesn't fit cleanly, omit tags rather than over-tagging. For example:
+- A research paper: `paper` only.
+- A commercial simulation platform: `simulator, commercial`.
+- An open-source RL library: `tool, open-source, research-only`.
+
 ### Categories
 
 - Add entries to the most specific applicable category.

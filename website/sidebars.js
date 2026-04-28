@@ -6,6 +6,7 @@ module.exports = {
       items: [
         'overview',
         'quick-start',
+        'discovery',
         'workflow',
         'workflow-review',
         'architecture',

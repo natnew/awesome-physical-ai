@@ -4,6 +4,8 @@ title: Simulators
 description: Physics engines and high-fidelity simulation environments for robotics and embodied AI — MuJoCo, Isaac Sim, Isaac Lab, Drake, Gazebo, PyBullet, Habitat, SAPIEN, Genesis.
 ---
 
+import { TagList } from '@site/src/components/TagBadge';
+
 # Simulators
 
 Simulators are the physics engines and rendering stacks where robot policies are trained, stress-tested, and iterated long before they touch hardware. They span rigid-body dynamics, contact-rich manipulation, photorealistic sensor simulation, and GPU-parallel rollouts that turn weeks of real-world data collection into hours of synthetic experience.
@@ -16,19 +18,52 @@ When choosing between options, weigh **physics fidelity** (contact, friction, ar
 If you are new to the space, **[MuJoCo](https://mujoco.org/)** is the most pragmatic entry point: fast, accurate contact dynamics, a small API surface, and the de facto baseline for robot-learning research.
 :::
 
-- [MuJoCo](https://mujoco.org/) — Multi-joint dynamics with contact; fast, accurate physics widely used for RL research.
-- [NVIDIA Isaac Sim](https://developer.nvidia.com/isaac-sim) — GPU-accelerated robotics simulator on Omniverse with photorealistic rendering and PhysX.
-- [Isaac Lab](https://isaac-sim.github.io/IsaacLab/) — Unified robot learning framework on Isaac Sim for RL, imitation learning, and motion planning.
-- [Drake](https://drake.mit.edu/) — Model-based design toolbox from TRI/MIT for planning, control, and rigorous dynamics analysis.
-- [Gazebo](https://gazebosim.org/) — Open-source robotics simulator with mature ROS integration and broad sensor support.
-- [PyBullet](https://github.com/bulletphysics/bullet3) — Open-source physics engine (Bullet) with Python bindings, popular for prototyping and RL.
-- [Habitat](https://aihabitat.org/) — Embodied AI platform optimised for high-throughput 3D navigation and instruction-following research.
-- [SAPIEN](https://sapien.ucsd.edu/) — Physics-rich simulator with the PartNet-Mobility articulated object dataset.
-- [Genesis](https://genesis-embodied-ai.github.io/) — Universal differentiable simulator for robotics and embodied AI with cross-platform physics solvers.
-- [Webots](https://cyberbotics.com/) — Open-source robot simulator with mature educational and research workflows for mobile and manipulation robotics.
-- [CoppeliaSim](https://www.coppeliarobotics.com/) — General-purpose robot simulation platform with rich scene scripting and broad manipulation benchmark usage.
-- [CARLA](https://carla.org/) — Open urban-driving simulator used for closed-loop autonomy and robustness testing at scale.
-- [AirSim](https://microsoft.github.io/AirSim/) — Photoreal simulation for drones and autonomous vehicles with configurable sensors and environments.
-- [Brax](https://github.com/google/brax) — Differentiable, accelerator-native physics engine designed for high-throughput RL experimentation.
-- [ManiSkill](https://github.com/haosulab/ManiSkill) — GPU-accelerated simulation and task suite for manipulation-focused embodied learning.
-- [RaiSim](https://raisim.com/) — High-performance rigid-body simulator widely used for legged-locomotion research and control.
+## Entries
+
+- **[MuJoCo](https://mujoco.org/)** — Multi-joint dynamics with contact; fast, accurate physics widely used for RL research.
+  <TagList tags={['simulator', 'open-source', 'production-ready']} />
+
+- **[NVIDIA Isaac Sim](https://developer.nvidia.com/isaac-sim)** — GPU-accelerated robotics simulator on Omniverse with photorealistic rendering and PhysX.
+  <TagList tags={['simulator', 'commercial', 'production-ready']} />
+
+- **[Isaac Lab](https://isaac-sim.github.io/IsaacLab/)** — Unified robot learning framework on Isaac Sim for RL, imitation learning, and motion planning.
+  <TagList tags={['simulator', 'framework', 'open-source']} />
+
+- **[Drake](https://drake.mit.edu/)** — Model-based design toolbox from TRI/MIT for planning, control, and rigorous dynamics analysis.
+  <TagList tags={['simulator', 'tool', 'open-source', 'production-ready']} />
+
+- **[Gazebo](https://gazebosim.org/)** — Open-source robotics simulator with mature ROS integration and broad sensor support.
+  <TagList tags={['simulator', 'open-source', 'production-ready']} />
+
+- **[PyBullet](https://github.com/bulletphysics/bullet3)** — Open-source physics engine (Bullet) with Python bindings, popular for prototyping and RL.
+  <TagList tags={['simulator', 'tool', 'open-source']} />
+
+- **[Habitat](https://aihabitat.org/)** — Embodied AI platform optimised for high-throughput 3D navigation and instruction-following research.
+  <TagList tags={['simulator', 'open-source', 'research-only']} />
+
+- **[SAPIEN](https://sapien.ucsd.edu/)** — Physics-rich simulator with the PartNet-Mobility articulated object dataset.
+  <TagList tags={['simulator', 'tool', 'open-source', 'research-only']} />
+
+- **[Genesis](https://genesis-embodied-ai.github.io/)** — Universal differentiable simulator for robotics and embodied AI with cross-platform physics solvers.
+  <TagList tags={['simulator', 'open-source', 'research-only']} />
+
+- **[Webots](https://cyberbotics.com/)** — Open-source robot simulator with mature educational and research workflows for mobile and manipulation robotics.
+  <TagList tags={['simulator', 'open-source', 'production-ready']} />
+
+- **[CoppeliaSim](https://www.coppeliarobotics.com/)** — General-purpose robot simulation platform with rich scene scripting and broad manipulation benchmark usage.
+  <TagList tags={['simulator', 'tool']} />
+
+- **[CARLA](https://carla.org/)** — Open urban-driving simulator used for closed-loop autonomy and robustness testing at scale.
+  <TagList tags={['simulator', 'open-source', 'benchmark']} />
+
+- **[AirSim](https://microsoft.github.io/AirSim/)** — Photoreal simulation for drones and autonomous vehicles with configurable sensors and environments.
+  <TagList tags={['simulator', 'open-source']} />
+
+- **[Brax](https://github.com/google/brax)** — Differentiable, accelerator-native physics engine designed for high-throughput RL experimentation.
+  <TagList tags={['simulator', 'open-source', 'framework']} />
+
+- **[ManiSkill](https://github.com/haosulab/ManiSkill)** — GPU-accelerated simulation and task suite for manipulation-focused embodied learning.
+  <TagList tags={['simulator', 'benchmark', 'open-source']} />
+
+- **[RaiSim](https://raisim.com/)** — High-performance rigid-body simulator widely used for legged-locomotion research and control.
+  <TagList tags={['simulator', 'tool', 'commercial']} />
