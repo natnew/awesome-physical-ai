@@ -43,3 +43,14 @@ Configure the following repository variables to control the published URL:
 3. Verify site resolves at GitHub Pages URL (`https://natnew.github.io/awesome-physical-ai/`).
 
 The source catalog for project content remains `README.md` in the repository root.
+
+## npm overrides
+
+`package.json` declares `overrides` to clear transitive vulnerabilities surfaced by `npm audit` against the Docusaurus 3.x dependency tree. Each pin should be revisited when its parent dependency releases a clean version:
+
+- `serialize-javascript ^7.0.5` — XSS fix (CVE in older 6.x reachable via webpack/terser).
+- `follow-redirects ^1.16.0` — closes credential/auth-header leak on cross-origin redirect.
+- `postcss ^8.5.12` — line-return parsing CVE.
+- `uuid ^14.0.0` — pulls forward to a maintained major; older `uuid@3` and `uuid@8` lines reach Docusaurus through several transitive paths.
+
+When upgrading Docusaurus, run `npm audit` and remove any override whose root cause is no longer present.

@@ -139,7 +139,13 @@ function setCanvasSize(canvas, context, width, height) {
 
 export default function NeuralNetworkBackground() {
   const canvasRef = React.useRef(null);
+  // Defer rendering until after hydration so SSR HTML and first client render match.
+  const [mounted, setMounted] = React.useState(false);
   const [reducedMotion, setReducedMotion] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   React.useEffect(() => {
     if (typeof window === 'undefined') {
@@ -271,15 +277,17 @@ export default function NeuralNetworkBackground() {
       window.removeEventListener('resize', handleResize);
       window.cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [mounted]);
 
   return (
     <div className={styles.backgroundLayer} aria-hidden="true">
       <div className={styles.baseTone} />
-      <canvas
-        ref={canvasRef}
-        className={`${styles.canvas} ${reducedMotion ? styles.canvasReducedMotion : ''}`}
-      />
+      {mounted ? (
+        <canvas
+          ref={canvasRef}
+          className={`${styles.canvas} ${reducedMotion ? styles.canvasReducedMotion : ''}`}
+        />
+      ) : null}
       <div className={styles.edgeTint} />
       <div className={styles.centerMask} />
     </div>

@@ -87,8 +87,6 @@ Physics engines and high-fidelity simulation environments for robotics and embod
 <!-- tags: simulator, open-source -->
 - [Brax](https://github.com/google/brax) — Differentiable, accelerator-native physics engine designed for high-throughput RL experimentation.
 <!-- tags: simulator, open-source, framework -->
-- [ManiSkill](https://github.com/haosulab/ManiSkill) — GPU-accelerated simulation and task suite for manipulation-focused embodied learning.
-<!-- tags: simulator, benchmark, open-source -->
 - [RaiSim](https://raisim.com/) — High-performance rigid-body simulator widely used for legged-locomotion research and control.
 <!-- tags: simulator, tool, commercial -->
 
@@ -227,7 +225,7 @@ Methods, models, and tools for grasping, dexterous manipulation, and contact-ric
 - [Transporter Networks](https://transporternets.github.io/) — Keypoint-based pick-and-place architecture for data-efficient tabletop manipulation.
 - [GraspNet-1Billion](https://graspnet.net/) — Large-scale benchmark and dataset for robust 6-DoF grasp planning.
 - [AnyGrasp](https://graspnet.net/anygrasp.html) — Efficient 6-DoF grasp generation framework for real-time deployment.
-- [ManiSkill](https://github.com/haosulab/ManiSkill) — Scalable simulator and benchmark suite for manipulation policy development.
+- [3D Diffusion Policy (DP3)](https://3d-diffusion-policy.github.io/) — Point-cloud-conditioned diffusion policy that improves data efficiency and robustness over image-based variants.
 - [robosuite](https://robosuite.ai/) — Modular simulation framework for manipulation research with reproducible task environments.
 
 ## Locomotion
@@ -279,7 +277,7 @@ Tools, benchmarks, and methodology for safe exploration, robustness testing, and
 - [Constrained Policy Optimization (Achiam et al.)](https://arxiv.org/abs/1705.10528) — Canonical algorithmic framework for constrained safe RL.
 - [Realistic Adversarial Driving (Wang et al.)](https://arxiv.org/abs/2003.01197) — Methodology for stress-testing autonomous driving policies under adversarial conditions.
 - [Robot Trust & Safety (Stanford CRFM)](https://crfm.stanford.edu/) — Foundation-model centre research including robotic safety, evaluation, and failure modes.
-- [CARLA Leaderboard — Safety Scenarios](https://leaderboard.carla.org/) — Standardised stress-test scenarios for driving-policy robustness.
+- [Scenic](https://scenic-lang.org/) — Probabilistic scenario-description language for specifying and generating stress-test scenes for autonomy.
 - [Verifiable Reinforcement Learning (DeepMind)](https://arxiv.org/abs/2308.13247) — Survey-style work on formal verification approaches for RL controllers.
 - [Safety-Gymnasium](https://github.com/PKU-Alignment/safety-gymnasium) — Modern safe-RL benchmark suite extending Safety Gym with richer constraints and tasks.
 - [OmniSafe](https://github.com/PKU-Alignment/omnisafe) — Open-source safe-RL training framework with strong baseline implementations.
