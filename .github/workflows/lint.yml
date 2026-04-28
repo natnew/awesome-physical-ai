@@ -1,0 +1,113 @@
+name: lint
+
+on:
+  pull_request:
+    paths:
+      - README.md
+      - website/docs/**
+      - .github/ISSUE_TEMPLATE/**
+      - .github/PULL_REQUEST_TEMPLATE.md
+      - .github/workflows/lint.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lint-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  remark:
+    name: remark-lint (advisory)
+    runs-on: ubuntu-latest
+    # Advisory only for Phase 6. Promoted to a required check in a later phase
+    # once the baseline is clean. See specs/2026-04-27-build-link-ci/validation.md (S1).
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run remark-lint
+        run: |
+          npx --yes \
+            -p remark-cli \
+            -p remark-preset-lint-recommended \
+            -p remark-mdx \
+            remark \
+              --use remark-mdx \
+              --use remark-preset-lint-recommended \
+              --quiet \
+              --frail \
+              README.md \
+              "website/docs/**/*.md" \
+              "website/docs/**/*.mdx"
+
+  yaml-templates:
+    name: Validate issue + PR templates
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyYAML
+        run: pip install --quiet pyyaml
+
+      - name: Validate templates
+        shell: python
+        run: |
+          import sys, pathlib, yaml
+
+          errors = []
+
+          issue_dir = pathlib.Path(".github/ISSUE_TEMPLATE")
+          forms = sorted(issue_dir.glob("*.yml"))
+          form_files = [f for f in forms if f.name != "config.yml"]
+
+          if not form_files:
+              errors.append("No issue forms found under .github/ISSUE_TEMPLATE/")
+
+          for form in form_files:
+              try:
+                  data = yaml.safe_load(form.read_text(encoding="utf-8"))
+              except yaml.YAMLError as exc:
+                  errors.append(f"{form}: invalid YAML — {exc}")
+                  continue
+              if not isinstance(data, dict):
+                  errors.append(f"{form}: top-level must be a mapping")
+                  continue
+              for key in ("name", "description", "body"):
+                  if key not in data:
+                      errors.append(f"{form}: missing required key '{key}'")
+              if "body" in data and not isinstance(data["body"], list):
+                  errors.append(f"{form}: 'body' must be a list")
+
+          config = issue_dir / "config.yml"
+          if config.exists():
+              try:
+                  yaml.safe_load(config.read_text(encoding="utf-8"))
+              except yaml.YAMLError as exc:
+                  errors.append(f"{config}: invalid YAML — {exc}")
+
+          pr_template = pathlib.Path(".github/PULL_REQUEST_TEMPLATE.md")
+          if not pr_template.exists():
+              errors.append(f"{pr_template}: missing")
+          elif not pr_template.read_text(encoding="utf-8").strip():
+              errors.append(f"{pr_template}: empty")
+
+          if errors:
+              print("Template validation failed:")
+              for e in errors:
+                  print(f"  - {e}")
+              sys.exit(1)
+
+          print(f"OK — validated {len(form_files)} issue form(s) + PR template.")

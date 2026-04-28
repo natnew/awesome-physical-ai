@@ -1,0 +1,18 @@
+# .lycheeignore
+#
+# Regex patterns (one per line) for URLs that lychee should skip.
+#
+# Rules:
+#   1. Add an entry ONLY when a link is verified-good in a browser but
+#      consistently fails in CI (e.g. hosts that 999 on HEAD requests,
+#      hosts that block GitHub-Actions egress, or rate-limit aggressively).
+#   2. Every entry MUST be preceded by a one-line comment explaining
+#      WHY it is ignored (host behaviour + date noticed).
+#   3. Prefer narrow patterns (specific host) over broad ones.
+#   4. Re-evaluate entries during Phase 7.5 review passes.
+#
+# Examples (commented out, kept for reference):
+# # linkedin.com — returns HTTP 999 on HEAD requests from CI runners (2026-04)
+# ^https?://(www\.)?linkedin\.com/
+# # twitter.com / x.com — aggressive bot-detection breaks unauthenticated checks (2026-04)
+# ^https?://(www\.)?(twitter|x)\.com/

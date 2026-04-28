@@ -1,0 +1,44 @@
+name: site-build
+
+on:
+  pull_request:
+    paths:
+      - website/**
+      - .github/workflows/site-build.yml
+  push:
+    branches:
+      - main
+    paths:
+      - website/**
+      - .github/workflows/site-build.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build Docusaurus site
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: website
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build

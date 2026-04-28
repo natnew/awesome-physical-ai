@@ -93,6 +93,32 @@ Open a [**Category proposal**](https://github.com/natnew/awesome-physical-ai/iss
 - [ ] Links are working and have no trailing slash.
 - [ ] I have provided a clear explanation of why this resource is awesome.
 
+## Continuous integration
+
+Every pull request runs two required checks:
+
+- **`site-build`** — runs `npm ci && npm run build` in `website/` against Node.js 20. Fails on any Docusaurus build error or broken internal docs link.
+- **`link-check`** — runs [lychee](https://github.com/lycheeverse/lychee) against `README.md` and `website/docs/**/*.{md,mdx}`. Fails on any unresolved external link.
+
+A third advisory check (`lint`) runs `remark-lint` on Markdown/MDX and validates the YAML structure of issue forms. It does not block merge during this phase.
+
+### Reproducing locally
+
+```bash
+# Site build
+cd website
+npm ci
+npm run build
+
+# Link check (install lychee once: https://lychee.cli.rs/installation/)
+cd ..
+lychee README.md "website/docs/**/*.md" "website/docs/**/*.mdx"
+```
+
+### Suppressing a known-flaky external link
+
+If a link is verified-good in a browser but consistently fails in CI (e.g. a host that returns HTTP 999 to HEAD requests, or aggressively rate-limits), add a regex to `.lycheeignore` at the repo root **with a one-line comment explaining why**. Narrow patterns are preferred over broad ones. Entries are reviewed during the periodic curation pass.
+
 ## Code of Conduct
 
 - Be respectful and constructive.
