@@ -31,9 +31,18 @@ keywords:
 
 Awesome Physical AI is a curated, engineering-oriented map of **Physical AI resources** — a Physical AI roadmap for researchers, ML and robotics engineers, and technical leaders working on robot learning, embodied AI, embodied agents, robotics simulation, sim-to-real transfer, world models, vision-language-action (VLA) models, robotics foundation models, generalist robot policies, Physical AI benchmarks, and production-grade, safe embodied AI systems. The repository content analyzed for this site centered on [README.md](https://github.com/natnew/awesome-physical-ai/blob/main/README.md), [CONTRIBUTING.md](https://github.com/natnew/awesome-physical-ai/blob/main/CONTRIBUTING.md), [LICENSE](https://github.com/natnew/awesome-physical-ai/blob/main/LICENSE), and small GitHub workflow files under [.github/workflows](https://github.com/natnew/awesome-physical-ai/tree/main/.github/workflows). That means the project architecture is editorial, not runtime-oriented.
 
+## Navigation layers
+
+There are two views over the same catalog, and they intentionally do not match line-for-line:
+
+- **The README headings** (~7 top-level sections) are optimised for scanning a single long Markdown file on GitHub. They group related categories together (for example, all simulation work under one heading).
+- **The 14 docs-site categories** (the sidebar on the left under *Categories*) are the **authoritative taxonomy** for curation, contribution, and the entry-count CI check. Each docs-site category corresponds to one or more sections in the README, and `CONTRIBUTING.md` is written against this 14-category structure.
+
+When the two diverge — for example, when the README places "Manipulation" and "Locomotion" under a single umbrella while the docs site splits them — the **docs-site taxonomy wins**, and the README will be reorganised on the next curation pass. The task table below adds a third, *non-authoritative* overlay (Learn / Build / Deploy / Measure / Track / Practice / Related) to help newcomers route into the 14 canonical categories quickly.
+
 ## Top-level map
 
-The README is organised into **14 canonical categories** plus a set of supporting **appendices** (reading material, hardware, community, project ladder). The table below groups those canonical categories by task so you can route to the right section quickly. The grouping is a docs-site overlay — the README itself does not contain "Learn", "Build", or "Deploy" headings, so each link below points to a real category anchor.
+The README is organised into **14 canonical categories** plus a set of supporting **appendices** (reading material, hardware, community, project ladder). The table below groups those canonical categories by task so you can route to the right section quickly. The grouping is a docs-site overlay — the README itself does not contain "Learn", "Build", or "Deploy" headings, so each link below points to a real category anchor. The 14 categories themselves remain the authoritative taxonomy described above.
 
 | Task | Canonical categories | Use it when |
 | --- | --- | --- |

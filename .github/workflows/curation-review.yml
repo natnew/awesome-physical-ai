@@ -20,7 +20,7 @@ jobs:
         run: echo "tag=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
 
       - name: Create curation review issue (idempotent)
-        uses: actions/github-script@v7
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
         env:
           MONTH_TAG: ${{ steps.month.outputs.tag }}
         with:

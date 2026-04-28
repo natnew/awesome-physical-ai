@@ -2,7 +2,7 @@ module.exports = {
   guideSidebar: [
     {
       type: 'category',
-      label: 'Guide',
+      label: 'About & How to Use',
       items: [
         'overview',
         'quick-start',

@@ -4,6 +4,35 @@ const siteUrl = process.env.DOCUSAURUS_SITE_URL || 'https://natnew.github.io';
 const customDomain = process.env.DOCUSAURUS_CUSTOM_DOMAIN || '';
 const canonicalSiteUrl = customDomain ? `https://${customDomain}` : siteUrl;
 
+// Fail fast on malformed env input. The Pages workflow already validates
+// DOCUSAURUS_CUSTOM_DOMAIN, but DOCUSAURUS_SITE_URL / DOCUSAURUS_BASE_URL
+// can also be set manually and a malformed value would build successfully
+// while breaking canonical and og:url metadata at runtime.
+if (process.env.DOCUSAURUS_SITE_URL) {
+  try {
+    // Throws on malformed origin (missing scheme, invalid host, etc.).
+    // We require an absolute URL with explicit https or http.
+    const parsed = new URL(process.env.DOCUSAURUS_SITE_URL);
+    if (!/^https?:$/.test(parsed.protocol)) {
+      throw new Error(`unsupported protocol "${parsed.protocol}"`);
+    }
+  } catch (err) {
+    throw new Error(
+      `DOCUSAURUS_SITE_URL is not a valid http(s) origin: ${process.env.DOCUSAURUS_SITE_URL} (${err.message})`,
+    );
+  }
+}
+if (process.env.DOCUSAURUS_BASE_URL && !/^\/[A-Za-z0-9._~\-/]*$/.test(process.env.DOCUSAURUS_BASE_URL)) {
+  throw new Error(
+    `DOCUSAURUS_BASE_URL must start with "/" and contain only URL-safe path characters; got: ${process.env.DOCUSAURUS_BASE_URL}`,
+  );
+}
+if (process.env.DOCUSAURUS_CUSTOM_DOMAIN && !/^[A-Za-z0-9.-]+$/.test(process.env.DOCUSAURUS_CUSTOM_DOMAIN)) {
+  throw new Error(
+    `DOCUSAURUS_CUSTOM_DOMAIN contains invalid characters; got: ${process.env.DOCUSAURUS_CUSTOM_DOMAIN}`,
+  );
+}
+
 const joinUrl = (origin, pathPrefix = '', relativePath = '') => {
   const normalizedOrigin = origin.replace(/\/+$/, '');
   const normalizedPrefix = pathPrefix.replace(/^\/+|\/+$/g, '');
@@ -51,6 +80,8 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/natnew/awesome-physical-ai/tree/main/website/',
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: false,
         },
         blog: false,
         theme: {
@@ -103,15 +134,15 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'guideSidebar',
-            position: 'left',
-            label: 'Docs',
-          },
-          {
-            type: 'docSidebar',
             sidebarId: 'categoriesSidebar',
             position: 'left',
             label: 'Categories',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'guideSidebar',
+            position: 'left',
+            label: 'About & How to Use',
           },
           {
             href: 'https://github.com/natnew/awesome-physical-ai/blob/main/README.md',

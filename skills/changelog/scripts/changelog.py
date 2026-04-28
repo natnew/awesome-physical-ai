@@ -13,7 +13,22 @@ def git_log(since_date=None):
     cmd = ["git", "log", "--format=%ad|%s", "--date=short"]
     if since_date:
         cmd.append(f"--after={since_date}")
-    result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+    except FileNotFoundError as exc:
+        sys.stderr.write(
+            "ERROR: 'git' executable not found on PATH. "
+            "Install Git or run this script from a Git working tree.\n"
+        )
+        raise SystemExit(2) from exc
+    except subprocess.CalledProcessError as exc:
+        sys.stderr.write(
+            f"ERROR: `git log` failed (exit {exc.returncode}). "
+            "Make sure you are inside a Git repository with at least one commit.\n"
+        )
+        if exc.stderr:
+            sys.stderr.write(exc.stderr)
+        raise SystemExit(exc.returncode) from exc
     by_date = defaultdict(list)
     for line in result.stdout.strip().splitlines():
         if "|" in line:

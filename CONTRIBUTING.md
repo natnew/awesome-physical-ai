@@ -85,6 +85,8 @@ If a resource doesn't fit cleanly, omit tags rather than over-tagging. For examp
 - If a resource fits multiple categories, add it to the primary one only.
 - New categories require at least 3 quality entries.
 
+> **The 14 docs-site categories are authoritative.** The repository ships two views of the same catalog: the headings inside `README.md` (optimised for scanning a single Markdown file on GitHub) and the 14 categories rendered on the docs site sidebar. The 14-category list is the canonical taxonomy used by `CONTRIBUTING.md`, the entry-count CI check, and the curation review process. Where the two diverge, contributions should follow the 14-category list; the README will be reorganised during the next curation pass. The full mapping is documented under [Navigation layers](https://natnew.github.io/awesome-physical-ai/docs/overview#navigation-layers).
+
 ### Updating the "Start here" entry for a category
 
 Each category in `README.md` has a single **Start here** entry — the one resource a newcomer should look at first. Because that designation is opinionated, it is updated deliberately, not casually:
