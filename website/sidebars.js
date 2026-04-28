@@ -12,6 +12,7 @@ module.exports = {
         'architecture',
         'curation-standards',
         'scope-and-limits',
+        'for-leaders',
       ],
     },
   ],

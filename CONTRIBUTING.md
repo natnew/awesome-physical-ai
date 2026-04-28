@@ -85,6 +85,16 @@ If a resource doesn't fit cleanly, omit tags rather than over-tagging. For examp
 - If a resource fits multiple categories, add it to the primary one only.
 - New categories require at least 3 quality entries.
 
+### Updating the "Start here" entry for a category
+
+Each category in `README.md` has a single **Start here** entry — the one resource a newcomer should look at first. Because that designation is opinionated, it is updated deliberately, not casually:
+
+1. Open a pull request titled `Update Start here for <Category>`.
+2. In the PR description, name the **incumbent** Start-here entry and the **proposed** replacement, and explain why the replacement is a better entry point. Strong reasons include: incumbent is no longer maintained, the new entry is materially clearer for beginners, or the field has moved (e.g., a new canonical tutorial or survey).
+3. Move the `Start here` marker line in `README.md` (and the corresponding callout on the matching page under `website/docs/categories/<slug>.mdx`) so README and the docs site stay in sync.
+4. Do **not** add a second Start-here entry; there is exactly one per category.
+5. If you would like to suggest a change without opening a PR, file a [**New resource**](https://github.com/natnew/awesome-physical-ai/issues/new/choose) issue and check the *"This is a Start-here proposal"* box; a maintainer will pick it up during the next curation review.
+
 ## How to Contribute
 
 ### Adding a Resource

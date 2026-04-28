@@ -41,11 +41,11 @@ jobs:
 
       - name: Resolve deployment URL settings
         shell: bash
+        env:
+          CUSTOM_DOMAIN: ${{ vars.DOCUSAURUS_CUSTOM_DOMAIN }}
+          EXPLICIT_SITE_URL: ${{ vars.DOCUSAURUS_SITE_URL }}
+          EXPLICIT_BASE_URL: ${{ vars.DOCUSAURUS_BASE_URL }}
         run: |
-          CUSTOM_DOMAIN="${{ vars.DOCUSAURUS_CUSTOM_DOMAIN }}"
-          EXPLICIT_SITE_URL="${{ vars.DOCUSAURUS_SITE_URL }}"
-          EXPLICIT_BASE_URL="${{ vars.DOCUSAURUS_BASE_URL }}"
-
           if [ -n "$CUSTOM_DOMAIN" ]; then
             echo "DOCUSAURUS_CUSTOM_DOMAIN=$CUSTOM_DOMAIN" >> "$GITHUB_ENV"
             echo "DOCUSAURUS_SITE_URL=https://$CUSTOM_DOMAIN" >> "$GITHUB_ENV"
@@ -72,8 +72,16 @@ jobs:
         if: ${{ vars.DOCUSAURUS_CUSTOM_DOMAIN != '' }}
         working-directory: website/static
         shell: bash
+        env:
+          CUSTOM_DOMAIN: ${{ vars.DOCUSAURUS_CUSTOM_DOMAIN }}
         run: |
-          printf '%s\n' "${{ vars.DOCUSAURUS_CUSTOM_DOMAIN }}" > CNAME
+          # Strip any whitespace/newlines and validate it looks like a hostname
+          domain="$(printf '%s' "$CUSTOM_DOMAIN" | tr -d '[:space:]')"
+          if [[ ! "$domain" =~ ^[A-Za-z0-9.-]+$ ]]; then
+            echo "ERROR: DOCUSAURUS_CUSTOM_DOMAIN contains unexpected characters" >&2
+            exit 1
+          fi
+          printf '%s\n' "$domain" > CNAME
 
       - name: Build site
         working-directory: website

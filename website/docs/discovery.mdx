@@ -8,13 +8,13 @@ description: How to search, filter, and discover resources in Awesome Physical A
 
 ## Searching Resources
 
-The site includes a built-in search feature accessible from the navigation bar. You can search by:
+The site ships a built-in offline search index, available from the magnifying-glass icon in the navigation bar (or the keyboard shortcut shown next to it). The index covers every page on this site — the Guide, the 14 category pages, and the Categories index — and runs entirely in your browser. You can search by:
 
 - **Resource name** (e.g., "MuJoCo", "ROS 2", "Diffusion Policy")
 - **Category** (e.g., "simulators", "benchmarks", "robotics foundation models")
 - **Keyword** (e.g., "GPU", "open-source", "reinforcement learning", "manipulation")
 
-Search results are ranked by relevance and link to the relevant category page or documentation.
+Search results are ranked by relevance and link directly to the matching page or section.
 
 :::tip
 Use specific terms for better results. For example:
@@ -25,7 +25,14 @@ Use specific terms for better results. For example:
 
 ## Browsing by Tag
 
-Each resource in the catalog is tagged to aid discovery:
+Each entry in the root `README.md` carries one or more **tag comments** that describe its type, maturity, and licensing — for example:
+
+```markdown
+- [MuJoCo](https://mujoco.org/) — Multi-joint dynamics with contact; fast, accurate physics widely used for RL research.
+<!-- tags: simulator, open-source, production-ready -->
+```
+
+These tags are the canonical metadata. A subset of category pages on this site additionally renders the tags visually as coloured badges; that visual rollout is incremental and tracked under the curation review cadence. The current taxonomy is:
 
 ### Resource Type
 - **tool** — Software, simulator, framework, or library for robotics development

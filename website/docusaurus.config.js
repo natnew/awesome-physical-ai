@@ -194,6 +194,23 @@ const config = {
         },
       },
     }),
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
+      ({
+        hashed: true,
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: true,
+        docsRouteBasePath: '/docs',
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 10,
+        searchBarShortcut: true,
+        searchBarShortcutHint: true,
+      }),
+    ],
+  ],
 };
 
 module.exports = config;

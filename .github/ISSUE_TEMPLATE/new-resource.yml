@@ -66,6 +66,14 @@ body:
     validations:
       required: true
   - type: checkboxes
+    id: start_here
+    attributes:
+      label: Start-here proposal (optional)
+      description: Tick this only if you are proposing this resource as the single "Start here" entry for the category, replacing the current one. See the "Updating the Start here entry" section in CONTRIBUTING.md.
+      options:
+        - label: This is a Start-here proposal (replaces the existing Start-here entry for the chosen category).
+          required: false
+  - type: checkboxes
     id: confirmations
     attributes:
       label: Confirmations

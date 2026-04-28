@@ -1,0 +1,60 @@
+---
+id: for-leaders
+title: For Technical Leaders
+description: How to read this list as a head of robotics, ML platform lead, or VP/director responsible for shipping Physical AI in production.
+---
+
+# For Technical Leaders
+
+This page is for the people who set technical direction rather than write the next training loop: heads of robotics, ML platform leads, principal engineers, and the VP/director layer above them. The list itself is organised by **what is being built**; this page reorganises the same material by **the decisions a leader actually has to make**.
+
+The four categories below — **staffing**, **roadmap**, **governance**, and **risk** — are not new entries. They are lenses over the existing fourteen canonical categories. Treat each lens as a checklist for the next planning cycle.
+
+## Staffing the work
+
+A Physical AI team is unusual: it bridges three labour markets that rarely overlap (classical robotics, modern ML, and platform/MLOps), and the cost of a mis-hire compounds because the feedback loop runs through real hardware.
+
+| Capability you need | Where it shows up in the list | What to look for in candidates |
+|---|---|---|
+| Simulation & data generation | [Simulators](/docs/categories/simulators), [Sim-to-Real](/docs/categories/sim-to-real) | Has shipped a domain-randomised pipeline; can articulate what the simulator gets wrong. |
+| Modeling & policy learning | [Robotics Foundation Models](/docs/categories/robotics-foundation-models), [World Models](/docs/categories/world-models), [Manipulation](/docs/categories/manipulation), [Locomotion](/docs/categories/locomotion) | Has trained models on real-robot data, not only public datasets; knows the difference. |
+| Evaluation & measurement | [Benchmarks](/docs/categories/benchmarks), [Evaluation Methodology](/docs/categories/evaluation-methodology) | Insists on per-task success rates and confidence intervals, not aggregate scores. |
+| Productionisation | [Production Patterns](/docs/categories/production-patterns) | Comfortable with ROS 2, on-device inference, and the messy bits of fleet operation. |
+| Risk & assurance | [Safety & Robustness](/docs/categories/safety-and-robustness), [Governance & Policy](/docs/categories/governance-and-policy) | Can name a specific incident class their previous system was designed to avoid. |
+
+A common failure mode is to staff only the first two rows and treat the bottom three as "we'll figure it out later." In Physical AI the bottom three rows are where most of the wall-clock time goes once a system is in pilot.
+
+## Sequencing the roadmap
+
+Most teams find that the sequencing below survives contact with reality, regardless of the application domain (humanoids, mobile manipulators, AMRs, drones):
+
+1. **Pick the evaluation regime first.** Decide what "working" means before choosing models or simulators. Start at [Evaluation Methodology](/docs/categories/evaluation-methodology) and a single benchmark from [Benchmarks](/docs/categories/benchmarks) that is close to your task. If you cannot define a pass/fail bar, you are not ready to train.
+2. **Choose the simulator and the data plan together.** [Simulators](/docs/categories/simulators) is the supply side; [Datasets](/docs/categories/datasets) is the demand side. Picking one before the other locks in expensive constraints.
+3. **Plan the sim-to-real bridge before training the policy.** Domain randomisation, real-world fine-tuning, and online adaptation all cost engineering time. [Sim-to-Real](/docs/categories/sim-to-real) is where to set realistic expectations.
+4. **Decide how much of the stack is foundation-model-shaped.** [Robotics Foundation Models](/docs/categories/robotics-foundation-models) and [World Models](/docs/categories/world-models) describe two different bets — one on imitation/VLA, one on learned dynamics. Most teams use both; few use only one.
+5. **Industrialise.** [Production Patterns](/docs/categories/production-patterns) covers the middleware, deployment, and observability work that is invisible until you don't have it.
+
+Skipping any step is a known smell, and the list is structured so that each category contains a Start-here entry and the materials to do the step properly.
+
+## Governance footprint
+
+Two categories deliberately sit outside the build/train/deploy axis and are easy to under-invest in:
+
+- [Safety & Robustness](/docs/categories/safety-and-robustness) — assurance, formal methods, robustness benchmarks, runtime monitors. The right time to read this is *before* the first integration sprint, not during incident review.
+- [Governance & Policy](/docs/categories/governance-and-policy) — regulation, standards, deployment frameworks. Relevant the moment a system leaves a controlled environment and operates near humans, in customer contexts, or in regulated jurisdictions.
+
+A pragmatic baseline for any team shipping outside a lab:
+
+- A named owner for safety cases per deployment.
+- A periodic review of governance materials (we do one monthly on this list itself; see [Workflow Review](/docs/workflow-review)).
+- A documented escalation path that a non-engineer can read.
+
+## Reading the list as a leader
+
+You do not need to read every entry. A useful first pass:
+
+- Skim each category page for its **why this matters** opening and its **Start here** entry.
+- Open [Companies](/docs/categories/companies) and [Courses](/docs/categories/courses) last — both are useful for hiring and ramp-up plans, but the technical decisions live in the other twelve categories.
+- When in doubt, use the search bar in the navigation; it indexes every page on this site.
+
+If a perspective you need is missing — for example, a procurement lens or a regulatory lens for a specific jurisdiction — that is a [contribution](https://github.com/natnew/awesome-physical-ai/blob/main/CONTRIBUTING.md) we would welcome.

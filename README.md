@@ -196,6 +196,7 @@ Generative and predictive models of physical dynamics used for planning, simulat
 - [NVIDIA Cosmos](https://developer.nvidia.com/cosmos) — World foundation models for physically-grounded synthetic data generation.
 <!-- tags: tool, commercial -->
 - [Genie 2 (DeepMind)](https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/) — Foundation world model that generates interactive, controllable 3D environments.
+<!-- tags: paper, framework -->
 - [DreamerV3](https://danijar.com/project/dreamerv3/) — General world-model algorithm achieving strong results across 150+ tasks with fixed hyperparameters.
 - [DayDreamer](https://danijar.com/project/daydreamer/) — World models applied to physical robot learning for sample-efficient skill acquisition.
 - [UniSim](https://universal-simulator.github.io/unisim/) — Universal simulator learning real-world interactions from diverse video data.
