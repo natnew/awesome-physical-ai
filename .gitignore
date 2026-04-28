@@ -219,3 +219,6 @@ website/.cache-loader/
 # Project constitution (local only)
 specs/
 
+# Local review process doc (not for publishing)
+REVIEW.md
+

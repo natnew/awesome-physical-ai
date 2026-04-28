@@ -7,6 +7,7 @@ module.exports = {
         'overview',
         'quick-start',
         'workflow',
+        'workflow-review',
         'architecture',
         'curation-standards',
         'scope-and-limits',

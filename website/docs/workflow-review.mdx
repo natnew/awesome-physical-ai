@@ -1,0 +1,58 @@
+---
+sidebar_label: "Review process"
+description: How to run a periodic curation review of the Awesome Physical AI list — checklist, staleness criteria, and cadence.
+---
+
+# Curation review process
+
+This page documents how to run a periodic review of the curated list. The authoritative local working copy is `REVIEW.md` at the repository root (gitignored; update it after each pass).
+
+---
+
+## Review checklist
+
+Apply the following criteria to each of the 14 categories in turn:
+
+- All links resolve (HTTP 2xx). Lychee CI covers this in PRs, but spot-check during the review pass too.
+- Entry count is within the **15–25 target band**. Run `python scripts/check_entry_counts.py` to verify.
+- Every entry is still actively maintained or clearly relevant — no abandoned or archived projects without an explanatory note.
+- One-line descriptions are specific and engineering-oriented. No stale hype phrasing, vague adjectives, or marketing copy.
+- The **"Start here"** highlight is still the strongest anchor resource in the category. Update the admonition if a better entry now exists.
+- No duplicate entries exist across categories. Each entry lives in its primary category only.
+
+---
+
+## Staleness criteria
+
+An entry is considered **stale** if any of the following apply:
+
+- The primary URL returns a non-2xx HTTP status (dead link).
+- The repository is archived on GitHub/GitLab and there is no maintained fork.
+- The project has had no commit activity for **24+ months** and it is not a stable reference paper, specification, or dataset intended to be static.
+- The resource has been superseded by a clearly superior maintained alternative and provides no independent value.
+
+When removing a stale entry, add a one-line comment in the PR description noting the reason.
+
+---
+
+## How to run a review
+
+1. Open a **Curation review** issue from the [issue templates](https://github.com/natnew/awesome-physical-ai/issues/new/choose). Fill in the review period and assign yourself.
+2. Run the entry-count script from the repo root:
+
+   ```bash
+   python scripts/check_entry_counts.py
+   ```
+
+   Fix any category outside [15, 25] before continuing.
+
+3. Work through the checklist above, category by category. Check off each category in the issue body as you go.
+4. For each change (add, remove, update), follow the standard [CONTRIBUTING.md](https://github.com/natnew/awesome-physical-ai/blob/main/CONTRIBUTING.md) format and alphabetical ordering rules.
+5. Submit a single PR with all changes. Title it: `Curation review: <quarter> <year>`.
+6. Once the PR merges, update the **Last reviewed** date in `REVIEW.md` and close the issue.
+
+---
+
+## Recommended cadence
+
+**Quarterly** is the default. Any maintainer can open a review issue at any time if a specific problem is noticed — a dead-link surge, a major new entrant in a category, or relevance drift after a significant field development.

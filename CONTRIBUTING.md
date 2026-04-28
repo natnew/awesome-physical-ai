@@ -119,6 +119,12 @@ lychee README.md "website/docs/**/*.md" "website/docs/**/*.mdx"
 
 If a link is verified-good in a browser but consistently fails in CI (e.g. a host that returns HTTP 999 to HEAD requests, or aggressively rate-limits), add a regex to `.lycheeignore` at the repo root **with a one-line comment explaining why**. Narrow patterns are preferred over broad ones. Entries are reviewed during the periodic curation pass.
 
+## Periodic review
+
+The list is reviewed quarterly to prune stale entries, rebalance category depths, and refresh "Start here" highlights. The full review process — checklist, staleness criteria, how to run a pass — is documented in `REVIEW.md` at the repository root (local only) and mirrored at the [Review process](https://natnew.github.io/awesome-physical-ai/docs/workflow-review) docs page.
+
+To kick off a review, open a [**Curation review**](https://github.com/natnew/awesome-physical-ai/issues/new/choose) issue.
+
 ## Code of Conduct
 
 - Be respectful and constructive.
