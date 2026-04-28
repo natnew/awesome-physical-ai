@@ -48,11 +48,13 @@ When removing a stale entry, add a one-line comment in the PR description noting
 
 3. Work through the checklist above, category by category. Check off each category in the issue body as you go.
 4. For each change (add, remove, update), follow the standard [CONTRIBUTING.md](https://github.com/natnew/awesome-physical-ai/blob/main/CONTRIBUTING.md) format and alphabetical ordering rules.
-5. Submit a single PR with all changes. Title it: `Curation review: <quarter> <year>`.
+5. Submit a single PR with all changes. Title it: `Curation review: <YYYY-MM>`.
 6. Once the PR merges, update the **Last reviewed** date in `REVIEW.md` and close the issue.
 
 ---
 
 ## Recommended cadence
 
-**Quarterly** is the default. Any maintainer can open a review issue at any time if a specific problem is noticed — a dead-link surge, a major new entrant in a category, or relevance drift after a significant field development.
+**Monthly.** A scheduled GitHub Action (`.github/workflows/curation-review.yml`) opens a `Curation review — YYYY-MM` issue on the first of each month at 09:00 UTC, and can also be triggered manually via `workflow_dispatch` from the Actions tab. The workflow is idempotent — re-running it within the same month will not create a duplicate issue.
+
+Any maintainer can open an ad-hoc review issue at any time if a specific problem is noticed — a dead-link surge, a major new entrant in a category, or relevance drift after a significant field development.

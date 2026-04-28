@@ -1,29 +1,18 @@
 name: Curation review
 description: Kick off a scheduled or ad-hoc review pass of the curated list.
-title: "Curation review: <quarter> <year>"
+title: "Curation review — <YYYY-MM>"
 labels: ["curation", "maintenance"]
 body:
   - type: markdown
     attributes:
       value: |
-        Use this form to open a curation review pass. Work through the checklist in [REVIEW.md](https://github.com/natnew/awesome-physical-ai/blob/main/REVIEW.md) (local copy) or the [Review process](https://natnew.github.io/awesome-physical-ai/docs/workflow-review) docs page. Submit all changes in a single PR titled **Curation review: \<quarter\> \<year\>**.
-  - type: dropdown
-    id: review-period
-    attributes:
-      label: Review period
-      options:
-        - Q1 (Jan–Mar)
-        - Q2 (Apr–Jun)
-        - Q3 (Jul–Sep)
-        - Q4 (Oct–Dec)
-        - Ad-hoc
-    validations:
-      required: true
+        Use this form to open an ad-hoc curation review pass. Scheduled monthly reviews are opened automatically by `.github/workflows/curation-review.yml` on the first of each month. Work through the checklist in [REVIEW.md](https://github.com/natnew/awesome-physical-ai/blob/main/REVIEW.md) (local copy) or the [Review process](https://natnew.github.io/awesome-physical-ai/docs/workflow-review) docs page. Submit all changes in a single PR titled **Curation review: YYYY-MM**.
   - type: input
-    id: year
+    id: review-month
     attributes:
-      label: Year
-      placeholder: "2026"
+      label: Review month (YYYY-MM)
+      placeholder: "2026-04"
+      description: The month this review pass covers. Use the current month for ad-hoc passes.
     validations:
       required: true
   - type: input

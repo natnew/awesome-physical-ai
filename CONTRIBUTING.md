@@ -156,9 +156,17 @@ If a link is verified-good in a browser but consistently fails in CI (e.g. a hos
 
 ## Periodic review
 
-The list is reviewed quarterly to prune stale entries, rebalance category depths, and refresh "Start here" highlights. The full review process — checklist, staleness criteria, how to run a pass — is documented in `REVIEW.md` at the repository root (local only) and mirrored at the [Review process](https://natnew.github.io/awesome-physical-ai/docs/workflow-review) docs page.
+The list is reviewed **monthly** to prune stale entries, rebalance category depths, and refresh "Start here" highlights. A scheduled GitHub Action (`.github/workflows/curation-review.yml`) opens a `Curation review — YYYY-MM` issue on the first of each month at 09:00 UTC; the same workflow can be triggered manually via **workflow_dispatch** from the Actions tab. The full review process — checklist, staleness criteria, how to run a pass — is documented in `REVIEW.md` at the repository root (local only) and mirrored at the [Review process](https://natnew.github.io/awesome-physical-ai/docs/workflow-review) docs page.
 
-To kick off a review, open a [**Curation review**](https://github.com/natnew/awesome-physical-ai/issues/new/choose) issue.
+To kick off an ad-hoc review between scheduled runs, open a [**Curation review**](https://github.com/natnew/awesome-physical-ai/issues/new/choose) issue.
+
+## Awesome list inclusion
+
+This repository carries the [Awesome](https://awesome.re) badge at the top of `README.md`. Submission to the [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) meta-list is intentionally deferred: the project meets the structural criteria, but submission is a one-shot external event best done after sustained traction signals (incoming PRs, external links, established review history). Contributors do not need to do anything for this — the criteria authority remains the project's own [curation standards](https://natnew.github.io/awesome-physical-ai/docs/curation-standards).
+
+## Announcements
+
+Draft copy for community announcements (Hacker News, Reddit, Discord, Slack) is kept in a gitignored `ANNOUNCEMENTS.md` at the repository root. **Do not commit announcement copy to the repo.** The drafts file is intentionally local so marketing language never enters the public history; publication is a manual, deliberate act outside the spec lifecycle.
 
 ## Code of Conduct
 

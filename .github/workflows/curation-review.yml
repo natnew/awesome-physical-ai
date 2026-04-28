@@ -1,0 +1,87 @@
+name: Curation review
+
+on:
+  schedule:
+    # 09:00 UTC on the 1st of every month
+    - cron: '0 9 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  open-monthly-review-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compute current month tag
+        id: month
+        shell: bash
+        run: echo "tag=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+
+      - name: Create curation review issue (idempotent)
+        uses: actions/github-script@v7
+        env:
+          MONTH_TAG: ${{ steps.month.outputs.tag }}
+        with:
+          script: |
+            const monthTag = process.env.MONTH_TAG;
+            const title = `Curation review — ${monthTag}`;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            // Idempotency: skip if an open issue with the same title already exists.
+            const q = `repo:${owner}/${repo} is:issue is:open in:title "${title}"`;
+            const existing = await github.rest.search.issuesAndPullRequests({ q, per_page: 5 });
+            const match = existing.data.items.find(i => i.title === title);
+            if (match) {
+              core.info(`Open issue already exists: #${match.number} ${match.html_url}`);
+              return;
+            }
+
+            const body = [
+              `Scheduled monthly curation review for **${monthTag}**.`,
+              ``,
+              `Run the full review process documented in [\`REVIEW.md\`](https://github.com/${owner}/${repo}/blob/main/REVIEW.md) (local copy; gitignored) or the [Review process](https://natnew.github.io/awesome-physical-ai/docs/workflow-review) docs page. Submit all changes in a single PR titled \`Curation review: ${monthTag}\`.`,
+              ``,
+              `### Pre-flight`,
+              ``,
+              `- [ ] Run \`python scripts/check_entry_counts.py\` from the repo root. Fix any category outside [15, 25] before continuing.`,
+              `- [ ] Confirm latest \`link-check\` run on \`main\` is green; otherwise resolve link issues first.`,
+              ``,
+              `### Categories`,
+              ``,
+              `Work through the [curation standards](https://natnew.github.io/awesome-physical-ai/docs/curation-standards) and the staleness criteria in \`REVIEW.md\` for each category:`,
+              ``,
+              `- [ ] Simulators`,
+              `- [ ] Datasets`,
+              `- [ ] Benchmarks`,
+              `- [ ] Evaluation Methodology`,
+              `- [ ] Robotics Foundation Models`,
+              `- [ ] World Models`,
+              `- [ ] Manipulation`,
+              `- [ ] Locomotion`,
+              `- [ ] Sim-to-Real`,
+              `- [ ] Safety & Robustness`,
+              `- [ ] Governance & Policy`,
+              `- [ ] Production Patterns`,
+              `- [ ] Courses`,
+              `- [ ] Companies`,
+              ``,
+              `### Notes`,
+              ``,
+              `_Use this section for known issues, categories of concern, or context for this review pass._`,
+              ``,
+              `---`,
+              ``,
+              `Opened automatically by \`.github/workflows/curation-review.yml\`.`,
+            ].join('\n');
+
+            const created = await github.rest.issues.create({
+              owner,
+              repo,
+              title,
+              body,
+              labels: ['curation', 'maintenance'],
+            });
+            core.info(`Created issue #${created.data.number}: ${created.data.html_url}`);
