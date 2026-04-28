@@ -1,23 +1,25 @@
 ---
 id: quick-start
 title: Quick Start
-description: Fast routes into the README based on what you need right now.
+description: Fast routes into the repository, grouped by task. Each card links to the relevant canonical category page on this site.
 ---
 
-This repository is easiest to use when you start from an immediate goal instead of scanning the entire README in order.
+This site is easiest to use when you start from an immediate goal instead of scanning the whole catalog in order.
+
+The groups below — *Learn first*, *Build systems*, *Prepare for real-world work*, *Track the field*, and *Use the project ladder* — are a docs-site overlay on top of the repository's [14 canonical categories](/docs/categories). The README itself does not contain "Learn", "Build", or "Deploy" headings; the cards link to the canonical category page on this site, with the equivalent section in the root README listed underneath.
 
 ## Learn first
 
-If you are new to Physical AI or Embodied AI, start in the [Learn](https://github.com/natnew/awesome-physical-ai#learn) branch and move from structured material to papers.
+If you are new to Physical AI or Embodied AI, start with structured material and move from there into papers.
 
 <div className="docs-link-grid">
-  <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#courses">
+  <a className="docs-card" href="/docs/categories/courses">
     <strong>Courses</strong>
-    <span>Structured starting points include Stanford CS 336, Stanford CS 224R, Berkeley CS 287, CMU 16-831, and MIT 6.4210.</span>
+    <span>Structured starting points include Stanford CS 336, Stanford CS 224R, Berkeley CS 287, CMU 16-831, and MIT 6.4210. README: <a href="https://github.com/natnew/awesome-physical-ai#courses">#courses</a>.</span>
   </a>
   <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#books">
     <strong>Books</strong>
-    <span>Use Probabilistic Robotics, Modern Robotics, Planning Algorithms, and related texts when you need slower, foundational coverage.</span>
+    <span>Probabilistic Robotics, Modern Robotics, Planning Algorithms, and related texts when you need slower, foundational coverage.</span>
   </a>
   <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#tutorials--guides">
     <strong>Tutorials & Guides</strong>
@@ -25,63 +27,79 @@ If you are new to Physical AI or Embodied AI, start in the [Learn](https://githu
   </a>
   <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#key-papers">
     <strong>Key Papers</strong>
-    <span>The README highlights V-JEPA 2, Open X-Embodiment, DROID, Diffusion Policy, RT-2, Octo, and related landmark entries.</span>
+    <span>Highlights including V-JEPA 2, Open X-Embodiment, DROID, Diffusion Policy, RT-2, Octo, and other landmark entries.</span>
   </a>
 </div>
 
 ## Build systems
 
-If you are choosing tools, models, or infrastructure, the [Build](https://github.com/natnew/awesome-physical-ai#build) section is the main branch.
+If you are choosing tools, models, or infrastructure, work through the canonical Build-side categories.
 
 <div className="docs-link-grid">
-  <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#foundation-models">
-    <strong>Foundation Models</strong>
-    <span>Compare entries like π0, V-JEPA 2, Octo, OpenVLA, RT-2, RT-X, Gemini Robotics, and NVIDIA GR00T.</span>
+  <a className="docs-card" href="/docs/categories/robotics-foundation-models">
+    <strong>Robotics Foundation Models</strong>
+    <span>Compare entries like π0, V-JEPA 2, Octo, OpenVLA, RT-2, RT-X, Gemini Robotics, and NVIDIA GR00T. README: <a href="https://github.com/natnew/awesome-physical-ai#robotics-foundation-models">#robotics-foundation-models</a>.</span>
   </a>
-  <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#world-models">
+  <a className="docs-card" href="/docs/categories/world-models">
     <strong>World Models</strong>
-    <span>Use this branch when planning, prediction, or synthetic environment generation matters more than direct policy execution.</span>
+    <span>Use this branch when planning, prediction, or synthetic environment generation matters more than direct policy execution. README: <a href="https://github.com/natnew/awesome-physical-ai#world-models">#world-models</a>.</span>
   </a>
-  <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#simulation-platforms">
-    <strong>Simulation Platforms</strong>
-    <span>Physics engines, high-fidelity simulators, and RL-focused environments are separated so you can narrow the tooling layer quickly.</span>
+  <a className="docs-card" href="/docs/categories/simulators">
+    <strong>Simulators</strong>
+    <span>Physics engines, high-fidelity simulators, and RL-focused environments. README: <a href="https://github.com/natnew/awesome-physical-ai#simulators">#simulators</a>.</span>
   </a>
-  <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#learning-frameworks">
-    <strong>Learning Frameworks</strong>
-    <span>The repository splits imitation learning, reinforcement learning, and general libraries instead of flattening them together.</span>
+  <a className="docs-card" href="/docs/categories/manipulation">
+    <strong>Manipulation</strong>
+    <span>Methods, models, and tools for grasping, dexterous manipulation, and contact-rich tasks. README: <a href="https://github.com/natnew/awesome-physical-ai#manipulation">#manipulation</a>.</span>
   </a>
-  <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#robot-software-stacks">
-    <strong>Robot Software Stacks</strong>
-    <span>ROS 2, ROS, micro-ROS, Isaac ROS, MoveIt, Nav2, Open-RMF, and Robotics Library cover middleware and operations layers.</span>
+  <a className="docs-card" href="/docs/categories/locomotion">
+    <strong>Locomotion</strong>
+    <span>Legged, bipedal, and humanoid locomotion — controllers, learning approaches, and reference platforms. README: <a href="https://github.com/natnew/awesome-physical-ai#locomotion">#locomotion</a>.</span>
   </a>
-  <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#perception--representations">
-    <strong>Perception & Control</strong>
-    <span>Perception / representation and motion planning / control live in separate subsections so you can keep sensing and execution concerns distinct.</span>
+  <a className="docs-card" href="/docs/categories/datasets">
+    <strong>Datasets</strong>
+    <span>Open X-Embodiment, DROID, RoboMIND, and related training datasets. README: <a href="https://github.com/natnew/awesome-physical-ai#datasets">#datasets</a>.</span>
   </a>
 </div>
 
 ## Prepare for real-world work
 
-When you are moving from research tooling toward physical systems, use the [Deploy](https://github.com/natnew/awesome-physical-ai#deploy) branch.
+When you are moving from research tooling toward physical systems, route through the canonical Deploy-side categories.
 
 <div className="docs-link-grid">
+  <a className="docs-card" href="/docs/categories/sim-to-real">
+    <strong>Sim-to-Real</strong>
+    <span>Domain randomisation, system identification, and case studies for transferring policies to real hardware. README: <a href="https://github.com/natnew/awesome-physical-ai#sim-to-real">#sim-to-real</a>.</span>
+  </a>
+  <a className="docs-card" href="/docs/categories/safety-and-robustness">
+    <strong>Safety & Robustness</strong>
+    <span>Safe-control references, guardrails, and robustness testing. README: <a href="https://github.com/natnew/awesome-physical-ai#safety--robustness">#safety--robustness</a>.</span>
+  </a>
+  <a className="docs-card" href="/docs/categories/evaluation-methodology">
+    <strong>Evaluation Methodology</strong>
+    <span>How to design and run trustworthy evaluations for physical systems. README: <a href="https://github.com/natnew/awesome-physical-ai#evaluation-methodology">#evaluation-methodology</a>.</span>
+  </a>
+  <a className="docs-card" href="/docs/categories/benchmarks">
+    <strong>Benchmarks</strong>
+    <span>CALVIN, LIBERO, RLBench, HumanoidBench, and other comparable harnesses. README: <a href="https://github.com/natnew/awesome-physical-ai#benchmarks">#benchmarks</a>.</span>
+  </a>
+  <a className="docs-card" href="/docs/categories/production-patterns">
+    <strong>Production Patterns</strong>
+    <span>Reference architectures, operational patterns, and deployment-adjacent references. README: <a href="https://github.com/natnew/awesome-physical-ai#production-patterns--reference-architectures">#production-patterns--reference-architectures</a>.</span>
+  </a>
+  <a className="docs-card" href="/docs/categories/governance-and-policy">
+    <strong>Governance & Policy</strong>
+    <span>Standards, regulation, and policy-adjacent material that shapes deployment. README: <a href="https://github.com/natnew/awesome-physical-ai#governance--policy">#governance--policy</a>.</span>
+  </a>
   <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#hardware-platforms">
     <strong>Hardware Platforms</strong>
-    <span>The README separates arms, humanoids, mobile robots, and lower-cost or DIY hardware to keep procurement and experiment planning practical.</span>
-  </a>
-  <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#datasets--benchmarks">
-    <strong>Datasets & Benchmarks</strong>
-    <span>Open X-Embodiment, DROID, RoboMIND, CALVIN, LIBERO, RLBench, HumanoidBench, and related entries sit in one place.</span>
-  </a>
-  <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#safety--evaluation">
-    <strong>Safety & Evaluation</strong>
-    <span>Use this subsection when you need safe-control references, guardrails, or evaluation frameworks rather than model catalogs.</span>
+    <span>Arms, humanoids, mobile robots, and lower-cost or DIY hardware separated for procurement and experiment planning.</span>
   </a>
 </div>
 
 ## Track the field
 
-If your goal is ongoing awareness instead of immediate implementation, use the [Stay Current](https://github.com/natnew/awesome-physical-ai#stay-current) section.
+If your goal is ongoing awareness instead of immediate implementation, work from the appendices and the Companies category.
 
 <div className="docs-link-grid">
   <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#conferences">
@@ -90,15 +108,15 @@ If your goal is ongoing awareness instead of immediate implementation, use the [
   </a>
   <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#community">
     <strong>Community channels</strong>
-    <span>ROS Discourse, Robotics Stack Exchange, subreddit communities, and Discord communities provide discussion entry points.</span>
+    <span>ROS Discourse, Robotics Stack Exchange, subreddit communities, and Discord servers provide discussion entry points.</span>
   </a>
-  <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#companies--labs">
-    <strong>Companies & Labs</strong>
-    <span>Research labs and startups are separated, which makes it easier to track research output versus commercial product signals.</span>
+  <a className="docs-card" href="/docs/categories/companies">
+    <strong>Companies</strong>
+    <span>Active commercial and research-product organisations in Physical AI. README: <a href="https://github.com/natnew/awesome-physical-ai#companies">#companies</a>.</span>
   </a>
   <a className="docs-card" href="https://github.com/natnew/awesome-physical-ai#newsletters--blogs">
     <strong>Newsletters & Blogs</strong>
-    <span>Use these when you want analysis, technical commentary, and field updates without reading every primary source directly.</span>
+    <span>Use these when you want analysis, technical commentary, and field updates without reading every primary source.</span>
   </a>
 </div>
 

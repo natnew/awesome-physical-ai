@@ -259,13 +259,13 @@ Techniques and case studies for transferring policies trained in simulation to r
 - [Eureka (NVIDIA)](https://eureka-research.github.io/) — LLM-driven reward design that enables sim-to-real transfer for dexterous skills.
 - [DextrAH-G](https://sites.google.com/view/dextrah-g) — Sim-to-real dexterous arm-hand grasping pipeline using GPU-parallel RL.
 - [Real-World Humanoid Locomotion (Radosavovic et al.)](https://arxiv.org/abs/2303.03381) — Sim-to-real RL for humanoid walking with strong robustness.
-- [DayDreamer](https://danijar.com/project/daydreamer/) — World-model approach that reduces real-robot interaction needed for transfer.
+- [DeXtreme (NVIDIA)](https://dextreme.org/) — Sim-to-real dexterous in-hand manipulation on the Allegro hand using massively parallel GPU simulation.
 - [Automatic Domain Randomization](https://arxiv.org/abs/1910.07113) — Curriculum-style randomization strategy for robust transfer without manual tuning.
 - [SimOpt](https://arxiv.org/abs/1910.13325) — Simulation parameter optimization framework for reducing real-world mismatch.
 - [BayesSim](https://arxiv.org/abs/1906.01728) — Bayesian domain randomization approach for data-efficient sim-to-real adaptation.
 - [Residual Reinforcement Learning for Robot Control](https://arxiv.org/abs/1812.03201) — Combines model-based controllers with learned residuals for stable transfer.
 - [Learning Agile Flight in the Wild](https://arxiv.org/abs/1909.11652) — Sim-to-real pipeline for high-speed quadrotor control under real-world disturbances.
-- [Rapid Locomotion via RL](https://arxiv.org/abs/2207.07802) — Transfer-focused locomotion training recipe used in practical legged deployments.
+- [Learning Robust Perceptive Locomotion (Miki et al.)](https://leggedrobotics.github.io/rl-perceptiveloco/) — Science Robotics result combining proprioceptive and exteroceptive teachers for robust real-world transfer.
 - [Privileged Learning for Rapid Motor Adaptation](https://arxiv.org/abs/2109.11978) — Distillation strategy leveraging privileged simulation signals for robust real-world control.
 - [SimGAN](https://arxiv.org/abs/1612.07828) — Sim-to-real visual adaptation method for narrowing sensor-domain gaps.
 
