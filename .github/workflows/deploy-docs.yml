@@ -25,6 +25,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -35,6 +38,42 @@ jobs:
       - name: Install dependencies
         working-directory: website
         run: npm ci
+
+      - name: Resolve deployment URL settings
+        shell: bash
+        run: |
+          CUSTOM_DOMAIN="${{ vars.DOCUSAURUS_CUSTOM_DOMAIN }}"
+          EXPLICIT_SITE_URL="${{ vars.DOCUSAURUS_SITE_URL }}"
+          EXPLICIT_BASE_URL="${{ vars.DOCUSAURUS_BASE_URL }}"
+
+          if [ -n "$CUSTOM_DOMAIN" ]; then
+            echo "DOCUSAURUS_CUSTOM_DOMAIN=$CUSTOM_DOMAIN" >> "$GITHUB_ENV"
+            echo "DOCUSAURUS_SITE_URL=https://$CUSTOM_DOMAIN" >> "$GITHUB_ENV"
+            if [ -n "$EXPLICIT_BASE_URL" ]; then
+              echo "DOCUSAURUS_BASE_URL=$EXPLICIT_BASE_URL" >> "$GITHUB_ENV"
+            else
+              echo "DOCUSAURUS_BASE_URL=/" >> "$GITHUB_ENV"
+            fi
+          else
+            if [ -n "$EXPLICIT_SITE_URL" ]; then
+              echo "DOCUSAURUS_SITE_URL=$EXPLICIT_SITE_URL" >> "$GITHUB_ENV"
+            else
+              echo "DOCUSAURUS_SITE_URL=https://natnew.github.io" >> "$GITHUB_ENV"
+            fi
+
+            if [ -n "$EXPLICIT_BASE_URL" ]; then
+              echo "DOCUSAURUS_BASE_URL=$EXPLICIT_BASE_URL" >> "$GITHUB_ENV"
+            else
+              echo "DOCUSAURUS_BASE_URL=/awesome-physical-ai/" >> "$GITHUB_ENV"
+            fi
+          fi
+
+      - name: Add CNAME for custom domain
+        if: ${{ vars.DOCUSAURUS_CUSTOM_DOMAIN != '' }}
+        working-directory: website/static
+        shell: bash
+        run: |
+          printf '%s\n' "${{ vars.DOCUSAURUS_CUSTOM_DOMAIN }}" > CNAME
 
       - name: Build site
         working-directory: website

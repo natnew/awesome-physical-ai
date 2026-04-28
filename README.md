@@ -12,6 +12,13 @@ Physical AI and embodied AI represent the convergence of large-scale machine lea
 
 It is built for researchers and practitioners at every stage — from foundational learning to deployment of safe embodied AI systems — and for technical leaders evaluating how embodied intelligence will affect products, operations, and infrastructure.
 
+Live docs site: https://natnew.github.io/awesome-physical-ai/
+
+Hosting notes:
+- Production publishing uses GitHub Pages.
+- Custom-domain cutover is configured through repository variables used by `.github/workflows/deploy-docs.yml`.
+- Social preview metadata and OG image defaults are configured in `website/docusaurus.config.js`.
+
 ## Contents
 
 **Canonical categories**

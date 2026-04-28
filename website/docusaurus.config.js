@@ -1,11 +1,36 @@
 /** @type {import('@docusaurus/types').Config} */
+const baseUrl = process.env.DOCUSAURUS_BASE_URL || '/awesome-physical-ai/';
+const siteUrl = process.env.DOCUSAURUS_SITE_URL || 'https://natnew.github.io';
+const customDomain = process.env.DOCUSAURUS_CUSTOM_DOMAIN || '';
+const canonicalSiteUrl = customDomain ? `https://${customDomain}` : siteUrl;
+
+const joinUrl = (origin, pathPrefix = '', relativePath = '') => {
+  const normalizedOrigin = origin.replace(/\/+$/, '');
+  const normalizedPrefix = pathPrefix.replace(/^\/+|\/+$/g, '');
+  const normalizedPath = relativePath.replace(/^\/+/, '');
+  const segments = [normalizedOrigin];
+
+  if (normalizedPrefix) {
+    segments.push(normalizedPrefix);
+  }
+
+  if (normalizedPath) {
+    segments.push(normalizedPath);
+  }
+
+  return segments.join('/');
+};
+
+const siteRootUrl = `${joinUrl(canonicalSiteUrl, baseUrl)}/`;
+const ogImageUrl = joinUrl(canonicalSiteUrl, baseUrl, 'img/og-card.svg');
+
 const config = {
   title: 'Awesome Physical AI',
   tagline:
     'A curated Physical AI roadmap: robotics resources, embodied AI, world models, robotics simulation, sim-to-real, Physical AI benchmarks, foundation models for robotics, and production-grade Physical AI systems.',
   favicon: 'img/favicon.svg',
-  url: 'https://natnew.github.io',
-  baseUrl: process.env.DOCUSAURUS_BASE_URL || '/awesome-physical-ai/',
+  url: canonicalSiteUrl,
+  baseUrl,
   organizationName: 'natnew',
   projectName: 'awesome-physical-ai',
   onBrokenLinks: 'throw',
@@ -37,6 +62,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: ogImageUrl,
       metadata: [
         {
           name: 'description',
@@ -54,6 +80,8 @@ const config = {
           content:
             'A curated Physical AI roadmap covering robotics resources, embodied AI, world models, robotics simulation, sim-to-real, VLA models, Physical AI benchmarks, foundation models for robotics, generalist robot policies, and production-grade, safe embodied AI systems.',
         },
+        { property: 'og:url', content: siteRootUrl },
+        { property: 'og:image', content: ogImageUrl },
         { property: 'og:type', content: 'website' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Awesome Physical AI' },
@@ -62,6 +90,8 @@ const config = {
           content:
             'Curated Physical AI resources: robotics, embodied AI, simulation, sim-to-real, world models, VLA models, benchmarks, and production-grade Physical AI systems.',
         },
+        { name: 'twitter:image', content: ogImageUrl },
+        { rel: 'canonical', href: siteRootUrl },
       ],
       colorMode: {
         defaultMode: 'dark',

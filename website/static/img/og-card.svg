@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Awesome Physical AI</title>
+  <desc id="desc">Engineering-oriented map of Physical AI resources spanning robotics, simulation, and deployment.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1d2a"/>
+      <stop offset="50%" stop-color="#123a52"/>
+      <stop offset="100%" stop-color="#0b1d2a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4dd0e1"/>
+      <stop offset="100%" stop-color="#9be15d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1020" cy="88" r="180" fill="#2f7ea333"/>
+  <circle cx="150" cy="560" r="210" fill="#4fc3f733"/>
+
+  <g fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.5">
+    <path d="M80 120 C270 30, 430 30, 600 115"/>
+    <path d="M600 115 C760 195, 930 195, 1120 110"/>
+    <path d="M80 510 C300 420, 470 430, 650 520"/>
+    <path d="M650 520 C840 600, 980 600, 1120 520"/>
+  </g>
+
+  <text x="80" y="250" fill="#ecf7ff" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="700">
+    Awesome Physical AI
+  </text>
+  <text x="80" y="320" fill="#c5e6f8" font-family="Segoe UI, Arial, sans-serif" font-size="34">
+    Curated resources for embodied systems engineering
+  </text>
+  <text x="80" y="380" fill="#9fd0e8" font-family="Segoe UI, Arial, sans-serif" font-size="28">
+    Robotics • Simulation • Sim-to-Real • Evaluation • Safety
+  </text>
+
+  <rect x="80" y="430" width="460" height="56" rx="12" fill="#0f2f43" stroke="#4dd0e1"/>
+  <text x="106" y="467" fill="#d5f6ff" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="600">
+    github.com/natnew/awesome-physical-ai
+  </text>
+</svg>
