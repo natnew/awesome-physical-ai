@@ -247,6 +247,14 @@ Legged, bipedal, and humanoid locomotion — controllers, learning approaches, a
 - [Learning Quadrupedal Locomotion over Challenging Terrain](https://arxiv.org/abs/1901.08652) — Classic ANYmal result demonstrating robust transfer from simulation.
 - [Isaac Gym](https://developer.nvidia.com/isaac-gym) — GPU-parallel simulation stack that accelerated modern locomotion training pipelines.
 - [MuJoCo Menagerie](https://github.com/google-deepmind/mujoco_menagerie) — Curated high-quality robot models for repeatable locomotion research.
+- [Real-World Humanoid Locomotion with RL](https://arxiv.org/abs/2303.03381) — Sim-to-real RL controller for blind humanoid walking on a real bipedal platform (Science Robotics 2024).
+- [Periodic Reward Composition for Bipedal Gaits](https://arxiv.org/abs/2011.01387) — Sim-to-real RL recipe producing walking, hopping, and skipping from a single Cassie policy (ICRA 2021).
+- [Robust Parameterized Bipedal Locomotion (Cassie)](https://arxiv.org/abs/2103.14295) — RL controller covering a parameterised velocity/stance family on Cassie (ICRA 2021).
+- [Bipedal Soccer (DeepMind OP3)](https://arxiv.org/abs/2304.13653) — Whole-body RL pipeline producing agile soccer skills on a small humanoid (Science Robotics 2024).
+- [Humanoid Parkour Learning](https://arxiv.org/abs/2406.10759) — End-to-end perceptive RL enabling humanoid parkour over discontinuous terrain (CoRL 2024).
+- [Expressive Whole-Body Control](https://expressive-humanoid.github.io/) — Whole-body controller producing expressive, human-like motion on a real humanoid (RSS 2024).
+- [ASAP — Sim-to-Real for Humanoid Whole-Body Skills](https://agile.human2humanoid.com/) — Delta-action correction closing the sim-to-real gap on agile humanoid skills (RSS 2025).
+- [HOVER — Versatile Humanoid Whole-Body Controller](https://hover-versatile-humanoid.github.io/) — Single neural controller covering multiple humanoid command modes (ICRA 2025).
 
 ## Sim-to-Real
 
@@ -411,6 +419,18 @@ Influential research papers in Physical AI.
 - [Mobile ALOHA](https://arxiv.org/abs/2401.02117) - Learning bimanual mobile manipulation with low-cost hardware.
 - [ALOHA Unleashed](https://aloha-unleashed.github.io/) - Simple recipe for robot dexterity at scale.
 - [I-JEPA](https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/) - LeCun's image joint-embedding predictive architecture.
+- [Real-World Humanoid Locomotion with RL](https://arxiv.org/abs/2303.03381) - Radosavovic et al. Sim-to-real RL controller for blind humanoid walking, deployed on a real Digit-class platform (Science Robotics 2024).
+- [Sim-to-Real Learning of All Common Bipedal Gaits](https://arxiv.org/abs/2011.01387) - Siekmann et al. Periodic reward composition that transfers a single bipedal policy across walking, hopping, and skipping gaits (ICRA 2021).
+- [Robust Parameterized Locomotion Control for Bipedal Robots](https://arxiv.org/abs/2103.14295) - Li et al. RL controller spanning a parameterised family of velocities and stances on Cassie (ICRA 2021).
+- [Learning Agile Soccer Skills for a Bipedal Robot](https://arxiv.org/abs/2304.13653) - Haarnoja et al. Deep RL pipeline producing whole-body soccer behaviours on a small humanoid (Science Robotics 2024).
+- [Humanoid Parkour Learning](https://arxiv.org/abs/2406.10759) - Zhuang et al. End-to-end perceptive RL controller enabling humanoid parkour over discontinuous terrain (CoRL 2024).
+- [Expressive Whole-Body Control for Humanoid Robots](https://arxiv.org/abs/2402.16796) - Cheng et al. Whole-body controller producing expressive, human-like motion on a real humanoid (RSS 2024).
+- [H2O: Human-to-Humanoid Real-Time Whole-Body Teleoperation](https://arxiv.org/abs/2403.04436) - He et al. RL-based real-time teleoperation framework retargeting human motion to a humanoid (IROS 2024).
+- [ASAP: Aligning Simulation and Real-World Physics](https://arxiv.org/pdf/2502.01143) - He et al. Delta-action correction for closing the sim-to-real gap on agile humanoid whole-body skills (RSS 2025).
+- [HOVER: Versatile Neural Whole-Body Controller](https://hover-versatile-humanoid.github.io/resources/HOVER_paper.pdf) - He et al. Single neural controller covering multiple humanoid command modes — joint, root, and end-effector tracking (ICRA 2025).
+- [Attention-Based Map Encoding for Generalized Legged Locomotion](https://www.science.org/doi/10.1126/scirobotics.adv5733) - He et al. Attention-based exteroceptive encoder generalising perceptive locomotion across legged platforms (Science Robotics 2025).
+- [Denoising World Model Learning for Humanoid Locomotion](https://arxiv.org/abs/2408.14472) - Gu et al. Denoising world-model RL for humanoid traversal of challenging terrain (RSS 2024).
+- [HugWBC: Unified Humanoid Whole-Body Controller](https://arxiv.org/abs/2502.03206) - Xue et al. General whole-body controller targeting fine-grained humanoid locomotion across gaits and tasks (RSS 2025).
 
 ## Survey Papers
 
@@ -587,6 +607,7 @@ Other curated lists covering adjacent topics.
 - [Awesome Generative AI](https://github.com/natasha-rye/awesome-generative-ai) - Broader generative AI resources.
 - [Awesome Deep RL](https://github.com/kengz/awesome-deep-rl) - Deep reinforcement learning resources.
 - [Awesome Imitation Learning](https://github.com/kristery/Awesome-Imitation-Learning) - Learning from demonstrations.
+- [Bipedal Robot Learning Collection](https://github.com/zita-ch/bipedal-robot-learning-collection) - Curated bipedal/humanoid robot-learning papers with a sim-to-real focus.
 
 ---
 
