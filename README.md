@@ -632,4 +632,16 @@ Other curated lists covering adjacent topics.
 
 ## Contributing
 
-Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
+<p align="center">
+  <img src="assets/We%20love%20Contributors%20%E2%80%94%20section%20title%20banner.png" alt="We love Contributors" width="480">
+</p>
+
+<p align="center">
+Thrilled to have you here.<br>
+Whether it's a quick typo fix, a fresh resource, a doc polish, or a sweeping overhaul — every contribution helps this list grow.<br>
+Jump in and join the community — PRs of every size are welcome.
+</p>
+
+<p align="center">
+📝 <a href="CONTRIBUTING.md">Read the contributing guide</a>  ·  🐛 <a href="https://github.com/natnew/awesome-physical-ai/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">good first issues</a>
+</p>
