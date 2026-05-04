@@ -16,3 +16,28 @@
 # ^https?://(www\.)?linkedin\.com/
 # # twitter.com / x.com — aggressive bot-detection breaks unauthenticated checks (2026-04)
 # ^https?://(www\.)?(twitter|x)\.com/
+
+# unece.org — 403 to GitHub Actions egress; pages verified live in browser (2026-05)
+^https?://unece\.org/
+# tesla.com — Cloudflare bot wall returns 403 to CI runners; pages live in browser (2026-05)
+^https?://(www\.)?tesla\.com/
+# spinningup.openai.com — 403 to CI HEAD requests; site is live (2026-05)
+^https?://spinningup\.openai\.com/
+# mitpress.mit.edu — 403 to CI; book pages live in browser (2026-05)
+^https?://mitpress\.mit\.edu/
+# science.org — publisher bot wall returns 403 to CI; DOI links live in browser (2026-05)
+^https?://(www\.)?science\.org/
+# reddit.com — 403 to unauthenticated CI requests; pages live in browser (2026-05)
+^https?://(www\.)?reddit\.com/
+# substack.com — 403 to CI HEAD requests across newsletters; live in browser (2026-05)
+^https?://[a-z0-9-]+\.substack\.com/
+# standardscatalog.ul.com — TLS/network errors from CI runners; site live in browser (2026-05)
+^https?://standardscatalog\.ul\.com/
+# cds.caltech.edu — intermittent network errors from CI; pages live in browser (2026-05)
+^https?://(www\.)?cds\.caltech\.edu/
+# stanfordstudentrobotics.org — network errors from CI runners; site live in browser (2026-05)
+^https?://stanfordstudentrobotics\.org/
+# teach.cs.washington.edu — network errors from CI runners; pages live in browser (2026-05)
+^https?://teach\.cs\.washington\.edu/
+# robotsandstartups.substack.com — covered by substack.com rule above (2026-05)
+# importai.substack.com — covered by substack.com rule above (2026-05)

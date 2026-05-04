@@ -1,10 +1,13 @@
 # Awesome Physical AI [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-[![License: MIT](https://img.shields.io/github/license/natnew/awesome-physical-ai?color=blue)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Last Commit](https://img.shields.io/github/last-commit/natnew/awesome-physical-ai)](https://github.com/natnew/awesome-physical-ai/commits/main)
-[![Contributors](https://img.shields.io/github/contributors/natnew/awesome-physical-ai)](https://github.com/natnew/awesome-physical-ai/graphs/contributors)
-[![GitHub stars](https://img.shields.io/github/stars/natnew/awesome-physical-ai?style=social)](https://github.com/natnew/awesome-physical-ai/stargazers)
+<p align="center">
+  <a href="https://github.com/natnew/awesome-physical-ai/stargazers"><img src="https://img.shields.io/github/stars/natnew/awesome-physical-ai?style=flat-square&label=stars" alt="GitHub stars"></a>
+  <a href="https://github.com/natnew/awesome-physical-ai/network/members"><img src="https://img.shields.io/github/forks/natnew/awesome-physical-ai?style=flat-square&label=forks" alt="GitHub forks"></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/github/license/natnew/awesome-physical-ai?style=flat-square" alt="Licence"></a>
+  <a href="https://github.com/natnew/awesome-physical-ai/commits/main"><img src="https://img.shields.io/github/last-commit/natnew/awesome-physical-ai?style=flat-square" alt="Last commit"></a>
+  <a href="https://github.com/natnew/awesome-physical-ai/actions/workflows/link-check.yml"><img src="https://img.shields.io/github/actions/workflow/status/natnew/awesome-physical-ai/link-check.yml?branch=main&style=flat-square&label=links" alt="Link check"></a>
+  <a href="./CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs welcome"></a>
+</p>
 
 > A curated list of **awesome Physical AI** resources — a Physical AI roadmap covering robotics, embodied AI, simulation, world models, and production-grade Physical AI systems.
 
@@ -205,7 +208,7 @@ Generative and predictive models of physical dynamics used for planning, simulat
 - [SimPLe](https://arxiv.org/abs/1903.00374) — Model-based RL baseline showing strong sample efficiency from learned video prediction.
 - [MuZero](https://arxiv.org/abs/1911.08265) — Learned model-based planning architecture with strong performance across control domains.
 - [DreamerV2](https://arxiv.org/abs/2010.02193) — Robust latent world-model RL variant with improved discrete latent representations.
-- [GAIA-1 (Wayve)](https://wayve.ai/thinking/introducing-gaia-1/) — Driving-oriented generative world model for physically plausible scenario synthesis.
+- [GAIA-1 (Wayve)](https://arxiv.org/abs/2309.17080) — Driving-oriented generative world model for physically plausible scenario synthesis.
 - [TD-MPC2](https://arxiv.org/abs/2310.16828) — Modern latent model-predictive control method with broad robot-control transfer.
 
 ## Manipulation
@@ -308,7 +311,7 @@ Standards, frameworks, and policy guidance relevant to deploying Physical AI sys
 - [UK AI Safety Institute](https://www.aisi.gov.uk/) — Government body publishing evaluations and guidance on frontier AI risks.
 - [White House Executive Order on AI (14110)](https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence) — US federal directive on safe and trustworthy AI development relevant to robotics deployers.
 - [ISO/IEC 42001](https://www.iso.org/standard/81230.html) — AI management-system standard for governance, controls, and continuous improvement.
-- [NIST AI RMF Generative AI Profile](https://www.nist.gov/itl/ai-risk-management-framework/ai-risk-management-framework-generative-artificial-intelligence-profile) — Practical profile extending AI RMF controls to generative-model deployments.
+- [NIST AI RMF Generative AI Profile](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf) — Practical profile extending AI RMF controls to generative-model deployments.
 - [EU Machinery Regulation (EU 2023/1230)](https://eur-lex.europa.eu/eli/reg/2023/1230/oj) — Core legal framework governing safety requirements for machinery and many robotic systems in the EU.
 - [UNECE R155](https://unece.org/transport/vehicle-regulations/un-regulation-no-155-cyber-security-and-cyber-security) — Cybersecurity requirements for connected and automated road vehicles.
 - [UNECE R156](https://unece.org/transport/vehicle-regulations/un-regulation-no-156-software-update-and-software-updates-management) — Software update and update-management requirements for vehicles.
@@ -350,7 +353,7 @@ University courses and structured learning programs in robot learning and embodi
 - [NVIDIA DLI Robotics](https://www.nvidia.com/en-us/training/) — Self-paced courses on Isaac Sim, ROS, and robot learning.
 - [CS 285 — Deep Reinforcement Learning (Berkeley)](https://rail.eecs.berkeley.edu/deeprlcourse/) — Strong practical RL course with modern policy-gradient and model-based methods.
 - [Deep RL Bootcamp](https://sites.google.com/view/deep-rl-bootcamp/lectures) — Lecture series covering core deep-RL concepts and implementation practice.
-- [DeepMind x UCL RL Lecture Series](https://www.deepmind.com/learning-resources/reinforcement-learning-lectures-series-2021) — Advanced RL lecture track from leading research practitioners.
+- [DeepMind x UCL RL Lecture Series](https://www.youtube.com/playlist?list=PLqYmG7hTraZDVH599EItlEWsUOsJbAodm) — Advanced RL lecture track from leading research practitioners.
 - [16-745 — Optimal Control and Reinforcement Learning (CMU)](https://optimalcontrol.ri.cmu.edu/) — Control and RL foundations for robotics deployment.
 - [MIT Underactuated Robotics](https://underactuated.mit.edu/) — Open textbook/course on dynamics, planning, and control for underactuated systems.
 - [Fast.ai Practical Deep Learning](https://course.fast.ai/) — Applied deep-learning curriculum useful for perception and representation foundations.
@@ -561,8 +564,8 @@ Hands-on projects to progress from beginner to mastery. All runnable on laptop o
 
 Start here to build intuition for robot learning concepts.
 
-- **Gymnasium Cart-Pole** - Classic control problem. Balance a pole using RL in 50 lines of Python. [Tutorial](https://gymnasium.farama.org/tutorials/training_agents/cart_pole/)
-- **MuJoCo Playground** - Explore physics simulation in the browser. No install required. [Playground](https://mujoco.github.io/mujoco_wasm/)
+- **Gymnasium Cart-Pole** - Classic control problem. Balance a pole using RL in 50 lines of Python. [Tutorial](https://gymnasium.farama.org/introduction/train_agent/)
+- **MuJoCo Playground** - Explore physics simulation in the browser. No install required. [Playground](https://mujoco.org/)
 - **Hugging Face Deep RL Course** - Free, hands-on RL fundamentals with Colab notebooks. [Course](https://huggingface.co/learn/deep-rl-course/)
 - **Spinning Up in Deep RL** - OpenAI's educational resource. Well-documented implementations. [Guide](https://spinningup.openai.com/)
 
@@ -604,7 +607,7 @@ Other curated lists covering adjacent topics.
 - [Awesome Robotics 3D](https://github.com/zubair-irshad/Awesome-Robotics-3D) - 3D vision for robotics.
 - [Awesome Embodied Agent](https://github.com/zchoi/Awesome-Embodied-Robotics-and-Agent) - Embodied AI with VLMs and LLMs.
 - [Awesome World Models](https://github.com/operator22th/awesome-world-models-for-robots) - World models for robotics.
-- [Awesome Generative AI](https://github.com/natasha-rye/awesome-generative-ai) - Broader generative AI resources.
+- [Awesome Generative AI](https://github.com/steven2358/awesome-generative-ai) - Broader generative AI resources.
 - [Awesome Deep RL](https://github.com/kengz/awesome-deep-rl) - Deep reinforcement learning resources.
 - [Awesome Imitation Learning](https://github.com/kristery/Awesome-Imitation-Learning) - Learning from demonstrations.
 - [Bipedal Robot Learning Collection](https://github.com/zita-ch/bipedal-robot-learning-collection) - Curated bipedal/humanoid robot-learning papers with a sim-to-real focus.
