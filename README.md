@@ -628,7 +628,7 @@ Other curated lists covering adjacent topics.
 
 <p align="center">
 Thrilled to have you here.<br>
-Whether it's a quick typo fix, a fresh resource, a doc polish, or a sweeping overhaul — every contribution helps this list grow.<br>
+Whether it's a quick typo fix, a fresh resource,<br> a doc polish, or a sweeping overhaul — every contribution helps this list grow.<br>
 Jump in and join the community — PRs of every size are welcome.
 </p>
 
