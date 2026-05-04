@@ -230,4 +230,6 @@ ANNOUNCEMENTS.md
 _private/
 
 # assets
-assets/
+assets/*
+!assets/github/
+!assets/readme/
