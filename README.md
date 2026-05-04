@@ -36,44 +36,36 @@ Built for researchers and practitioners across the stack — from foundations to
 <details>
 <summary><h2 style="display:inline-block">Get Started</h2></summary>
 
-Hands-on projects to progress from beginner to mastery. All runnable on laptop or mobile.
+**New to Physical AI? Start here.**  
+Physical AI sits at the intersection of robotics, machine learning, simulation, and embodied decision-making. The easiest way to begin is to start in simulation, understand the learning loop, then move toward robot policies, foundation models, and real-world systems.
 
-### Beginner: Foundations (Week 1-2)
+### Quick start path
 
-Start here to build intuition for robot learning concepts.
+**1. Learn the core reinforcement learning loop**  
+Start with [Gymnasium CartPole](https://gymnasium.farama.org/introduction/train_agent/) to build intuition for states, actions, rewards, and policies.
 
-**Gymnasium Cart-Pole** — Classic control problem. Balance a pole using RL in 50 lines of Python. [Tutorial](https://gymnasium.farama.org/introduction/train_agent/)<br>
-**MuJoCo Playground** — Explore physics simulation in the browser. No install required. [Playground](https://mujoco.org/)<br>
-**Hugging Face Deep RL Course** — Free, hands-on RL fundamentals with Colab notebooks. [Course](https://huggingface.co/learn/deep-rl-course/)<br>
-**Spinning Up in Deep RL** — OpenAI's educational resource. Well-documented implementations. [Guide](https://spinningup.openai.com/)
+**2. Explore simulation**  
+Use [MuJoCo](https://mujoco.org/) to understand how control, physics, contacts, and robot dynamics are modelled.
 
-### Intermediate: Simulation & Imitation (Week 3-6)
+**3. Inspect a modern robot-learning workflow**  
+Browse [LeRobot](https://github.com/huggingface/lerobot) to see how robot datasets, policies, training, and evaluation are structured in practice.
 
-Build robot policies in simulation environments.
+**4. Explore the frontier of embodied foundation models**  
+Look at [OpenVLA](https://openvla.github.io/) to understand how vision-language-action models connect perception, language, and robot control.
 
-**LeRobot Tutorials** — Train manipulation policies using Hugging Face's framework. Includes pre-trained models. [Repo](https://github.com/huggingface/lerobot)<br>
-**Diffusion Policy Colab** — Implement diffusion-based robot policies step by step. [Colab](https://colab.research.google.com/github/real-stanford/diffusion_policy/blob/main/diffusion_policy.ipynb)<br>
-**MuJoCo Humanoid Control** — Train a humanoid to walk using PPO. [MuJoCo Docs](https://mujoco.readthedocs.io/)<br>
-**Isaac Lab Getting Started** — GPU-accelerated robot learning. Requires NVIDIA GPU. [Docs](https://isaac-sim.github.io/IsaacLab/)<br>
-**RoboMimic** — Framework for robot learning from demonstrations. [Repo](https://github.com/ARISE-Initiative/robomimic)
+**5. Move deeper when ready**  
+Once the above feels clear, continue into imitation learning, generalist robot policies, sim-to-real methods, hardware, and evaluation.
 
-### Advanced: Foundation Models & Transfer (Week 7-12)
+### Choose your route
 
-Work with state-of-the-art models and real-world transfer.
+- **Foundations** — simulation, control, reinforcement learning, and core robot-learning concepts  
+- **Robot Learning** — imitation learning, diffusion policies, and visuomotor control  
+- **Foundation Models** — VLA models, generalist policies, world models, and large-scale robot data  
+- **Evaluation & Safety** — benchmarks, robustness, deployment constraints, and responsible embodied AI  
+- **Hardware** — low-cost robot platforms and practical embodied projects
 
-**OpenVLA Fine-tuning** — Fine-tune a 7B vision-language-action model on custom tasks. [Guide](https://openvla.github.io/)<br>
-**Octo Custom Dataset** — Train generalist policies on Open X-Embodiment data. [Repo](https://octo-models.github.io/)<br>
-**Open X-Embodiment Colab** — Explore 1M+ trajectories across 22 robot embodiments. [Colab](https://colab.research.google.com/github/google-deepmind/open_x_embodiment/blob/main/colabs/Open_X_Embodiment_Datasets.ipynb)<br>
-**RT-X Evaluation** — Evaluate cross-embodiment transfer with RT-X models. [Paper](https://robotics-transformer-x.github.io/)
-
-### Hardware Projects (Optional)
-
-For those ready to touch real robots.
-
-**SO-100 Arm ($110)** — LeRobot-compatible low-cost robot arm. [Build Guide](https://github.com/TheRobotStudio/SO-ARM100)<br>
-**ALOHA ($20K)** — Bimanual teleoperation platform with extensive documentation. [Repo](https://github.com/tonyzhaozh/aloha)<br>
-**Reachy Mini ($299)** — Desktop humanoid from Pollen Robotics with Python SDK. [Shop](https://www.pollen-robotics.com/)<br>
-**NVIDIA JetBot** — Autonomous driving on Jetson Nano. Great for perception projects. [Wiki](https://github.com/NVIDIA-AI-IOT/jetbot/wiki)
+> **Tip:** You do not need hardware to begin.  
+> Start with simulation first, then move to real-world systems when you understand the learning and evaluation loop.
 
 </details>
 
