@@ -1,4 +1,4 @@
-# Awesome Physical AI [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<h1 align="center">Awesome Physical AI <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a></h1>
 
 <p align="center">
   <a href="https://github.com/natnew/awesome-physical-ai/stargazers"><img src="https://img.shields.io/github/stars/natnew/awesome-physical-ai?style=flat-square&label=stars" alt="GitHub stars"></a>
@@ -11,16 +11,73 @@
 
 > A curated list of **awesome Physical AI** resources — a Physical AI roadmap covering robotics, embodied AI, simulation, world models, and production-grade Physical AI systems.
 
-Physical AI and embodied AI represent the convergence of large-scale machine learning with robotics — enabling embodied agents that perceive, reason, and act in the physical world. This list is a curated, engineering-oriented map of **Physical AI resources**: robotics resources, robot learning, robotics foundation models, vision-language-action models (VLA models), world models, robotics simulation, sim-to-real techniques, simulation environments, Physical AI benchmarks, robotics datasets, robotics benchmarks, foundation models for robotics, generalist robot policies, and patterns for safe, production-grade Physical AI systems.
+<p align="center">
+Physical AI and embodied AI represent the convergence of large-scale machine learning with robotics — enabling embodied agents that perceive, reason, and act in the physical world. This list is a curated, engineering-oriented map of <strong>Physical AI resources</strong>: robotics resources, robot learning, robotics foundation models, vision-language-action models (VLA models), world models, robotics simulation, sim-to-real techniques, simulation environments, Physical AI benchmarks, robotics datasets, robotics benchmarks, foundation models for robotics, generalist robot policies, and patterns for safe, production-grade Physical AI systems.
+</p>
 
+<p align="center">
 It is built for researchers and practitioners at every stage — from foundational learning to deployment of safe embodied AI systems — and for technical leaders evaluating how embodied intelligence will affect products, operations, and infrastructure.
+</p>
 
-Live docs site: https://natnew.github.io/awesome-physical-ai/
 
-Hosting notes:
-- Production publishing uses GitHub Pages.
-- Custom-domain cutover is configured through repository variables used by `.github/workflows/deploy-docs.yml`.
-- Social preview metadata and OG image defaults are configured in `website/docusaurus.config.js`.
+
+<p align="center">
+  <a href="https://natnew.github.io/awesome-physical-ai/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/github/live-docs-pill-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/github/live-docs-pill-light.svg">
+      <img alt="Visit the Live Docs Site" src="assets/github/live-docs-pill-light.svg" height="36">
+    </picture>
+  </a>
+</p>
+
+<div align="center">
+
+<details>
+<summary><h2 style="display:inline-block">Get Started</h2></summary>
+
+Hands-on projects to progress from beginner to mastery. All runnable on laptop or mobile.
+
+### Beginner: Foundations (Week 1-2)
+
+Start here to build intuition for robot learning concepts.
+
+**Gymnasium Cart-Pole** — Classic control problem. Balance a pole using RL in 50 lines of Python. [Tutorial](https://gymnasium.farama.org/introduction/train_agent/)<br>
+**MuJoCo Playground** — Explore physics simulation in the browser. No install required. [Playground](https://mujoco.org/)<br>
+**Hugging Face Deep RL Course** — Free, hands-on RL fundamentals with Colab notebooks. [Course](https://huggingface.co/learn/deep-rl-course/)<br>
+**Spinning Up in Deep RL** — OpenAI's educational resource. Well-documented implementations. [Guide](https://spinningup.openai.com/)
+
+### Intermediate: Simulation & Imitation (Week 3-6)
+
+Build robot policies in simulation environments.
+
+**LeRobot Tutorials** — Train manipulation policies using Hugging Face's framework. Includes pre-trained models. [Repo](https://github.com/huggingface/lerobot)<br>
+**Diffusion Policy Colab** — Implement diffusion-based robot policies step by step. [Colab](https://colab.research.google.com/github/real-stanford/diffusion_policy/blob/main/diffusion_policy.ipynb)<br>
+**MuJoCo Humanoid Control** — Train a humanoid to walk using PPO. [MuJoCo Docs](https://mujoco.readthedocs.io/)<br>
+**Isaac Lab Getting Started** — GPU-accelerated robot learning. Requires NVIDIA GPU. [Docs](https://isaac-sim.github.io/IsaacLab/)<br>
+**RoboMimic** — Framework for robot learning from demonstrations. [Repo](https://github.com/ARISE-Initiative/robomimic)
+
+### Advanced: Foundation Models & Transfer (Week 7-12)
+
+Work with state-of-the-art models and real-world transfer.
+
+**OpenVLA Fine-tuning** — Fine-tune a 7B vision-language-action model on custom tasks. [Guide](https://openvla.github.io/)<br>
+**Octo Custom Dataset** — Train generalist policies on Open X-Embodiment data. [Repo](https://octo-models.github.io/)<br>
+**Open X-Embodiment Colab** — Explore 1M+ trajectories across 22 robot embodiments. [Colab](https://colab.research.google.com/github/google-deepmind/open_x_embodiment/blob/main/colabs/Open_X_Embodiment_Datasets.ipynb)<br>
+**RT-X Evaluation** — Evaluate cross-embodiment transfer with RT-X models. [Paper](https://robotics-transformer-x.github.io/)
+
+### Hardware Projects (Optional)
+
+For those ready to touch real robots.
+
+**SO-100 Arm ($110)** — LeRobot-compatible low-cost robot arm. [Build Guide](https://github.com/TheRobotStudio/SO-ARM100)<br>
+**ALOHA ($20K)** — Bimanual teleoperation platform with extensive documentation. [Repo](https://github.com/tonyzhaozh/aloha)<br>
+**Reachy Mini ($299)** — Desktop humanoid from Pollen Robotics with Python SDK. [Shop](https://www.pollen-robotics.com/)<br>
+**NVIDIA JetBot** — Autonomous driving on Jetson Nano. Great for perception projects. [Wiki](https://github.com/NVIDIA-AI-IOT/jetbot/wiki)
+
+</details>
+
+</div>
 
 ## Contents
 
@@ -52,7 +109,7 @@ Hosting notes:
 - [Community](#community)
 - [Newsletters & Blogs](#newsletters--blogs)
 - [People to Follow](#people-to-follow)
-- [Getting Started Projects](#getting-started-projects)
+- [Get Started](#get-started)
 - [Related Awesome Lists](#related-awesome-lists)
 - [Contributing](#contributing)
 
@@ -555,47 +612,6 @@ Researchers, engineers, and practitioners shaping Physical AI.
 - [Austin Lyons](https://x.com/austinlyons) - Chipstrat. Semiconductor and robotics strategy.
 - [Soumith Chintala](https://x.com/soumithchintala) - PyTorch co-founder, Meta. Open-source AI.
 - [Andrej Karpathy](https://x.com/karpathy) - Ex-Tesla AI, educator. Neural networks and autonomous systems.
-
-## Getting Started Projects
-
-Hands-on projects to progress from beginner to mastery. All runnable on laptop or mobile.
-
-### Beginner: Foundations (Week 1-2)
-
-Start here to build intuition for robot learning concepts.
-
-- **Gymnasium Cart-Pole** - Classic control problem. Balance a pole using RL in 50 lines of Python. [Tutorial](https://gymnasium.farama.org/introduction/train_agent/)
-- **MuJoCo Playground** - Explore physics simulation in the browser. No install required. [Playground](https://mujoco.org/)
-- **Hugging Face Deep RL Course** - Free, hands-on RL fundamentals with Colab notebooks. [Course](https://huggingface.co/learn/deep-rl-course/)
-- **Spinning Up in Deep RL** - OpenAI's educational resource. Well-documented implementations. [Guide](https://spinningup.openai.com/)
-
-### Intermediate: Simulation & Imitation (Week 3-6)
-
-Build robot policies in simulation environments.
-
-- **LeRobot Tutorials** - Train manipulation policies using Hugging Face's framework. Includes pre-trained models. [Repo](https://github.com/huggingface/lerobot)
-- **Diffusion Policy Colab** - Implement diffusion-based robot policies step by step. [Colab](https://colab.research.google.com/github/real-stanford/diffusion_policy/blob/main/diffusion_policy.ipynb)
-- **MuJoCo Humanoid Control** - Train a humanoid to walk using PPO. [MuJoCo Docs](https://mujoco.readthedocs.io/)
-- **Isaac Lab Getting Started** - GPU-accelerated robot learning. Requires NVIDIA GPU. [Docs](https://isaac-sim.github.io/IsaacLab/)
-- **RoboMimic** - Framework for robot learning from demonstrations. [Repo](https://github.com/ARISE-Initiative/robomimic)
-
-### Advanced: Foundation Models & Transfer (Week 7-12)
-
-Work with state-of-the-art models and real-world transfer.
-
-- **OpenVLA Fine-tuning** - Fine-tune a 7B vision-language-action model on custom tasks. [Guide](https://openvla.github.io/)
-- **Octo Custom Dataset** - Train generalist policies on Open X-Embodiment data. [Repo](https://octo-models.github.io/)
-- **Open X-Embodiment Colab** - Explore 1M+ trajectories across 22 robot embodiments. [Colab](https://colab.research.google.com/github/google-deepmind/open_x_embodiment/blob/main/colabs/Open_X_Embodiment_Datasets.ipynb)
-- **RT-X Evaluation** - Evaluate cross-embodiment transfer with RT-X models. [Paper](https://robotics-transformer-x.github.io/)
-
-### Hardware Projects (Optional)
-
-For those ready to touch real robots.
-
-- **SO-100 Arm ($110)** - LeRobot-compatible low-cost robot arm. [Build Guide](https://github.com/TheRobotStudio/SO-ARM100)
-- **ALOHA ($20K)** - Bimanual teleoperation platform with extensive documentation. [Repo](https://github.com/tonyzhaozh/aloha)
-- **Reachy Mini ($299)** - Desktop humanoid from Pollen Robotics with Python SDK. [Shop](https://www.pollen-robotics.com/)
-- **NVIDIA JetBot** - Autonomous driving on Jetson Nano. Great for perception projects. [Wiki](https://github.com/NVIDIA-AI-IOT/jetbot/wiki)
 
 ## Related Awesome Lists
 
