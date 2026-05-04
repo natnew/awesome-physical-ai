@@ -614,6 +614,9 @@ Other curated lists covering adjacent topics.
 - [Awesome Embodied Agent](https://github.com/zchoi/Awesome-Embodied-Robotics-and-Agent) - Embodied AI with VLMs and LLMs.
 - [Awesome World Models](https://github.com/operator22th/awesome-world-models-for-robots) - World models for robotics.
 - [Awesome Generative AI](https://github.com/steven2358/awesome-generative-ai) - Broader generative AI resources.
+- [Awesome Agentic Engineering](https://github.com/natnew/Awesome-Agentic-Engineering) - Agentic AI architectures, frameworks, memory, evaluation, and safety.
+- [Awesome Agentic AI Security](https://github.com/natnew/Awesome-Agentic-AI-Security) - Security research, threat models, defenses, and governance for agentic AI systems.
+- [Awesome AI Scientists](https://github.com/natnew/Awesome-AI-Scientists) - AI scientist systems for literature intelligence, hypothesis generation, experiment planning, and scientific communication.
 - [Awesome Deep RL](https://github.com/kengz/awesome-deep-rl) - Deep reinforcement learning resources.
 - [Awesome Imitation Learning](https://github.com/kristery/Awesome-Imitation-Learning) - Learning from demonstrations.
 - [Bipedal Robot Learning Collection](https://github.com/zita-ch/bipedal-robot-learning-collection) - Curated bipedal/humanoid robot-learning papers with a sim-to-real focus.
