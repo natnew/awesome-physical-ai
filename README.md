@@ -12,11 +12,11 @@
 > A curated list of **awesome Physical AI** resources — a Physical AI roadmap covering robotics, embodied AI, simulation, world models, and production-grade Physical AI systems.
 
 <p align="center">
-Physical AI and embodied AI represent the convergence of large-scale machine learning with robotics — enabling embodied agents that perceive, reason, and act in the physical world. This list is a curated, engineering-oriented map of <strong>Physical AI resources</strong>: robotics resources, robot learning, robotics foundation models, vision-language-action models (VLA models), world models, robotics simulation, sim-to-real techniques, simulation environments, Physical AI benchmarks, robotics datasets, robotics benchmarks, foundation models for robotics, generalist robot policies, and patterns for safe, production-grade Physical AI systems.
+Physical AI and embodied AI bring large-scale machine learning to robotics — agents that perceive, reason, and act in the physical world. This is a curated, engineering-oriented map of <strong>Physical AI resources</strong>: robot learning, foundation models for robotics, vision-language-action (VLA) models, world models, simulation and sim-to-real, datasets and benchmarks, generalist policies, and patterns for safe, production-grade systems.
 </p>
 
 <p align="center">
-It is built for researchers and practitioners at every stage — from foundational learning to deployment of safe embodied AI systems — and for technical leaders evaluating how embodied intelligence will affect products, operations, and infrastructure.
+Built for researchers and practitioners across the stack — from foundations to deployment — and for technical leaders weighing how embodied intelligence will reshape products, operations, and infrastructure.
 </p>
 
 
@@ -633,7 +633,7 @@ Other curated lists covering adjacent topics.
 ## Contributing
 
 <p align="center">
-  <img src="assets/We%20love%20Contributors%20%E2%80%94%20section%20title%20banner.png" alt="We love Contributors" width="480">
+  <img src="assets/we-love-contributors.png" alt="We love Contributors" width="480">
 </p>
 
 <p align="center">
