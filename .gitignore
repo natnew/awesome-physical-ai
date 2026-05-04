@@ -233,3 +233,4 @@ _private/
 assets/*
 !assets/github/
 !assets/readme/
+!assets/we-love-contributors.png
