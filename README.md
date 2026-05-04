@@ -9,8 +9,6 @@
   <a href="./CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs welcome"></a>
 </p>
 
-> A curated list of **awesome Physical AI** resources — a Physical AI roadmap covering robotics, embodied AI, simulation, world models, and production-grade Physical AI systems.
-
 <p align="center">
 Physical AI and embodied AI bring large-scale machine learning to robotics — agents that perceive, reason, and act in the physical world. This is a curated, engineering-oriented map of <strong>Physical AI resources</strong>: robot learning, foundation models for robotics, vision-language-action (VLA) models, world models, simulation and sim-to-real, datasets and benchmarks, generalist policies, and patterns for safe, production-grade systems.
 </p>
