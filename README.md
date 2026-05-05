@@ -257,6 +257,7 @@ Generative and predictive models of physical dynamics used for planning, simulat
 - [DreamerV2](https://arxiv.org/abs/2010.02193) — Robust latent world-model RL variant with improved discrete latent representations.
 - [GAIA-1 (Wayve)](https://arxiv.org/abs/2309.17080) — Driving-oriented generative world model for physically plausible scenario synthesis.
 - [TD-MPC2](https://arxiv.org/abs/2310.16828) — Modern latent model-predictive control method with broad robot-control transfer.
+- [Robotic World Model (ETH RSL)](https://github.com/leggedrobotics/robotic_world_model) — Learned world model for legged robots from ETH Zurich's Robotic Systems Lab; companion [lite variant](https://github.com/leggedrobotics/robotic_world_model_lite) for lighter-weight experimentation.
 
 ## Manipulation
 
@@ -305,6 +306,9 @@ Legged, bipedal, and humanoid locomotion — controllers, learning approaches, a
 - [Expressive Whole-Body Control](https://expressive-humanoid.github.io/) — Whole-body controller producing expressive, human-like motion on a real humanoid (RSS 2024).
 - [ASAP — Sim-to-Real for Humanoid Whole-Body Skills](https://agile.human2humanoid.com/) — Delta-action correction closing the sim-to-real gap on agile humanoid skills (RSS 2025).
 - [HOVER — Versatile Humanoid Whole-Body Controller](https://hover-versatile-humanoid.github.io/) — Single neural controller covering multiple humanoid command modes (ICRA 2025).
+- [FLD — Fourier Latent Dynamics (MIT Biomimetics)](https://github.com/mit-biomimetics/fld) — Periodic motion latent representation for learning agile, natural-looking legged locomotion (ICLR 2024).
+- [WASABI (Max Planck / Martius Lab)](https://github.com/martius-lab/wasabi) — Versatile skill learning for quadrupeds via unsupervised motion-prior discovery from unlabeled reference data.
+- [CASSI (Max Planck / Martius Lab)](https://github.com/martius-lab/cassi) — Self-supervised adversarial imitation of unlabeled mixed motions for versatile quadruped skill control (ICRA 2023).
 
 ## Sim-to-Real
 
