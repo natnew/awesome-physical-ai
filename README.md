@@ -279,6 +279,8 @@ Methods, models, and tools for grasping, dexterous manipulation, and contact-ric
 - [3D Diffusion Policy (DP3)](https://3d-diffusion-policy.github.io/) — Point-cloud-conditioned diffusion policy that improves data efficiency and robustness over image-based variants.
 - [robosuite](https://robosuite.ai/) — Modular simulation framework for manipulation research with reproducible task environments.
 
+- [DreamZero](https://dreamzero0.github.io/) — Zero-shot dexterous manipulation with diffusion models and vision-language-action policies.
+
 ## Locomotion
 
 Legged, bipedal, and humanoid locomotion — controllers, learning approaches, and reference platforms.
@@ -430,6 +432,8 @@ Organisations advancing Physical AI through foundation models, humanoids, and ap
 - [Dexterity](https://www.dexterity.ai/) — AI robotics company deploying high-throughput manipulation systems for logistics.
 - [Tesla Optimus](https://www.tesla.com/AI) — Humanoid robotics program targeting general-purpose physical task automation.
 
+- [Sunday Robotics](https://www.sunday.ai/) — Building generalist robots and foundation models for physical intelligence.
+
 ---
 
 # Appendices
@@ -486,6 +490,9 @@ Influential research papers in Physical AI.
 - [Denoising World Model Learning for Humanoid Locomotion](https://arxiv.org/abs/2408.14472) - Gu et al. Denoising world-model RL for humanoid traversal of challenging terrain (RSS 2024).
 - [HugWBC: Unified Humanoid Whole-Body Controller](https://arxiv.org/abs/2502.03206) - Xue et al. General whole-body controller targeting fine-grained humanoid locomotion across gaits and tasks (RSS 2025).
 
+- [Dex-UMI: A Benchmark for Generalizable Dexterous Manipulation](https://arxiv.org/abs/2602.16710) - Comprehensive benchmark and dataset for dexterous multi-fingered manipulation.
+- [UMI: An Open-Source Underactuated Manipulator for Dexterous Grasping](https://arxiv.org/abs/2602.15922) - Open-source hardware and dataset for dexterous manipulation research.
+
 ## Survey Papers
 
 Comprehensive overviews of key areas.
@@ -507,6 +514,10 @@ Physical robots for research and development.
 - [Kinova](https://www.kinovarobotics.com/) - Lightweight assistive and research robot arms.
 - [xArm](https://www.ufactory.cc/) - Affordable 6/7-DOF robot arms for research and development.
 - [Kuka iiwa](https://www.kuka.com/) - Industrial arm designed for human collaboration.
+
+- [UMI Gripper](https://umi-gripper.github.io/) - Open-source underactuated manipulator for dexterous grasping and manipulation.
+- [Dex-UMI](https://dex-umi.github.io/) - Dexterous manipulation platform and dataset for multi-fingered robotic hands.
+- [DexUMI Code & Data](https://github.com/real-stanford/DexUMI) - Code and datasets for the Dex-UMI dexterous manipulation benchmark.
 
 **Humanoids**
 - [Reachy 2 (Pollen Robotics / Hugging Face)](https://www.pollen-robotics.com/reachy/) - Fully open-source humanoid robot for embodied AI research with Python SDK and ROS 2 support.
