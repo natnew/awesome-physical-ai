@@ -166,6 +166,7 @@ Task suites and standardised evaluations for manipulation, locomotion, and embod
 
 - [LIBERO](https://libero-project.github.io/) — Lifelong robot learning benchmark with 130 diverse manipulation tasks.
 - [RLBench](https://sites.google.com/view/rlbench) — Vision-guided manipulation benchmark covering 100+ tasks in CoppeliaSim.
+- [ActionShift](https://github.com/Archerkattri/actionshift) — ManiSkill benchmark that hides the action-interface contract (channel permutation, sign, scale, delta/absolute, frame, lag, gripper) from a frozen competent policy, with preregistered splits, a privileged oracle, and promotion gates for adaptation methods.
 - [MetaWorld](https://meta-world.github.io/) — Meta-RL benchmark with 50 manipulation tasks for multi-task and transfer studies.
 - [CALVIN](https://github.com/mees/calvin) — Benchmark for long-horizon, language-conditioned manipulation.
 - [HumanoidBench](https://humanoid-bench.github.io/) — Simulated humanoid benchmark for whole-body control across locomotion and manipulation.
