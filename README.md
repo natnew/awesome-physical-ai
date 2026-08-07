@@ -637,6 +637,7 @@ Other curated lists covering adjacent topics.
 - [Awesome Deep RL](https://github.com/kengz/awesome-deep-rl) - Deep reinforcement learning resources.
 - [Awesome Imitation Learning](https://github.com/kristery/Awesome-Imitation-Learning) - Learning from demonstrations.
 - [Bipedal Robot Learning Collection](https://github.com/zita-ch/bipedal-robot-learning-collection) - Curated bipedal/humanoid robot-learning papers with a sim-to-real focus.
+- [Physical AI Atlas](https://github.com/PlbKin190/physical-ai-atlas-data) - Bilingual FR/EN ecosystem index published as machine-readable JSON, covering humanoid robots, industrial platforms, VLA models, embedded chips, simulators and labs.
 
 ---
 
