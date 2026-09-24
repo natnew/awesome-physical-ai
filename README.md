@@ -554,6 +554,7 @@ Physical robots for research and development.
 - [Open Manipulator](https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/) - Affordable open-source robot arm from Robotis.
 - [LeRobot Hardware](https://github.com/huggingface/lerobot) - Reference designs for low-cost robot arms.
 - [SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100) - Open-source anthropomorphic robot arm.
+- [Gearotons M17](https://github.com/tomrodinger/servomotor) - Open-source NEMA 17 integrated servomotor with built-in driver, motion controller and encoder, controlled over RS-485.
 
 ## Conferences
 
