@@ -401,6 +401,7 @@ Middleware, runtime stacks, and reference patterns for shipping robots in produc
 - [Zenoh](https://zenoh.io/) — Data-centric middleware for distributed robotics over constrained and heterogeneous networks.
 - [rosbag2](https://github.com/ros2/rosbag2) — Standard ROS 2 recording and replay pipeline for debugging and incident analysis.
 - [ABot-AgentOS](https://arxiv.org/abs/2607.10350) — Robotic agent operating layer for scene-conditioned planning, skill execution, verification, multimodal memory, and edge-cloud collaboration.
+- [CodeNinja Atoms reference architectures](https://codeatoms.ai/) — 13 open, DOI-backed system designs for physical AI in industrial operations (edge vision, sensors, open-weight models, ontology, GPU sizing, three-year cost), with a dataset and an MCP server.
 
 ## Courses
 
