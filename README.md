@@ -30,7 +30,7 @@ Built for researchers and practitioners across the stack — from foundations to
 </p>
 
 <p align="center">
-  <sub><strong>Last updated:</strong> 2026-08-21 &middot; <strong>229 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-10-07 &middot; <strong>229 entries</strong> across 14 canonical categories</sub>
 </p>
 
 <div align="center">
@@ -554,6 +554,8 @@ Physical robots for research and development.
 - [Open Manipulator](https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/) - Affordable open-source robot arm from Robotis.
 - [LeRobot Hardware](https://github.com/huggingface/lerobot) - Reference designs for low-cost robot arms.
 - [SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100) - Open-source anthropomorphic robot arm.
+- [SO-ARM 102](https://github.com/roboninecom/SO-ARM-102) - 3D-printable leader-follower arm with five arm degrees of freedom plus a parallel gripper, open CAD, a bill of materials, assembly instructions, and a follower URDF for LeRobot workflows.
+<!-- tags: open-source -->
 
 ## Conferences
 
