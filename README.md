@@ -30,7 +30,7 @@ Built for researchers and practitioners across the stack — from foundations to
 </p>
 
 <p align="center">
-  <sub><strong>Last updated:</strong> 2026-10-07 &middot; <strong>229 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-10-12 &middot; <strong>229 entries</strong> across 14 canonical categories</sub>
 </p>
 
 <div align="center">
@@ -648,6 +648,7 @@ Other curated lists covering adjacent topics.
 - [Awesome Deep RL](https://github.com/kengz/awesome-deep-rl) - Deep reinforcement learning resources.
 - [Awesome Imitation Learning](https://github.com/kristery/Awesome-Imitation-Learning) - Learning from demonstrations.
 - [Bipedal Robot Learning Collection](https://github.com/zita-ch/bipedal-robot-learning-collection) - Curated bipedal/humanoid robot-learning papers with a sim-to-real focus.
+- [Botstest](https://botstest.com) - Categorized embodied-AI and robotics reference directory covering robot learning, simulation, models, datasets, and hardware.
 
 ---
 
