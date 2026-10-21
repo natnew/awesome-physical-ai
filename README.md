@@ -33,7 +33,7 @@ Built for researchers and practitioners across the stack — from foundations to
 
   <sub><strong>Last updated:</strong> 2026-10-12 &middot; <strong>229 entries</strong> across 14 canonical categories</sub>
 
-  <sub><strong>Last updated:</strong> 2026-10-18 &middot; <strong>235 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-10-20 &middot; <strong>236 entries</strong> across 14 canonical categories</sub>
 
 </p>
 
@@ -415,6 +415,7 @@ Middleware, runtime stacks, and reference patterns for shipping robots in produc
 <!-- tags: framework -->
 - [Reducing Latency in LLM-Based Natural Language Commands Processing for Robot Navigation](https://arxiv.org/abs/2506.00075) — Integration study that connects ChatGPT directly to ROS 2 without a middleware transport layer to cut command latency for text and voice navigation in Gazebo.
 <!-- tags: paper, research-only -->
+- [Monolithos Robot Brain](https://github.com/silas-zhen/robot-brain) — Long-term memory and experience layer for embodied AI; public Alpha, evaluation license.
 
 ## Courses
 
