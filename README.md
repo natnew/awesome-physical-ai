@@ -31,7 +31,7 @@ Built for researchers and practitioners across the stack — from foundations to
 
 <p align="center">
 
-  <sub><strong>Last updated:</strong> 2026-10-22 &middot; <strong>237 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-10-23 &middot; <strong>257 entries</strong> across 14 canonical categories</sub>
 
 </p>
 
@@ -117,6 +117,8 @@ Physics engines and high-fidelity simulation environments for robotics and embod
 
 - [MuJoCo](https://mujoco.org/) — Multi-joint dynamics with contact; fast, accurate physics widely used for RL research.
 <!-- tags: simulator, open-source, production-ready -->
+- [MuJoCo Playground](https://github.com/google-deepmind/mujoco_playground) — GPU-accelerated robot-learning environments built on MuJoCo MJX and MuJoCo Warp, covering control, locomotion, manipulation and sim-to-real transfer.
+<!-- tags: simulator, framework, open-source -->
 - [NVIDIA Isaac Sim](https://developer.nvidia.com/isaac-sim) — GPU-accelerated robotics simulator on Omniverse with photorealistic rendering and PhysX.
 <!-- tags: simulator, commercial, production-ready -->
 - [Isaac Lab](https://isaac-sim.github.io/IsaacLab/) — Unified robot learning framework on Isaac Sim for RL, imitation learning, and motion planning.
@@ -145,6 +147,8 @@ Physics engines and high-fidelity simulation environments for robotics and embod
 <!-- tags: simulator, open-source, framework -->
 - [RaiSim](https://raisim.com/) — High-performance rigid-body simulator widely used for legged-locomotion research and control.
 <!-- tags: simulator, tool, commercial -->
+- [Newton](https://github.com/newton-physics/newton) — GPU-accelerated open-source physics engine built on NVIDIA Warp with MuJoCo Warp as its main solver, initiated by Disney Research, Google DeepMind and NVIDIA and hosted by the Linux Foundation.
+<!-- tags: simulator, open-source -->
 
 ## Datasets
 
@@ -155,7 +159,7 @@ Large-scale teleoperation, demonstration, and interaction datasets used to train
 - [BridgeData V2](https://rail-berkeley.github.io/bridgedata/) — Diverse manipulation behaviours designed to support broad generalisation.
 - [RH20T](https://rh20t.github.io/) — Robot manipulation dataset with paired human demonstrations for one-shot learning research.
 - [RoboMIND](https://x-humanoid-robomind.github.io/) — Multimodal bimanual mobile manipulation dataset with 310K+ trajectories.
-- [AgiBot World](https://github.com/OpenDriveLab/AgiBot-World) — Large-scale dataset designed to train and evaluate robot foundation models.
+- [AgiBot World](https://github.com/OpenDriveLab/AgiBot-World) — Large-scale manipulation platform (AgiBot World Colosseo, IROS 2025) pairing a 1M+ trajectory bimanual dataset with the open GO-1 generalist policy trained on it.
 - [Ego4D](https://ego4d-data.org/) — Massive-scale egocentric video dataset useful for pretraining perception and world models.
 - [Something-Something V2](https://developer.qualcomm.com/software/ai-datasets/something-something) — Action recognition dataset frequently used to pretrain manipulation perception.
 - [RLDS](https://github.com/google-research/rlds) — Standardized format and tooling for logged trajectories used across robot-learning datasets.
@@ -185,6 +189,10 @@ Task suites and standardised evaluations for manipulation, locomotion, and embod
 - [TEACh](https://teach.cs.washington.edu/) — Interactive benchmark for embodied dialog and task execution in household environments.
 - [RoboTHOR](https://ai2thor.allenai.org/robothor/) — Navigation benchmark focused on sim-to-real transfer and unseen-scene generalization.
 - [ManiSkill Benchmark](https://github.com/haosulab/ManiSkill) — Manipulation benchmark suite with scalable GPU simulation and reproducible baselines.
+- [PAI-Bench](https://github.com/SHI-Labs/physical-ai-bench) — Benchmark of 2,808 real-world cases that scores physical plausibility in video generation, conditional generation and video understanding (CVPR 2026).
+<!-- tags: benchmark, open-source -->
+- [QuantiPhy](https://quantiphy.stanford.edu) — Benchmark of 3,300+ video-text instances testing whether vision-language models can numerically estimate object size, velocity and acceleration (CVPR 2026).
+<!-- tags: benchmark, paper -->
 
 ## Evaluation Methodology
 
@@ -209,24 +217,30 @@ Harnesses, metrics, and methodology for measuring robot policy performance, robu
 <!-- tags: paper -->
 - [Inspect Robots (Robocurve)](https://github.com/robocurve/inspect-robots) — Open-source evaluation harness for running LLM and VLA policies on simulated and real arms and humanoids against shared benchmarks.
 <!-- tags: tool, benchmark, open-source -->
+- [PhyCritic (NVIDIA)](https://arxiv.org/abs/2602.11124) — Multimodal critic models trained with two-stage RL to judge physical perception and reasoning, for use as evaluators and reward models in physical AI (CVPR 2026).
+<!-- tags: paper -->
 
 ## Robotics Foundation Models
 
 Generalist policies and vision-language-action (VLA) models for robotic control.
 
-- [π0 (Physical Intelligence)](https://www.physicalintelligence.company/) — Generalist policy combining multi-robot data with flow matching for dexterous manipulation.
+- [π0 / π0.5 / π0.7 (Physical Intelligence)](https://www.pi.website/pi07) — Generalist VLA family from Physical Intelligence: π0 combines multi-robot data with flow matching, [π0.5](https://www.pi.website/blog/pi05) targets open-world generalization, and π0.7 recombines skills learned from diverse robot and human data.
 <!-- tags: tool, commercial, production-ready -->
+- [openpi (Physical Intelligence)](https://github.com/Physical-Intelligence/openpi) — Open weights plus fine-tuning and inference code for π0, π0-FAST and π0.5, with base checkpoints pretrained on 10k+ hours of robot data.
+<!-- tags: tool, open-source -->
 - [Octo](https://octo-models.github.io/) — Open-source generalist robot policy trained on Open X-Embodiment with cross-embodiment fine-tuning.
 <!-- tags: tool, open-source, production-ready -->
 - [OpenVLA](https://openvla.github.io/) — Open-source 7B-parameter vision-language-action model built on Prismatic VLMs.
 <!-- tags: tool, open-source -->
+- [SmolVLA (Hugging Face)](https://arxiv.org/abs/2506.01844) — 450M-parameter vision-language-action model trained on community LeRobot datasets and designed to train and run on consumer-grade hardware.
+<!-- tags: paper, open-source -->
 - [RT-2](https://robotics-transformer2.github.io/) — Vision-language-action model that transfers web knowledge to robotic control.
 <!-- tags: paper, framework -->
 - [RT-X](https://robotics-transformer-x.github.io/) — Cross-embodiment models demonstrating positive transfer across robot platforms.
 <!-- tags: paper, framework, open-source -->
 - [Gemini Robotics](https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/) — Google DeepMind VLA family with embodied reasoning capabilities.
 <!-- tags: paper, framework -->
-- [GR00T N1 (NVIDIA)](https://developer.nvidia.com/isaac/gr00t) — Open humanoid foundation model with a dual-system slow/fast architecture.
+- [Isaac GR00T N1.x (NVIDIA)](https://github.com/NVIDIA/Isaac-GR00T) — Open humanoid VLA foundation model family (N1 through N1.7) with weights and fine-tuning code; the companion [GR00T-Dreams](https://github.com/NVIDIA/GR00T-Dreams) blueprint generates synthetic training trajectories with Cosmos world models.
 <!-- tags: tool, open-source -->
 - [Helix (Figure)](https://www.figure.ai/) — Vision-language-action model targeting generalist humanoid control.
 <!-- tags: tool, commercial -->
@@ -250,6 +264,14 @@ Generalist policies and vision-language-action (VLA) models for robotic control.
 <!-- tags: paper -->
 - [LangNav](https://arxiv.org/abs/2310.07889) — Navigation method that converts egocentric views into text with off-the-shelf captioning and detection so a fine-tuned language model selects actions from few expert trajectories.
 <!-- tags: paper -->
+- [RDT2 (Tsinghua)](https://github.com/thu-ml/RDT2) — VLA trained on 10,000+ hours of UMI human manipulation data for zero-shot deployment on unseen robot embodiments; successor to [RDT-1B](https://rdt-robotics.github.io/rdt-robotics), a diffusion transformer for bimanual manipulation.
+<!-- tags: tool, open-source, research-only -->
+- [WALL-OSS (X Square Robot)](https://github.com/X-Square-Robot/wall-x) — Open embodied foundation models (WALL-OSS, WALL-OSS-0.5) with flow-matching and FAST action heads, released with training and inference code.
+<!-- tags: tool, open-source -->
+- [BFM-Zero](https://github.com/LeCAR-Lab/BFM-Zero) — Promptable behavioral foundation model for humanoid control that uses unsupervised forward-backward RL so one policy handles motion tracking, goal reaching and reward optimization (ICLR 2026).
+<!-- tags: paper, open-source, research-only -->
+- [Skild AI S1](https://www.skild.ai/blogs/s1) — Robot foundation model that Skild AI reports can learn new tasks from a single in-context video demonstration without fine-tuning.
+<!-- tags: commercial -->
 
 ## World Models
 
@@ -257,7 +279,7 @@ Generative and predictive models of physical dynamics used for planning, simulat
 
 - [V-JEPA 2 (Meta FAIR)](https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/) — Self-supervised video world model trained on 1M+ hours enabling zero-shot robot planning.
 <!-- tags: paper, framework -->
-- [NVIDIA Cosmos](https://developer.nvidia.com/cosmos) — World foundation models for physically-grounded synthetic data generation.
+- [NVIDIA Cosmos](https://developer.nvidia.com/cosmos) — World foundation model platform whose current [Cosmos 3](https://github.com/nvidia/cosmos) family (Edge, Nano and Super) provides open omnimodal models that act as world models and as backbones for world-action models.
 <!-- tags: tool, commercial -->
 - [Genie 2 (DeepMind)](https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/) — Foundation world model that generates interactive, controllable 3D environments.
 <!-- tags: paper, framework -->
@@ -275,6 +297,8 @@ Generative and predictive models of physical dynamics used for planning, simulat
 - [TD-MPC2](https://arxiv.org/abs/2310.16828) — Modern latent model-predictive control method with broad robot-control transfer.
 - [Robotic World Model (ETH RSL)](https://github.com/leggedrobotics/robotic_world_model) — Learned world model for legged robots from ETH Zurich's Robotic Systems Lab; companion [lite variant](https://github.com/leggedrobotics/robotic_world_model_lite) for lighter-weight experimentation.
 - [GreenWAM (Sber Robotics Center)](https://github.com/greenvla/GreenWAM) — World foundation model built on Cosmos 3 Edge that acts as both world model and policy across 20 robot families via a shared anatomical joint space, with released benchmark checkpoints and evaluation code.
+<!-- tags: paper, open-source, research-only -->
+- [DreamDojo (NVIDIA)](https://github.com/NVIDIA/DreamDojo) — Robot world model pretrained on 44k hours of egocentric human video using latent actions, then post-trained for action-conditioned prediction on robot data (ICML 2026).
 <!-- tags: paper, open-source, research-only -->
 
 ## Manipulation
@@ -299,6 +323,10 @@ Methods, models, and tools for grasping, dexterous manipulation, and contact-ric
 
 - [DreamZero](https://dreamzero0.github.io/) — Zero-shot dexterous manipulation with diffusion models and vision-language-action policies.
 - [T-Rex](https://tactile-reactive-dexterous.github.io/) — Tactile-reactive vision-language-action model using a variable-rate Mixture-of-Transformers, released with checkpoints and around 50 hours of open tactile manipulation data.
+- [TWIST2](https://github.com/amazon-far/TWIST2) — Portable, mocap-free whole-body humanoid teleoperation and data-collection system using a VR headset and a low-cost robot neck for egocentric vision.
+<!-- tags: tool, open-source, research-only -->
+- [OSMO](https://github.com/jessicayin/osmo_tactile_glove) — Tactile glove with shear and normal force sensing, worn by both human demonstrators and robot hands to transfer contact-rich skills, with released hardware designs and firmware.
+<!-- tags: research-only -->
 
 ## Locomotion
 
@@ -323,7 +351,7 @@ Legged, bipedal, and humanoid locomotion — controllers, learning approaches, a
 - [Robust Parameterized Bipedal Locomotion (Cassie)](https://arxiv.org/abs/2103.14295) — RL controller covering a parameterised velocity/stance family on Cassie (ICRA 2021).
 - [Bipedal Soccer (DeepMind OP3)](https://arxiv.org/abs/2304.13653) — Whole-body RL pipeline producing agile soccer skills on a small humanoid (Science Robotics 2024).
 - [Humanoid Parkour Learning](https://arxiv.org/abs/2406.10759) — End-to-end perceptive RL enabling humanoid parkour over discontinuous terrain (CoRL 2024).
-- [Expressive Whole-Body Control](https://expressive-humanoid.github.io/) — Whole-body controller producing expressive, human-like motion on a real humanoid (RSS 2024).
+- [Expressive Whole-Body Control](https://expressive-humanoid.github.io/) — Whole-body controller producing expressive, human-like motion on a real humanoid (RSS 2024); the follow-up [ExBody2](https://arxiv.org/abs/2412.13196) extends it to more dynamic whole-body motion tracking.
 - [ASAP — Sim-to-Real for Humanoid Whole-Body Skills](https://agile.human2humanoid.com/) — Delta-action correction closing the sim-to-real gap on agile humanoid skills (RSS 2025).
 - [HOVER — Versatile Humanoid Whole-Body Controller](https://hover-versatile-humanoid.github.io/) — Single neural controller covering multiple humanoid command modes (ICRA 2025).
 - [FLD — Fourier Latent Dynamics (MIT Biomimetics)](https://github.com/mit-biomimetics/fld) — Periodic motion latent representation for learning agile, natural-looking legged locomotion (ICLR 2024).
@@ -352,6 +380,8 @@ Techniques and case studies for transferring policies trained in simulation to r
 - [SimToolReal](https://simtoolreal.github.io/) — Object-centric RL policy trained on procedurally generated tool primitives, transferring to unseen real tools without task-specific training.
 - [RoboSimStudio](https://github.com/robosimstudio/robosimstudio) — Interactive GPU toolkit built on Newton for rebuilding real manipulation tasks in simulation, by hand or with a coding agent, with editable solver, contact and physical parameters.
 <!-- tags: tool, open-source, research-only -->
+- [BeyondMimic](https://arxiv.org/abs/2508.08241) — Sim-to-real humanoid motion-tracking pipeline that reproduces highly dynamic human motions on hardware and adds a guided diffusion policy for test-time control.
+<!-- tags: paper, research-only -->
 
 ## Safety & Robustness
 
@@ -372,6 +402,16 @@ Tools, benchmarks, and methodology for safe exploration, robustness testing, and
 - [S-TaLiRo](https://sites.google.com/a/asu.edu/s-taliro/) — Temporal-logic falsification framework for stress-testing control-system requirements.
 - [Safe Reinforcement Learning Survey](https://arxiv.org/abs/2205.10330) — Survey of safe-RL methods, benchmarks, and open deployment challenges.
 - [Robust Policy Optimization](https://arxiv.org/abs/1906.03710) — Distributional-robust RL approach for improved policy reliability under uncertainty.
+- [AgentSafe (SAFE)](https://arxiv.org/abs/2506.14697) — Embodied-agent safety benchmark with 45 adversarial scenarios and 1,350 hazardous tasks inspired by Asimov's laws, scored across perception, planning and execution (CVPR 2026).
+<!-- tags: paper, benchmark -->
+- [IS-Bench](https://github.com/AI45Lab/IS-Bench) — Interactive-safety benchmark of 161 household scenarios and 388 safety risks in OmniGibson that checks whether VLM-driven agents mitigate risks at the right step (AAAI 2026).
+<!-- tags: benchmark, open-source -->
+- [SafeVLA](https://github.com/PKU-Alignment/SafeVLA) — Constrained-learning method that aligns vision-language-action models with explicit safety constraints for mobile manipulation (NeurIPS 2025).
+<!-- tags: paper, open-source, research-only -->
+- [RoboGuard](https://github.com/KumarRobotics/RoboGuard) — Guardrail that compiles safety rules into temporal-logic constraints and checks LLM-generated robot plans against them, including under jailbreak attacks.
+<!-- tags: tool, open-source, research-only -->
+- [BadVLA](https://arxiv.org/abs/2505.16640) — Backdoor attack on vision-language-action models that triggers deviant behaviour while preserving clean-task performance, exposing a security risk in fine-tuned VLAs (NeurIPS 2025).
+<!-- tags: paper -->
 
 ## Governance & Policy
 
@@ -429,7 +469,7 @@ University courses and structured learning programs in robot learning and embodi
 - [MIT 6.4210 — Robotic Manipulation](https://manipulation.csail.mit.edu/) — Perception, planning, and control for manipulation by Russ Tedrake.
 - [Spinning Up in Deep RL (OpenAI)](https://spinningup.openai.com/) — Educational resource covering deep RL fundamentals with reference implementations.
 - [Hugging Face Deep RL Course](https://huggingface.co/learn/deep-rl-course/) — Free hands-on course on deep reinforcement learning.
-- [NVIDIA DLI Robotics](https://www.nvidia.com/en-us/training/) — Self-paced courses on Isaac Sim, ROS, and robot learning.
+- [NVIDIA Physical AI Learning](https://docs.nvidia.com/learning/physical-ai) — Free self-paced NVIDIA courses that progress from Isaac Sim basics to GR00T post-training, LeRobot sim-to-real on the SO-101 and end-to-end deployment on the Unitree G1 with Jetson Thor.
 - [CS 285 — Deep Reinforcement Learning (Berkeley)](https://rail.eecs.berkeley.edu/deeprlcourse/) — Strong practical RL course with modern policy-gradient and model-based methods.
 - [Deep RL Bootcamp](https://sites.google.com/view/deep-rl-bootcamp/lectures) — Lecture series covering core deep-RL concepts and implementation practice.
 - [DeepMind x UCL RL Lecture Series](https://www.youtube.com/playlist?list=PLqYmG7hTraZDVH599EItlEWsUOsJbAodm) — Advanced RL lecture track from leading research practitioners.
@@ -532,6 +572,9 @@ Comprehensive overviews of key areas.
 - [3D Gaussian Splatting in Robotics](https://arxiv.org/abs/2410.12262) - Survey on gaussian splatting applications in robotics.
 - [World Models Survey](https://arxiv.org/abs/2403.02622) - Survey on world models for autonomous systems.
 - [Neuromorphic Computing - An Overview](https://arxiv.org/abs/2510.06721) - Introductory survey of brain-inspired computing, from von Neumann limits to neuromorphic chips and photonic systems.
+- [A Survey: Learning Embodied Intelligence from Physical Simulators and World Models](https://arxiv.org/abs/2507.00917) - Survey connecting physical simulators and world models for embodied AI, with a maintained [companion repository](https://github.com/NJU3DV-LoongGroup/Embodied-World-Models-Survey).
+- [A Survey on Efficient Vision-Language-Action Models](https://arxiv.org/abs/2510.24795) - Taxonomy of efficient VLA model design, training and data collection (IEEE TPAMI 2026), with a maintained [paper list](https://github.com/YuZhaoshu/Efficient-VLAs-Survey).
+- [Security of World-Model-Based Embodied AI](https://arxiv.org/abs/2607.28226) - Lifecycle survey of threats, defenses and evaluation for world-model-based embodied agents, covering VLA backdoors, adversarial and jailbreak attacks.
 
 ## Hardware Platforms
 
@@ -671,6 +714,7 @@ Other curated lists covering adjacent topics.
 - [Awesome Imitation Learning](https://github.com/kristery/Awesome-Imitation-Learning) - Learning from demonstrations.
 - [Bipedal Robot Learning Collection](https://github.com/zita-ch/bipedal-robot-learning-collection) - Curated bipedal/humanoid robot-learning papers with a sim-to-real focus.
 - [Botstest](https://botstest.com) - Categorized embodied-AI and robotics reference directory covering robot learning, simulation, models, datasets, and hardware.
+- [Awesome VLA for Humanoid Robots (OpenDriveLab)](https://github.com/OpenDriveLab/WholebodyVLA) - Paper list on vision-language-action models for humanoid robots, maintained in the WholeBodyVLA (ICLR 2026) repository.
 
 ---
 
