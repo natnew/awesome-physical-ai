@@ -31,9 +31,13 @@ Built for researchers and practitioners across the stack — from foundations to
 
 <p align="center">
 
+
   <sub><strong>Last updated:</strong> 2026-10-12 &middot; <strong>229 entries</strong> across 14 canonical categories</sub>
 
   <sub><strong>Last updated:</strong> 2026-10-20 &middot; <strong>236 entries</strong> across 14 canonical categories</sub>
+
+  <sub><strong>Last updated:</strong> 2026-10-22 &middot; <strong>237 entries</strong> across 14 canonical categories</sub>
+
 
 </p>
 
@@ -276,6 +280,8 @@ Generative and predictive models of physical dynamics used for planning, simulat
 - [GAIA-1 (Wayve)](https://arxiv.org/abs/2309.17080) — Driving-oriented generative world model for physically plausible scenario synthesis.
 - [TD-MPC2](https://arxiv.org/abs/2310.16828) — Modern latent model-predictive control method with broad robot-control transfer.
 - [Robotic World Model (ETH RSL)](https://github.com/leggedrobotics/robotic_world_model) — Learned world model for legged robots from ETH Zurich's Robotic Systems Lab; companion [lite variant](https://github.com/leggedrobotics/robotic_world_model_lite) for lighter-weight experimentation.
+- [GreenWAM (Sber Robotics Center)](https://github.com/greenvla/GreenWAM) — World foundation model built on Cosmos 3 Edge that acts as both world model and policy across 20 robot families via a shared anatomical joint space, with released benchmark checkpoints and evaluation code.
+<!-- tags: paper, open-source, research-only -->
 
 ## Manipulation
 
@@ -350,6 +356,8 @@ Techniques and case studies for transferring policies trained in simulation to r
 - [Privileged Learning for Rapid Motor Adaptation](https://arxiv.org/abs/2109.11978) — Distillation strategy leveraging privileged simulation signals for robust real-world control.
 - [SimGAN](https://arxiv.org/abs/1612.07828) — Sim-to-real visual adaptation method for narrowing sensor-domain gaps.
 - [SimToolReal](https://simtoolreal.github.io/) — Object-centric RL policy trained on procedurally generated tool primitives, transferring to unseen real tools without task-specific training.
+- [RoboSimStudio](https://github.com/robosimstudio/robosimstudio) — Interactive GPU toolkit built on Newton for rebuilding real manipulation tasks in simulation, by hand or with a coding agent, with editable solver, contact and physical parameters.
+<!-- tags: tool, open-source, research-only -->
 
 ## Safety & Robustness
 
@@ -555,6 +563,7 @@ Physical robots for research and development.
 - [Unitree H1/G1](https://www.unitree.com/) - Affordable humanoid platforms for research.
 - [Agility Robotics Digit](https://agilityrobotics.com/) - Bipedal robot for logistics.
 - [Fourier Intelligence GR-1](https://www.fftai.com/) - Open-platform humanoid robot.
+- [RoboParty RP1](https://github.com/Roboparty/RP1) - Open-source humanoid platform releasing mechanical CAD, PCB and harness designs, BOM, joint-module firmware, robot descriptions and locomotion training code.
 
 **Mobile Robots**
 - [Boston Dynamics Spot](https://bostondynamics.com/spot/) - Quadruped with manipulation capabilities.
