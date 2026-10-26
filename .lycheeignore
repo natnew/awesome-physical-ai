@@ -45,3 +45,10 @@
 ^https?://(www\.)?deeplearning\.ai/
 # github.com /stargazers pages — GitHub returns 404 to non-browser clients on this path; live in browser (2026-07)
 ^https?://github\.com/natnew/awesome-physical-ai/stargazers$
+
+# ISO catalogue pages return 403 in Actions; each standard verified in a browser (2026-10-25).
+^https://www\.iso\.org/standard/(73934|81230|53820|43464)\.html$
+# ANYmal page returns 403 in Actions and local lychee; verified in a browser (2026-10-25).
+^https://www\.anybotics\.com/robotics/anymal/?$
+# These X profiles return 403 in Actions; each named person verified in a browser (2026-10-25).
+^https://x\.com/(ylecun|drfeifei|pabbeel|svlevine|chelseabfinn|russtedrake|grok_|rodneyabrooks|petitegeek|robotlaunch|adcock_brett|austinsemis|soumithchintala|karpathy)/?$
