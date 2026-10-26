@@ -31,7 +31,7 @@ Built for researchers and practitioners across the stack — from foundations to
 
 <p align="center">
 
-  <sub><strong>Last updated:</strong> 2026-10-22 &middot; <strong>237 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-10-25 &middot; <strong>237 entries</strong> across 14 canonical categories</sub>
 
 </p>
 
@@ -129,7 +129,7 @@ Physics engines and high-fidelity simulation environments for robotics and embod
 <!-- tags: simulator, tool, open-source -->
 - [Habitat](https://aihabitat.org/) — Embodied AI platform optimised for high-throughput 3D navigation and instruction-following research.
 <!-- tags: simulator, open-source, research-only -->
-- [SAPIEN](https://sapien.ucsd.edu/) — Physics-rich simulator with the PartNet-Mobility articulated object dataset.
+- [SAPIEN](https://sapien-sim.github.io/docs) — Physics-rich simulator with the PartNet-Mobility articulated object dataset.
 <!-- tags: simulator, tool, open-source, research-only -->
 - [Genesis](https://genesis-embodied-ai.github.io/) — Universal differentiable simulator for robotics and embodied AI with cross-platform physics solvers.
 <!-- tags: simulator, open-source, research-only -->
@@ -487,7 +487,7 @@ Hands-on learning resources.
 - [LeRobot Tutorials](https://github.com/huggingface/lerobot) - Getting started with robot learning using Hugging Face's framework.
 - [Isaac Lab Documentation](https://isaac-sim.github.io/IsaacLab/) - Comprehensive guides for NVIDIA's robot learning framework.
 - [MuJoCo Documentation](https://mujoco.readthedocs.io/) - Official docs with modeling and programming guides.
-- [ROS 2 Tutorials](https://docs.ros.org/en/rolling/Tutorials/) - Official tutorials for getting started with ROS 2.
+- [ROS 2 Tutorials](https://docs.ros.org/en/rolling/First-Steps.html) - Official tutorials for getting started with ROS 2.
 - [PyBullet Quickstart](https://docs.google.com/document/d/10sXEhzFRSnvFcl3XxNGhnD4N2SedqwdAvK3dsihxVUA/) - Getting started with PyBullet simulation.
 - [Open X-Embodiment Tutorial](https://colab.research.google.com/github/google-deepmind/open_x_embodiment/blob/main/colabs/Open_X_Embodiment_Datasets.ipynb) - Working with the largest robotics dataset.
 - [Diffusion Policy Tutorial](https://diffusion-policy.cs.columbia.edu/) - Implementation guide for diffusion-based robot policies.
@@ -639,13 +639,13 @@ Researchers, engineers, and practitioners shaping Physical AI.
 - [Sergey Levine](https://x.com/svlevine) - Berkeley. Reinforcement learning and robot learning.
 - [Chelsea Finn](https://x.com/chelseabfinn) - Stanford. Meta-learning and robot learning.
 - [Russ Tedrake](https://x.com/russtedrake) - MIT, Toyota Research Institute. Manipulation and control.
-- [Dieter Fox](https://x.com/dieterfox) - NVIDIA, UW. Perception and robot learning.
+- [Dieter Fox](https://homes.cs.washington.edu/~fox/) - NVIDIA, UW. Perception and robot learning.
 
 **Robotics & Hardware**
 - [Kate Darling](https://x.com/grok_) - MIT Media Lab, BD AI Institute. Robotics ethics and human-robot interaction.
 - [Rodney Brooks](https://x.com/rodneyabrooks) - iRobot co-founder, Robust.AI. Robotics pioneer and blogger.
 - [Angelica Lim](https://x.com/petitegeek) - SFU. Social robotics and emotional AI.
-- [Andra Keay](https://x.com/robohub) - Silicon Valley Robotics. Robot ecosystem and startups.
+- [Andra Keay](https://x.com/robotlaunch) - Silicon Valley Robotics. Robot ecosystem and startups.
 
 **Industry Leaders**
 - [Brett Adcock](https://x.com/adcock_brett) - Figure CEO. Humanoid robotics at scale.

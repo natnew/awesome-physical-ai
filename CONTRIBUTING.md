@@ -181,10 +181,11 @@ Open a [**Category proposal**](https://github.com/natnew/awesome-physical-ai/iss
 Checks are path-filtered; not every PR triggers every workflow. The [workflow files](.github/workflows) define the current triggers:
 
 - **`site-build`** — runs for website or site-build workflow changes, using Node.js 20 and `npm ci` followed by `npm run build` in `website/`. Build errors and broken internal docs links fail the check.
-- **`link-check`** — runs for README, website docs, or link-check configuration changes. It checks catalog and docs links with lychee, subject to `.lycheeignore`.
+- **`link-check`** — runs for README, website docs, or link-check configuration changes. It first runs the offline regression tests in `scripts/test_link_check.py`, then checks catalog and docs links with lychee 0.16.1, subject to `.lycheeignore`. Lychee retries timeouts and dropped connections (`--max-retries 2`); it does not retry HTTP 429 or treat it as success.
 - **`lint`** — runs for README, website docs, template, or lint workflow changes. Markdown/MDX lint is advisory; issue-form YAML validation is not.
+- **`agentic-workflow-lock`** — runs for changes to gh-aw agentic workflows (`.github/workflows/*.md`, `*.lock.yml`, or `.github/aw/`). It installs the gh-aw version recorded in the lock files, recompiles, and fails if any generated file would change. Fix it by running `gh aw compile` locally and committing the regenerated `.lock.yml` together with `.github/aw/actions-lock.json`.
 
-The entry-count script is a local check and is not currently run by CI. Changes only to this guide, `CODE_OF_CONDUCT.md`, or `SECURITY.md` do not trigger these three workflows.
+The entry-count script is a local check and is not currently run by CI. Changes only to this guide, `CODE_OF_CONDUCT.md`, or `SECURITY.md` do not trigger these workflows.
 
 ### Reproducing locally
 
@@ -196,6 +197,12 @@ python scripts/check_entry_counts.py
 
 # Catalog and docs links; requires lychee to be installed
 lychee --no-progress --max-retries 2 README.md "website/docs/**/*.md" "website/docs/**/*.mdx"
+
+# Regression checks for link-check exceptions and known-dead URLs (no network required)
+python -m unittest discover -s scripts -p test_link_check.py -v
+
+# Agentic workflow lock files; requires the gh-aw extension (gh extension install github/gh-aw)
+gh aw compile && git status --porcelain -- '.github/workflows/*.lock.yml' .github/aw
 
 # Whitespace errors
 git diff --check
@@ -215,6 +222,16 @@ The count script does not compare README and MDX content; check that consistency
 ### Suppressing a known-flaky external link
 
 If a link is verified-good in a browser but consistently fails in CI (e.g. a host that returns HTTP 999 to HEAD requests, or aggressively rate-limits), add a regex to `.lycheeignore` at the repo root **with a one-line comment explaining why**. Narrow patterns are preferred over broad ones. Entries are reviewed during the periodic curation pass.
+
+An intermittent HTTP 429 usually means the same URL appears in several files and lychee requested it concurrently; the pinned lychee 0.16.1 does not retry 429 responses. Re-run the job before changing anything. Add an exact-page exclusion only if the host rate-limits on every run, and do not add 429 to the accepted status codes: that would hide genuine failures behind rate limiting. Later lychee releases retry 429 with backoff, but they also change connection handling (0.18 onwards) and 0.24 rejects the site's root-relative routes unless `--root-dir` is configured, so an upgrade needs its own evidence-backed change with repeated Linux runs against the full catalog.
+
+The link-check regression tests protect the verified-page exceptions against accidental host-wide exclusions and keep previously dead or misattributed URLs out of the catalog. They do not prove that excluded pages remain available; recheck those pages in a browser during review. Keep genuine 404s and unverified timeouts visible, and prefer a verified official replacement over an exclusion.
+
+When diagnosing Actions failures, inspect job annotations as well as logs. A job blocked before any steps run has no script exit code; an account or runner admission error cannot be repaired by changing link-check arguments. For local parity, use lychee 0.16.1 on Linux, matching the pinned action. Root-relative site routes such as `/docs/categories/simulators` are skipped by lychee and validated by the Docusaurus build instead; the Windows binary reports them as missing files, so reproduce apparent local-file failures on Linux before changing checks.
+
+### Agentic workflow lock files
+
+`.github/workflows/issue-triage-agent.md` is a [gh-aw](https://github.github.com/gh-aw/) agentic workflow. GitHub runs the compiled `issue-triage-agent.lock.yml`, and its activation step compares the `frontmatter-hash` recorded in the lock file with the current `.md` frontmatter, so editing the Markdown without recompiling makes every scheduled run fail. After changing the `.md`, run `gh aw compile` with the gh-aw version named in the lock-file header and commit the regenerated `.lock.yml` and `.github/aw/actions-lock.json` together. The `agentic-workflow-lock` check enforces this on pull requests.
 
 ## Periodic review
 
