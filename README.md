@@ -31,7 +31,7 @@ Built for researchers and practitioners across the stack — from foundations to
 
 <p align="center">
 
-  <sub><strong>Last updated:</strong> 2026-10-22 &middot; <strong>237 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-10-28 &middot; <strong>238 entries</strong> across 14 canonical categories</sub>
 
 </p>
 
@@ -360,6 +360,8 @@ Tools, benchmarks, and methodology for safe exploration, robustness testing, and
 - [Safety Gym (OpenAI)](https://github.com/openai/safety-gym) — Environments for benchmarking constrained and safe-exploration RL.
 - [Safe Control Gym](https://github.com/utiasDSL/safe-control-gym) — Benchmark suite for safe learning-based control with constraints and disturbances.
 - [Constrained Policy Optimization (Achiam et al.)](https://arxiv.org/abs/1705.10528) — Canonical algorithmic framework for constrained safe RL.
+- [Provael](https://github.com/provael/provael) — Red-team harness for VLA robot policies in simulation on LIBERO, reporting attack success rate beside a benign control with 95% intervals.
+<!-- tags: tool, open-source, research-only -->
 - [Realistic Adversarial Driving (Wang et al.)](https://arxiv.org/abs/2003.01197) — Methodology for stress-testing autonomous driving policies under adversarial conditions.
 - [Robot Trust & Safety (Stanford CRFM)](https://crfm.stanford.edu/) — Foundation-model centre research including robotic safety, evaluation, and failure modes.
 - [Scenic](https://scenic-lang.org/) — Probabilistic scenario-description language for specifying and generating stress-test scenes for autonomy.
