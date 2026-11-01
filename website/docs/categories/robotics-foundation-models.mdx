@@ -1,7 +1,7 @@
 ---
 id: robotics-foundation-models
 title: Robotics Foundation Models
-description: Generalist policies and vision-language-action (VLA) models for robotic control — π0, Octo, OpenVLA, RT-2, RT-X, Gemini Robotics, GR00T N1, Helix.
+description: Generalist policies and vision-language-action (VLA) models for robotic control — π0, Octo, OpenVLA, RT-2, RT-X, Gemini Robotics, GR00T, Helix.
 ---
 
 # Robotics Foundation Models
@@ -16,13 +16,15 @@ When choosing between options, weigh **embodiment coverage** vs. your target rob
 **[OpenVLA](https://openvla.github.io/)** is the most accessible entry point: open weights, open training recipe, and a 7B-parameter VLA built on a strong vision-language backbone.
 :::
 
-- [π0 (Physical Intelligence)](https://www.physicalintelligence.company/) — Generalist policy combining multi-robot data with flow matching for dexterous manipulation.
+- [π0 / π0.5 / π0.7 (Physical Intelligence)](https://www.pi.website/pi07) — Generalist VLA family from Physical Intelligence: π0 combines multi-robot data with flow matching, [π0.5](https://www.pi.website/blog/pi05) targets open-world generalization, and π0.7 recombines skills learned from diverse robot and human data.
+- [openpi (Physical Intelligence)](https://github.com/Physical-Intelligence/openpi) — Open weights plus fine-tuning and inference code for π0, π0-FAST and π0.5, with base checkpoints pretrained on 10k+ hours of robot data.
 - [Octo](https://octo-models.github.io/) — Open-source generalist robot policy trained on Open X-Embodiment with cross-embodiment fine-tuning.
 - [OpenVLA](https://openvla.github.io/) — Open-source 7B-parameter vision-language-action model built on Prismatic VLMs.
+- [SmolVLA (Hugging Face)](https://arxiv.org/abs/2506.01844) — 450M-parameter vision-language-action model trained on community LeRobot datasets and designed to train and run on consumer-grade hardware.
 - [RT-2](https://robotics-transformer2.github.io/) — Vision-language-action model that transfers web knowledge to robotic control.
 - [RT-X](https://robotics-transformer-x.github.io/) — Cross-embodiment models demonstrating positive transfer across robot platforms.
 - [Gemini Robotics](https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/) — Google DeepMind VLA family with embodied reasoning capabilities.
-- [GR00T N1 (NVIDIA)](https://developer.nvidia.com/isaac/gr00t) — Open humanoid foundation model with a dual-system slow/fast architecture.
+- [Isaac GR00T N1.x (NVIDIA)](https://github.com/NVIDIA/Isaac-GR00T) — Open humanoid VLA foundation model family (N1 through N1.7) with weights and fine-tuning code; the companion [GR00T-Dreams](https://github.com/NVIDIA/GR00T-Dreams) blueprint generates synthetic training trajectories with Cosmos world models.
 - [Helix (Figure)](https://www.figure.ai/) — Vision-language-action model targeting generalist humanoid control.
 - [RT-1](https://arxiv.org/abs/2212.06817) — Robotics Transformer for large-scale real-robot manipulation with language-conditioned control.
 - [PaLM-E](https://arxiv.org/abs/2303.03378) — Embodied multimodal language model integrating visual and robot-state observations for action.
@@ -34,3 +36,7 @@ When choosing between options, weigh **embodiment coverage** vs. your target rob
 - [MEM — Multi-Scale Embodied Memory](https://arxiv.org/abs/2603.03596) — Memory architecture for vision-language-action models pairing a video encoder for short-horizon recall with language-based long-horizon memory.
 - [R&B-EnCoRe](https://arxiv.org/abs/2602.08167) — Self-supervised method that treats embodied reasoning as a latent variable and distils a refined reasoning dataset without human annotation or external rewards.
 - [LangNav](https://arxiv.org/abs/2310.07889) — Navigation method that converts egocentric views into text with off-the-shelf captioning and detection so a fine-tuned language model selects actions from few expert trajectories.
+- [RDT2 (Tsinghua)](https://github.com/thu-ml/RDT2) — VLA trained on 10,000+ hours of UMI human manipulation data for zero-shot deployment on unseen robot embodiments; successor to [RDT-1B](https://rdt-robotics.github.io/rdt-robotics), a diffusion transformer for bimanual manipulation.
+- [WALL-OSS (X Square Robot)](https://github.com/X-Square-Robot/wall-x) — Open embodied foundation models (WALL-OSS, WALL-OSS-0.5) with flow-matching and FAST action heads, released with training and inference code.
+- [BFM-Zero](https://github.com/LeCAR-Lab/BFM-Zero) — Promptable behavioral foundation model for humanoid control that uses unsupervised forward-backward RL so one policy handles motion tracking, goal reaching and reward optimization (ICLR 2026).
+- [Skild AI S1](https://www.skild.ai/blogs/s1) — Robot foundation model that Skild AI reports can learn new tasks from a single in-context video demonstration without fine-tuning.
