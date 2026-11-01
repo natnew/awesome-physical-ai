@@ -31,7 +31,7 @@ Built for researchers and practitioners across the stack — from foundations to
 
 <p align="center">
 
-  <sub><strong>Last updated:</strong> 2026-11-1 &middot; <strong>257 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-11-01 &middot; <strong>257 entries</strong> across 14 canonical categories</sub>
 
 </p>
 
