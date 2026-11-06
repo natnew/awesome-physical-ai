@@ -31,7 +31,7 @@ Built for researchers and practitioners across the stack — from foundations to
 
 <p align="center">
 
-  <sub><strong>Last updated:</strong> 2026-11-1 &middot; <strong>257 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-11-5 &middot; <strong>258 entries</strong> across 14 canonical categories</sub>
 
 </p>
 
@@ -452,6 +452,8 @@ Middleware, runtime stacks, and reference patterns for shipping robots in produc
 - [MCAP](https://mcap.dev/) — Modern log container format for robotics telemetry, replay, and long-term data retention.
 - [Zenoh](https://zenoh.io/) — Data-centric middleware for distributed robotics over constrained and heterogeneous networks.
 - [rosbag2](https://github.com/ros2/rosbag2) — Standard ROS 2 recording and replay pipeline for debugging and incident analysis.
+- [Cerulion](https://github.com/cerulion-inc/cerulion) — Rust robot runtime with zero-copy shared memory and a graph-aware scheduler, measured at a 4.08 µs median 1 MiB round trip for native nodes and 11.12 µs for ROS 2 Jazzy nodes over rmw_cerulion, against 10,952 µs for stock ROS 2 Jazzy, on one Linux x86-64 desktop at 100 Hz.
+<!-- tags: tool, open-source -->
 - [ABot-AgentOS](https://arxiv.org/abs/2607.10350) — Robotic agent operating layer for scene-conditioned planning, skill execution, verification, multimodal memory, and edge-cloud collaboration.
 - [CodeNinja Atoms Reference Architectures](https://codeatoms.ai) — Openly licensed reference designs for industrial physical AI deployments covering sensing, edge model placement, GPU sizing, and operating cost, with an accompanying dataset and MCP server.
 <!-- tags: framework -->
