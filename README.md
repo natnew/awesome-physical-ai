@@ -31,7 +31,7 @@ Built for researchers and practitioners across the stack — from foundations to
 
 <p align="center">
 
-  <sub><strong>Last updated:</strong> 2026-11-1 &middot; <strong>257 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-11-9 &middot; <strong>258 entries</strong> across 14 canonical categories</sub>
 
 </p>
 
@@ -169,6 +169,7 @@ Large-scale teleoperation, demonstration, and interaction datasets used to train
 - [nuScenes](https://www.nuscenes.org/) — Multisensor autonomous-driving dataset with rich annotations for perception and planning research.
 - [Waymo Open Dataset](https://waymo.com/open/) — Large-scale real-world driving dataset used for perception, motion forecasting, and closed-loop autonomy studies.
 - [Argoverse 2](https://www.argoverse.org/av2.html) — High-quality motion-forecasting and 3D tracking datasets for real-world embodied prediction tasks.
+- [Open Robot Dataset Spec Ledger](https://bestrobottrainingdata.com/dataset-spec-ledger) — Source-linked comparison of 25 open academic robot datasets across 13 specification fields, including control rate, sensors, calibration releases and data terms, with a CSV download.
 
 ## Benchmarks
 
