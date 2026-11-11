@@ -166,6 +166,7 @@ Large-scale teleoperation, demonstration, and interaction datasets used to train
 - [BEHAVIOR-1K](https://behavior.stanford.edu/) — Large-scale household activity dataset and environment targeting realistic embodied task diversity.
 - [CALVIN ABC-D](https://github.com/mees/calvin) — Language-conditioned manipulation dataset for long-horizon policy training and evaluation.
 - [EPIC-KITCHENS-100](https://epic-kitchens.github.io/2021) — Egocentric video corpus useful for action understanding and embodied perception pretraining.
+- [Talos Electrician Tactile Glove Sample](https://huggingface.co/datasets/talosdataworks/electrician-conduit-subpanel-two-hand-tactile-glove-sample) — Egocentric stereo video with two-hand tactile-glove force and 3D hand pose from real electrical work; free sample in LeRobot format.
 - [nuScenes](https://www.nuscenes.org/) — Multisensor autonomous-driving dataset with rich annotations for perception and planning research.
 - [Waymo Open Dataset](https://waymo.com/open/) — Large-scale real-world driving dataset used for perception, motion forecasting, and closed-loop autonomy studies.
 - [Argoverse 2](https://www.argoverse.org/av2.html) — High-quality motion-forecasting and 3D tracking datasets for real-world embodied prediction tasks.
@@ -501,6 +502,7 @@ Organisations advancing Physical AI through foundation models, humanoids, and ap
 
 - [Sunday Robotics](https://www.sunday.ai/) — Building generalist robots and foundation models for physical intelligence.
 - [Waddle Labs](https://www.waddlelabs.ai) — Applied AI lab building LLM agents that write and iteratively revise robot control code from natural-language goals using camera feedback.
+- [Talos Dataworks](https://talosdataworks.com) — Collects egocentric video and tactile-glove hand data from skilled tradespeople for training manipulation policies.
 
 ---
 
