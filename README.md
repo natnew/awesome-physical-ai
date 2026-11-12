@@ -31,7 +31,7 @@ Built for researchers and practitioners across the stack — from foundations to
 
 <p align="center">
 
-  <sub><strong>Last updated:</strong> 2026-11-1 &middot; <strong>257 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-11-12 &middot; <strong>258 entries</strong> across 14 canonical categories</sub>
 
 </p>
 
@@ -148,6 +148,8 @@ Physics engines and high-fidelity simulation environments for robotics and embod
 - [RaiSim](https://raisim.com/) — High-performance rigid-body simulator widely used for legged-locomotion research and control.
 <!-- tags: simulator, tool, commercial -->
 - [Newton](https://github.com/newton-physics/newton) — GPU-accelerated open-source physics engine built on NVIDIA Warp with MuJoCo Warp as its main solver, initiated by Disney Research, Google DeepMind and NVIDIA and hosted by the Linux Foundation.
+<!-- tags: simulator, open-source -->
+- [Alloy](https://github.com/argonrobotics-ai/alloy) — Multi-material, GPU-parallel physics engine for robot learning that simulates robots, cloth, cables, liquids, sand and soft bodies in one scene, built on Newton and MuJoCo Warp.
 <!-- tags: simulator, open-source -->
 
 ## Datasets
