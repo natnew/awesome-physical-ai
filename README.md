@@ -31,7 +31,7 @@ Built for researchers and practitioners across the stack — from foundations to
 
 <p align="center">
 
-  <sub><strong>Last updated:</strong> 2026-11-1 &middot; <strong>257 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-11-14 &middot; <strong>258 entries</strong> across 14 canonical categories</sub>
 
 </p>
 
@@ -219,6 +219,8 @@ Harnesses, metrics, and methodology for measuring robot policy performance, robu
 <!-- tags: tool, benchmark, open-source -->
 - [PhyCritic (NVIDIA)](https://arxiv.org/abs/2602.11124) — Multimodal critic models trained with two-stage RL to judge physical perception and reasoning, for use as evaluators and reward models in physical AI (CVPR 2026).
 <!-- tags: paper -->
+- [policy-crosscheck](https://github.com/Helpforce-AI/policy-crosscheck) — Runs an Isaac Lab Unitree Go2 locomotion policy unchanged in MuJoCo and Genesis with a matched control loop, seeds and fall rule, and reports falls and body clearance per seed.
+<!-- tags: tool, open-source, research-only -->
 
 ## Robotics Foundation Models
 
