@@ -149,7 +149,7 @@ Physics engines and high-fidelity simulation environments for robotics and embod
 <!-- tags: simulator, tool, commercial -->
 - [Newton](https://github.com/newton-physics/newton) — GPU-accelerated open-source physics engine built on NVIDIA Warp with MuJoCo Warp as its main solver, initiated by Disney Research, Google DeepMind and NVIDIA and hosted by the Linux Foundation.
 <!-- tags: simulator, open-source -->
-- [Alloy](https://github.com/argonrobotics-ai/alloy) — Multi-material, GPU-parallel physics engine for robot learning that simulates robots, cloth, cables, liquids, sand and soft bodies in one scene, built on Newton and MuJoCo Warp.
+- [Alloy](https://github.com/argonrobotics-ai/alloy) — Multi-material, GPU-parallel physics engine for robot learning that simulates robots, cloth, cables, liquids, sand and soft bodies, built on Newton and MuJoCo Warp.
 <!-- tags: simulator, open-source -->
 
 ## Datasets
