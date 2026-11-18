@@ -31,7 +31,7 @@ Built for researchers and practitioners across the stack — from foundations to
 
 <p align="center">
 
-  <sub><strong>Last updated:</strong> 2026-11-5 &middot; <strong>258 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-11-18 &middot; <strong>261 entries</strong> across 14 canonical categories</sub>
 
 </p>
 
@@ -163,6 +163,8 @@ Large-scale teleoperation, demonstration, and interaction datasets used to train
 - [Ego4D](https://ego4d-data.org/) — Massive-scale egocentric video dataset useful for pretraining perception and world models.
 - [Something-Something V2](https://developer.qualcomm.com/software/ai-datasets/something-something) — Action recognition dataset frequently used to pretrain manipulation perception.
 - [RLDS](https://github.com/google-research/rlds) — Standardized format and tooling for logged trajectories used across robot-learning datasets.
+- [leCop](https://github.com/michele-xilo/leCop) — Rust CLI that checks LeRobot v2.x and v3.x datasets for broken episodes, timestamp drift, wrong stats and video/metadata mismatches, reading video container metadata instead of decoding.
+<!-- tags: tool, open-source -->
 - [BEHAVIOR-1K](https://behavior.stanford.edu/) — Large-scale household activity dataset and environment targeting realistic embodied task diversity.
 - [CALVIN ABC-D](https://github.com/mees/calvin) — Language-conditioned manipulation dataset for long-horizon policy training and evaluation.
 - [EPIC-KITCHENS-100](https://epic-kitchens.github.io/2021) — Egocentric video corpus useful for action understanding and embodied perception pretraining.
