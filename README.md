@@ -505,6 +505,8 @@ Organisations advancing Physical AI through foundation models, humanoids, and ap
 - [Sunday Robotics](https://www.sunday.ai/) — Building generalist robots and foundation models for physical intelligence.
 - [Waddle Labs](https://www.waddlelabs.ai) — Applied AI lab building LLM agents that write and iteratively revise robot control code from natural-language goals using camera feedback.
 - [Talos Dataworks](https://talosdataworks.com) — Collects egocentric video and tactile-glove hand data from skilled tradespeople for training manipulation policies.
+- [Humyn Labs](https://humynlabs.ai) — Collects real-world egocentric data for robot learning (stereo video, depth, hand tracking, IMU, narration) and publishes CC BY 4.0 sample datasets on Hugging Face.
+<!-- tags: dataset, commercial -->
 
 ---
 
