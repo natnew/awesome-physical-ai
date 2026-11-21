@@ -31,7 +31,15 @@ Built for researchers and practitioners across the stack — from foundations to
 
 <p align="center">
 
+
   <sub><strong>Last updated:</strong> 2026-11-12 &middot; <strong>258 entries</strong> across 14 canonical categories</sub>
+
+
+  <sub><strong>Last updated:</strong> 2026-10-28 &middot; <strong>238 entries</strong> across 14 canonical categories</sub>
+
+  <sub><strong>Last updated:</strong> 2026-11-5 &middot; <strong>258 entries</strong> across 14 canonical categories</sub>
+
+
 
 </p>
 
@@ -168,6 +176,7 @@ Large-scale teleoperation, demonstration, and interaction datasets used to train
 - [BEHAVIOR-1K](https://behavior.stanford.edu/) — Large-scale household activity dataset and environment targeting realistic embodied task diversity.
 - [CALVIN ABC-D](https://github.com/mees/calvin) — Language-conditioned manipulation dataset for long-horizon policy training and evaluation.
 - [EPIC-KITCHENS-100](https://epic-kitchens.github.io/2021) — Egocentric video corpus useful for action understanding and embodied perception pretraining.
+- [Talos Electrician Tactile Glove Sample](https://huggingface.co/datasets/talosdataworks/electrician-conduit-subpanel-two-hand-tactile-glove-sample) — Egocentric stereo video with two-hand tactile-glove force and 3D hand pose from real electrical work; free sample in LeRobot format.
 - [nuScenes](https://www.nuscenes.org/) — Multisensor autonomous-driving dataset with rich annotations for perception and planning research.
 - [Waymo Open Dataset](https://waymo.com/open/) — Large-scale real-world driving dataset used for perception, motion forecasting, and closed-loop autonomy studies.
 - [Argoverse 2](https://www.argoverse.org/av2.html) — High-quality motion-forecasting and 3D tracking datasets for real-world embodied prediction tasks.
@@ -392,6 +401,8 @@ Tools, benchmarks, and methodology for safe exploration, robustness testing, and
 - [Safety Gym (OpenAI)](https://github.com/openai/safety-gym) — Environments for benchmarking constrained and safe-exploration RL.
 - [Safe Control Gym](https://github.com/utiasDSL/safe-control-gym) — Benchmark suite for safe learning-based control with constraints and disturbances.
 - [Constrained Policy Optimization (Achiam et al.)](https://arxiv.org/abs/1705.10528) — Canonical algorithmic framework for constrained safe RL.
+- [Provael](https://github.com/provael/provael) — Red-team harness for VLA robot policies in simulation on LIBERO, reporting attack success rate beside a benign control with 95% intervals.
+<!-- tags: tool, open-source, research-only -->
 - [Realistic Adversarial Driving (Wang et al.)](https://arxiv.org/abs/2003.01197) — Methodology for stress-testing autonomous driving policies under adversarial conditions.
 - [Robot Trust & Safety (Stanford CRFM)](https://crfm.stanford.edu/) — Foundation-model centre research including robotic safety, evaluation, and failure modes.
 - [Scenic](https://scenic-lang.org/) — Probabilistic scenario-description language for specifying and generating stress-test scenes for autonomy.
@@ -454,6 +465,8 @@ Middleware, runtime stacks, and reference patterns for shipping robots in produc
 - [MCAP](https://mcap.dev/) — Modern log container format for robotics telemetry, replay, and long-term data retention.
 - [Zenoh](https://zenoh.io/) — Data-centric middleware for distributed robotics over constrained and heterogeneous networks.
 - [rosbag2](https://github.com/ros2/rosbag2) — Standard ROS 2 recording and replay pipeline for debugging and incident analysis.
+- [Cerulion](https://github.com/cerulion-inc/cerulion) — Rust robot runtime with zero-copy shared memory and a graph-aware scheduler, measured at a 4.08 µs median 1 MiB round trip for native nodes and 11.12 µs for ROS 2 Jazzy nodes over rmw_cerulion, against 10,952 µs for stock ROS 2 Jazzy, on one Linux x86-64 desktop at 100 Hz.
+<!-- tags: tool, open-source -->
 - [ABot-AgentOS](https://arxiv.org/abs/2607.10350) — Robotic agent operating layer for scene-conditioned planning, skill execution, verification, multimodal memory, and edge-cloud collaboration.
 - [CodeNinja Atoms Reference Architectures](https://codeatoms.ai) — Openly licensed reference designs for industrial physical AI deployments covering sensing, edge model placement, GPU sizing, and operating cost, with an accompanying dataset and MCP server.
 <!-- tags: framework -->
@@ -503,6 +516,7 @@ Organisations advancing Physical AI through foundation models, humanoids, and ap
 
 - [Sunday Robotics](https://www.sunday.ai/) — Building generalist robots and foundation models for physical intelligence.
 - [Waddle Labs](https://www.waddlelabs.ai) — Applied AI lab building LLM agents that write and iteratively revise robot control code from natural-language goals using camera feedback.
+- [Talos Dataworks](https://talosdataworks.com) — Collects egocentric video and tactile-glove hand data from skilled tradespeople for training manipulation policies.
 
 ---
 
