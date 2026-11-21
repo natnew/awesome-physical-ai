@@ -292,7 +292,7 @@ Generative and predictive models of physical dynamics used for planning, simulat
 <!-- tags: paper, framework -->
 - [NVIDIA Cosmos](https://developer.nvidia.com/cosmos) — World foundation model platform whose current [Cosmos 3](https://github.com/nvidia/cosmos) family (Edge, Nano and Super) provides open omnimodal models that act as world models and as backbones for world-action models.
 <!-- tags: tool, commercial -->
-- [Genie 2 (DeepMind)](https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/) — Foundation world model that generates interactive, controllable 3D environments.
+- [Genie (DeepMind)](https://deepmind.google/models/genie) — Foundation world model family that generates interactive, controllable 3D environments, from Genie 2 to the real-time Genie 3 and Genie 4.
 <!-- tags: paper, framework -->
 - [DreamerV3](https://danijar.com/project/dreamerv3/) — General world-model algorithm achieving strong results across 150+ tasks with fixed hyperparameters.
 - [DayDreamer](https://danijar.com/project/daydreamer/) — World models applied to physical robot learning for sample-efficient skill acquisition.
