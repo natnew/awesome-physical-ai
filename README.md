@@ -547,6 +547,7 @@ Hands-on learning resources.
 - [PyBullet Quickstart](https://docs.google.com/document/d/10sXEhzFRSnvFcl3XxNGhnD4N2SedqwdAvK3dsihxVUA/) - Getting started with PyBullet simulation.
 - [Open X-Embodiment Tutorial](https://colab.research.google.com/github/google-deepmind/open_x_embodiment/blob/main/colabs/Open_X_Embodiment_Datasets.ipynb) - Working with the largest robotics dataset.
 - [Diffusion Policy Tutorial](https://diffusion-policy.cs.columbia.edu/) - Implementation guide for diffusion-based robot policies.
+- [Physical AI Glossary](https://maxversace.com/physical-ai-glossary) - Defines 26 Physical AI terms in plain words, from Sim2Real and world models to continual learning.
 
 ## Key Papers
 
