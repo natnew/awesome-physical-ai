@@ -204,6 +204,8 @@ Task suites and standardised evaluations for manipulation, locomotion, and embod
 <!-- tags: benchmark, open-source -->
 - [QuantiPhy](https://quantiphy.stanford.edu) — Benchmark of 3,300+ video-text instances testing whether vision-language models can numerically estimate object size, velocity and acceleration (CVPR 2026).
 <!-- tags: benchmark, paper -->
+- [Street Crossing Challenge](https://huggingface.co/spaces/roaddata-ai/street-crossing-challenge) — Leaderboard for humanoid and wheeled robots crossing a real Jersey City crosswalk in an NVIDIA Isaac Sim twin, with the real crowd replayed from dashcam footage and scores recomputed from run logs.
+<!-- tags: benchmark, research-only -->
 
 ## Evaluation Methodology
 
