@@ -32,7 +32,7 @@ Built for researchers and practitioners across the stack — from foundations to
 <p align="center">
 
 
-  <sub><strong>Last updated:</strong> 2026-11-12 &middot; <strong>258 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-11-26 &middot; <strong>264 entries</strong> across 14 canonical categories</sub>
 
 
   <sub><strong>Last updated:</strong> 2026-10-28 &middot; <strong>238 entries</strong> across 14 canonical categories</sub>
@@ -177,6 +177,7 @@ Large-scale teleoperation, demonstration, and interaction datasets used to train
 - [CALVIN ABC-D](https://github.com/mees/calvin) — Language-conditioned manipulation dataset for long-horizon policy training and evaluation.
 - [EPIC-KITCHENS-100](https://epic-kitchens.github.io/2021) — Egocentric video corpus useful for action understanding and embodied perception pretraining.
 - [Talos Electrician Tactile Glove Sample](https://huggingface.co/datasets/talosdataworks/electrician-conduit-subpanel-two-hand-tactile-glove-sample) — Egocentric stereo video with two-hand tactile-glove force and 3D hand pose from real electrical work; free sample in LeRobot format.
+- [Autelica Three-Drone Jog Sample](https://autelica.com/sample) — Eight-second jog filmed by three moving drones with no markers or timecode, with per-frame camera poses, metric 3D body joints, foot contacts and a retargeted Unitree G1 trajectory; CC BY 4.0.
 - [nuScenes](https://www.nuscenes.org/) — Multisensor autonomous-driving dataset with rich annotations for perception and planning research.
 - [Waymo Open Dataset](https://waymo.com/open/) — Large-scale real-world driving dataset used for perception, motion forecasting, and closed-loop autonomy studies.
 - [Argoverse 2](https://www.argoverse.org/av2.html) — High-quality motion-forecasting and 3D tracking datasets for real-world embodied prediction tasks.
@@ -517,6 +518,7 @@ Organisations advancing Physical AI through foundation models, humanoids, and ap
 - [Sunday Robotics](https://www.sunday.ai/) — Building generalist robots and foundation models for physical intelligence.
 - [Waddle Labs](https://www.waddlelabs.ai) — Applied AI lab building LLM agents that write and iteratively revise robot control code from natural-language goals using camera feedback.
 - [Talos Dataworks](https://talosdataworks.com) — Collects egocentric video and tactile-glove hand data from skilled tradespeople for training manipulation policies.
+- [Autelica](https://autelica.com) — Checks and measures real-world capture data for robot learning: per-second footage QA, calibrated cameras, metric 3D hands and bodies, and egocentric, multi-view and multi-drone datasets.
 
 ---
 
